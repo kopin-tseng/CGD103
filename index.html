@@ -4,39 +4,975 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wellcome to GARY CAFE!</title>
+    <link rel="stylesheet" href="normalize.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
+        .main-content{
+            width: 100%;
         }
-        .box{
-            width: 600px;
-            height: 600px;
-            background-color: rgb(231, 97, 97);
+
+        /* header  */
+        .header{
+            background-color: white;
+            height: 90px;
+            width: 100%;
+            max-width: 100%;
+            z-index: 1000;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
+            padding: .8rem 3rem;
+            box-sizing: border-box;
         }
-        .item{
-            width: 100px;
-            height: 100px;
-            background-color: rgb(68, 56, 240);
-            margin: 10px;
-            font-size: 30px;
-            border: 1px solid salmon;
-            
+        .logo img{
+            width: 70px;
+            height: 70px;
+            /* padding-top: 10px; */
+        }
+        .main-navbar{
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .navbar-nav{
+            display: flex;
+            font-size: 18px;
+            list-style-type: none;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .nav-item a{
+            text-decoration: none;
+            color: #000;
+        }
+        .navbar-nav .nav-item{
+            padding: 0 20px;
+        }
+        .search-panel{
+            padding-left: 40px;
+            position: relative;
+        }
+        .search-panel a{
+            text-decoration: none;
+            position: absolute;
+        }
+        .search-panel a img{
+            width: 35px;
+            height: 35px;
+            margin-top: 2px;
+        }
+        .search-panel input{
+            max-width: 300px;
+            /* width: 300px; */
+            height: 40px;
+            box-sizing: border-box;
+            background-color: #eee;
+            border-width: 0;
+            border-radius: 0.25rem;
+            padding: 0 45px;
+        }
+        .header-icon .icon-list{
+            display: flex;
+            list-style-type: none;
+        }
+        .header-icon .icon-list li a img{
+            width: 35px;
+            height: 35px;
+            margin: 0 15px;
 
         }
+        /* header  */
+
+
+        .slick{
+            box-sizing: border-box;
+            padding-top: 90px;
+        }
+        .slick img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .new-message{
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 40px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .new-message dl{
+            padding: 20px 0;
+            margin: 0;
+        }
+        .new-message dl dt{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 20px 0 0;
+        }
+        .new-message dl dt span:nth-child(1){
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px 15px;
+            margin: 0 20px 0 0;
+            background-color: rgb(0, 0, 0);
+            color: #eee;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+        }
+        .new-message dl dt span:nth-child(2){
+            display: inline-block;
+            vertical-align: middle;
+            color: rgb(183, 183, 183);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+        }
+        .new-message dl dd{
+            display: inline-block;
+            margin: 0;
+        }
+        .new-message dl dd a{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+            text-decoration: none;
+            color: #333;
+        }
+        .quick-opt,.feature-product{
+            width: 100%;
+            /* max-width: 100%; */
+            padding: 60px 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .quick-opt .quick-item{
+            margin: 0 10px 0 10px;
+            width: calc(20% - 20px);
+            border: 1px solid rgb(234, 234, 234);
+            box-sizing: border-box;
+        }
+        .quick-item a img{
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+            object-position: center;
+            /* aspect-ratio: 1/1; */
+        }
+
+
+        /* section  START*/
+        .visible{
+            opacity: 1;
+            transform: translate(0,0);
+            transition: opacity 1024ms ease ,transform 1024ms ease ;
+        }
+        .main-product{
+            background: transparent;
+            margin: 40px auto 140px;
+            padding: 100px 0 110px;
+            display: block;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+        div.main-product::before{
+            content: "BEANS";
+            display: block;
+            font-size: 206px;
+            font-weight: bold;
+            line-height: 1;
+            color: rgb(249, 246, 244);
+            position: absolute;
+            z-index: -2;
+            right: 0;
+            top: 0;
+        }
+        div.main-product::after{
+            content: "";
+            display: block;
+            background: #e7dcd5;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            bottom: 0;
+            width: 70vw;
+            height: 350px;
+        }
+        @media screen and(min-width:1200px) {
+            .inner{
+                position: static;
+            }
+        }
+        .inner{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .inner dl{
+            display: flex;
+            align-items: center;
+        }
+        .inner dl dt{
+            max-width: 700px;
+            position: relative;
+        }
+        .inner dl dt::before{
+            content: "BEANS";
+            display: block;
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 1;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            z-index: 2;
+            left: calc(-47px);
+            top: -54px;
+        }
+        .inner dl dt img{
+            /* display: block; */
+            width: 100%;
+            border-radius: 10px;
+            vertical-align: top;
+            border: 0;
+        }
+        .inner dl dd{
+            width: 50%;
+            padding: 0 0 0 10%;
+            max-width: 540px;
+            min-width: 360px;
+        }
+        .inner dl dd h1{
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.6;
+            margin: 0 0 30px;
+            position: relative;
+        }
+        .inner dl dd h1::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 136px;
+            position: absolute;
+            z-index: -1;
+            top: -50px;
+            right: 30px;
+            background: url(/UX/beans_machine.png) no-repeat center center;
+            background-size: contain;
+
+        }
+        .inner dl dd small{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+            display: block;
+            margin: 0 0 10px;
+        }
+        .inner dl dd p{
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .inner dl dd a{
+            margin: 40px 0 0;
+            background: transparent;
+            display: block;
+            max-width: 360px;
+            padding: 22px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 300ms ease;
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+        }
+        /* section  endline*/
+
+
+        /* feature start */
+        .feature-wrap{
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        h2.title{
+            text-align: center;
+            padding-bottom: 40px;
+            font-size: 30px;
+        }
+        .feature-list{
+            /* display: flex; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2,1fr);
+            margin: 40px 0;
+            gap: 15px;
+        }
+        .feature-list .feature-item{
+            /* padding: 10px; */
+            box-sizing: border-box;
+            /* width: 25% */
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .feature-list .feature-item img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .feature-item .add-cart{
+            text-align: center;
+            background-color: #000;
+            padding: 10px 0;
+        }
+        .feature-item .add-cart a{
+            color: #fff;
+            text-decoration: none;
+        }
+        /* feature end */
+
+
+
+
+
+        .product-intro{
+            width: 100%;
+        }
+        .product-intro .intro-wrap{
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        .intro-wrap .intro-list{
+            display: flex;
+            gap: 5px;
+            margin-bottom: 50px;
+        }
+        .intro-wrap .intro-list:nth-child(2){
+            flex-direction: row-reverse;
+        }
+        .intro-list .intro{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 60px;
+            width: 0;
+            /* background-color: rgb(242, 242, 242);  */
+            flex-grow: 2;
+        }
+        .intro-wrap .intro-list:nth-child(2) .intro{
+            text-align: left;
+            align-items: flex-start;
+        }
+        .intro-wrap .intro-list:nth-child(2) .intro-box div{
+            justify-content: flex-start;
+        }
+        .intro-box{
+            width: 70%;
+        }
+        .intro-box div{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .intro-box div a{
+            text-align: center;
+            text-decoration: none;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 30px;
+        }
+        .intro input{
+            width: 100px;
+        }
+        .intro-photo{
+            width: 0;
+            flex-grow: 7;
+        }
+        .intro-photo img{
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        .product-more{
+            width: 100%;
+            padding: 60px 0;
+        }
+        .product-more .more-content{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 30px;
+        }
+        .more-item img{
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 16/10;
+        }
+        
+
+
+        .coffee-info{
+            width: 100%;
+        }
+        .coffee-info .info-list{
+            max-width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        a.info-item{
+            display: block;
+            width: 33.333333%;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #000;
+            margin: 2rem 2.6%;
+        }
+        a.info-item span{
+            margin: 0.5rem 0;
+            display: block;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        a.info-item h3{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            line-height: 1.7rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+        a.info-item p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            opacity: 0.7;
+            text-align: justify;
+            font-size: 15px;
+            font-weight: 300;
+
+        }
+        a.info-item div img{
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+            aspect-ratio: 16/10;
+        }
+
+
+
+
+        /* footer start */
+        #gototop{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(252, 216, 55, 0.5);
+            position: fixed;
+            right: 1.875rem;
+            bottom: 6.875rem;
+            padding: 0.625rem;
+            z-index: 3;
+            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
+        }
+        #gototop a img{
+            width: 100%;
+            opacity: 0.5;
+        }
+
+
+        .footerimg{
+            background-image: url(/UX/footerimg3.webp);
+            background-size: cover;
+            background-position:center center;
+            width: 100%;
+            height: 220px;
+        }
+
+
+
+        .footer-section{
+            background-color: rgb(255, 255, 255);
+            font-weight: 400;
+            color : rgb(58, 58, 58);
+            padding-top: 60px;
+            width: 100%;
+            /* margin-top: 70px; */
+        }
+        .footer-wrap{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-link{
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 40px;
+        }
+        .footer-list{
+            margin: 0 40px;
+        }
+        .footer-list h3{
+            font-weight: 300;
+            font-size: 16px;
+        }
+        .footer-list ul{
+            padding: 0;
+        }
+        .footer-list ul li{
+            list-style-type: none;
+            font-size: 14px;
+            color: rgb(83, 83, 83);
+        }
+        .footer-icon a{
+            text-decoration: none;
+        }
+        .footer-legal{
+            background-color: rgb(255, 203, 99);
+            padding: 10px 0 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .footer-legal-link a{
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        /* footer end */
+
+
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
+    <div class="main-content">
+
+
+        <!-- header -->
+        <header class="header">
+            <div class="logo">
+                <a href="/index.html"><img src="/UX/LOGO.png" alt="GARY CAFE LOGO ICON"></a>
+            </div>
+            <div class="main-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="aboutus.html">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="product-category.html">全部商品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">咖啡豆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">咖啡器具</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="coffee-knowledge.html">咖啡知識</a>
+                    </li>
+                </ul>
+                <div class="search-panel">
+                    <a href="">
+                        <img src="/UX/search.svg" alt="">
+                    </a>
+                    <input id="global-search" type="text" placeholder="搜尋">
+                </div>
+                <div class="header-icon">
+                    <ul class="icon-list">
+                        <li class="icon">
+                            <a href="">
+                                <img src="/UX/shopping_cart.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a href="">
+                                <img src="/UX/person.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+
+
+        <div class="slick"><!-- 使用slick套件 -->
+            <a>
+                <img src="/UX/banner1.jpeg" alt="banner">
+            </a>
+        </div>
+
+
+        <div class="new-message">
+            <dl>
+                <dt>
+                    <span>NEWS</span>
+                    <span>2022.06.01</span>
+                </dt>
+                <dd>
+                    <a href="">新冠肺炎防疫規範最新須知....Read more</a>
+                </dd>
+            </dl>
+        </div>
+
+
+        <div class="quick-opt">
+            <div class="quick-item">
+                <a href="">
+                    <img src="/UX/coffeebeans.jpeg" alt="">
+                </a>
+            </div>
+            <div class="quick-item">
+                <a href="">
+                    <img src="/UX/Mills.jpeg" alt="">
+                </a>
+            </div>
+            <div class="quick-item">
+                <a href="">
+                    <img src="/UX/Drippers.webp" alt="">
+                </a>
+            </div>
+            <div class="quick-item">
+                <a href="">
+                    <img src="/UX/Filters.webp" alt="">
+                </a>
+            </div>
+            <div class="quick-item">
+                <a href="">
+                    <img src="/UX/Kettles.webp" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="main-product visible">
+            <div class="inner">
+                <dl>
+                    <dt>
+                        <img src="/UX/1.jpeg" alt="">
+                    </dt>
+                    <dd>
+                        <h1>
+                            <small style="font-weight: 300;">希望讓更多人喝到舒服的一杯好咖啡</small>
+                            自家烘焙咖啡豆
+                        </h1>
+                        <p>從生豆挑選到烘焙的過程皆為您嚴格把關。<br>為了追求一杯心目中的精品優質的咖啡，從生豆到烘焙到沖煮，都希望能給客戶一個買得起又好喝的咖啡。團隊成員也陸續取得多種證照，提升gary cafe的咖啡專業能力，證照包括CQI Q grader/SCAE 金杯/烘焙認證/SCA感官杯測認證</p>
+                        <a href="">立即選購</a>
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+
+        <!-- feature -->
+        <div class="feature-product">
+            <div class="feature-wrap">
+                <h2 class="title">精選咖啡豆</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-1.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                            <p>NT$400</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-2.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                            <p>NT$450</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-3.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                            <p>NT$325</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-4.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                            <p>NT$1200</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+
+                    <!-- clo2 -->
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-1.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                            <p>NT$400</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-2.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                            <p>NT$450</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-3.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                            <p>NT$325</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <a href="">
+                                <img src="/UX/products-4.webp" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                            <p>NT$1200</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="">加入購物車</a>
+                        </div>
+                    </div>
+                    <!-- clo2 -->
+                </div>
+            </div>
+        </div>
+        <!-- feature -->
+
+
+
+
+        <div class="product-intro">
+            <div class="intro-wrap">
+                <div class="intro-list">
+                    <div class="intro">
+                        <div class="intro-box">
+                            <h2 style="font-size:30px;font-weight: 400;">ORIGAMI<br>陶瓷折紙濾杯<br>S號</h2>
+                            <p style="font-size:14px;font-weight: 400;">日本美濃燒陶瓷,可使用普遍的錐形濾紙或Kalita 155蛋糕濾紙,可選購專用木托盤</p>
+                            <div><a href="">瞭解更多</a></div>
+                        </div>
+                        
+                    </div>
+                    <div class="intro-photo">
+                        <a href="">
+                            <img src="/UX/intro-photo1-ORIGAMI.webp" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-list">
+                    <div class="intro">
+                        <div class="intro-box">
+                            <h2 style="font-size:30px;font-weight: 400;">HARIO<br>台灣限定版<br>祥鶴濾杯</h2>
+                            <p style="font-size:14px;font-weight: 400;">半肋結構濾杯,能創造多層次咖啡風味,木質盒裝，值得收藏與傳遞溫暖心意</p>
+                            <div><a href="">瞭解更多</a></div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="intro-photo">
+                        <a href="">
+                            <img src="/UX/intro-photo2.jpeg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-more">
+            <h2 class="title">精選咖啡器具</h2>
+            <div class="more-content">
+                <div class="more-item">
+                    <img src="/UX/more-p1-r220b.jpeg" alt="">
+                    <h3>FUJI ROYAL 株式会社富士珈機 R-220鬼齒磨豆機</h3>
+                </div>
+                <div class="more-item">
+                    <img src="/UX/more-p2.webp" alt="">
+                    <h3>珈堂 M1 星芒濾杯「極」 KADOU & HASAMI 波佐見燒</h3>
+                </div>
+                <div class="more-item">
+                    <img src="/UX/more-p3-FELLOW STAGG EKG.webp" alt="">
+                    <h3>FELLOW STAGG EKG【智慧電子溫控壺】</h3>
+                </div>
+                <div class="more-item">
+                    <img src="/UX/more-p4.webp" alt="">
+                    <h3>HARIO ZEBRANG DRIPPER 矽膠濾杯連濾紙套裝</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="coffee-info">
+            <h2 class="title">咖啡知識</h2>
+            <div class="info-list">
+                <a class="info-item" href="">
+                    <div>
+                        <img src="/UX/coffee lesson.jpeg" alt="">
+                    </div>
+                    <span>2022/09/09</span>
+                    <h3>Gary Cafe手沖咖啡小教室</h3>
+                    <p>Gary教你如何手沖每杯美味的咖啡</p>
+                </a>
+                <a class="info-item" href="">
+                    <div>
+                        <img src="/UX/Coffee-Cherry-Plant.jpeg" alt="">
+                    </div>
+                    <span>2022/05/13</span>
+                    <h3>咖啡豆如何挑選</h3>
+                    <p>挑選方法、產地、品種,與您一同選出最適合的咖啡豆</p>
+                </a>
+                <a class="info-item" href="">
+                    <div>
+                        <img src="/UX/coffee dripper.webp" alt="">
+                    </div>
+                    <span>2022/09/20</span>
+                    <h3>手沖咖啡器具挑選</h3>
+                    <p>磨豆機、濾杯、手沖壺,手沖咖啡器材入門到進階</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footerimg"></div>
+
+
+
+
+        <!-- footer -->
+        <footer class="footer-section">
+            <div class="footer-wrap">
+                <div class="footer-link">
+                    <div class="footer-list">
+                        <h3>聯繫我們</h3>
+                        <ul>
+                            <li>服務專線</li>
+                            <li>0800-800-824</li>
+                            <li>週一至週五 9:30~18:00(國定例假日除外)</li>
+                            <li>Line 線上客服</li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <h3>顧客服務</h3>
+                        <ul>
+                            <li>訂單狀態</li>
+                            <li>退換貨說明</li>
+                            <li>網路訂購商品條款</li>
+                            <li>運送服務</li>
+                            <li>常見問題</li>
+                            <li>會員權益條款</li>
+                        </ul>
+                    </div>
+                    <div class="footer-icon">
+                        <a href="">
+                            <img width="40px" height="40px" src="/UX/3069725_circle_line_messenger_round icon_icon.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img width="40px" height="40px" src="/UX/317752_facebook_social media_social_icon.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img width="40px" height="40px" src="/UX/3225191_app_instagram_logo_media_popular_icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <div id="gototop">
+                    <a href="#"><img src="/UX/gototop.svg" alt=""></a>
+                  </div>
+                <div class="footer-legal-copyright">Copyright © 2022 GARY CAFE. 保留一切權利。</div>
+                <div class="footer-legal-link">
+                    <a href="">隱私權政策 |</a>
+                    <a href="">使用條款 |</a>
+                    <a href="">法律聲明 |</a>
+                    <a href="">網站地圖</a>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+
+
+
+
     </div>
+
+
+
+    
 </body>
 </html>
