@@ -12,7 +12,7 @@
         }
 
 
-        /* header start */
+        /* header  */
         .header{
             background-color: white;
             height: 90px;
@@ -31,6 +31,7 @@
         .logo img{
             width: 70px;
             height: 70px;
+            /* padding-top: 10px; */
         }
         .main-navbar{
             display: flex;
@@ -43,14 +44,90 @@
             list-style-type: none;
             align-items: center;
             flex-grow: 1;
+            /* height: 100%; */
         }
         .nav-item a{
             text-decoration: none;
             color: #000;
+            transition: 0.3s;
         }
-        .navbar-nav .nav-item{
-            padding: 0 20px;
+        a.thispage{
+            color: rgb(209, 131, 30);
+            font-weight: 700;
+            border-bottom: 3px solid rgb(186, 129, 5);
         }
+        .nav-item>a:hover{
+            color: rgb(209, 131, 30);
+            font-weight: 700;
+            border-bottom: 3px solid rgb(186, 129, 5);
+
+        }
+        .navbar-nav li.nav-item{
+            padding: 34px 20px;
+            position: relative;
+            
+            
+        }
+        .navbar-nav li.nav-item:hover ul.layer1{
+            display: flex;
+        }
+        .navbar-nav li.nav-item:hover ul.layer1 ul{
+            display: block;
+            
+        }
+        .navbar-nav li.nav-item ul.layer1{
+            display: none;
+            min-width: 600px;
+            padding-left: 0;
+            list-style-type: none;
+            background-color: white;
+            opacity: 0.9;
+            position: absolute;
+            border: 1px solid rgb(235, 235, 235);
+            left: 0;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            z-index: 10;
+            padding: 20px;
+            top: 100%;
+            transition: 1s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 10px 0;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul li{
+            padding: 10px 0;
+            font-size: 15px;
+            /* opacity: 0.7; */
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li{
+            flex: 1;
+            margin: 10px;
+        }
+        .navbar-nav li.nav-item ul.layer2 li{
+            margin: 10px 0 10px 10px;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        .navbar-nav li.nav-item ul.layer1 li li:hover{
+            background-color: rgb(209, 209, 209);
+        }
+
+
+
+
+        
+        
         .search-panel{
             padding-left: 40px;
             position: relative;
@@ -66,12 +143,17 @@
         }
         .search-panel input{
             max-width: 300px;
+            /* width: 300px; */
             height: 40px;
             box-sizing: border-box;
             background-color: #eee;
             border-width: 0;
             border-radius: 0.25rem;
             padding: 0 45px;
+            transition: 0.5s;
+        }
+        .search-panel input:hover{
+            background-color: rgb(255, 234, 180);
         }
         .header-icon .icon-list{
             display: flex;
@@ -83,17 +165,21 @@
             margin: 0 15px;
 
         }
-        /* header end */
+        /* header  */
 
 
 
         .top-photo{
             margin-top: 90px;
-            background-image: url(mv.jpeg);
+            background-image: url(./UX/mv.jpeg);
             background-size: cover;
             position: relative;
             height: 250px;
             width: 100%;
+        }
+        .breadcrumb{
+            max-width: 1200px;
+            margin: 30px auto;
         }
         .top-photo h2{
             color: #fff;
@@ -107,7 +193,7 @@
             text-align: center;
             
         }
-        .main-section{
+        /* .main-section{
             position: relative;
             margin: 128px auto 0;
             height: 470px;
@@ -119,19 +205,93 @@
             top: 0;
             width: 918px;
         }
-        .section1{
+        .main-section ul li{
+            background: white;
+            position: absolute;
+            height: 60px;
+            width: 310px;
+            
+
+        }
+        .main-section ul li:nth-child(1){
+            top: -30px;
+            left: 38px;
+        }
+        .main-section ul li:nth-child(2){
+            top: 155px;
+            left: 0;
+            width: 245px;
+        }
+        .main-section ul li:nth-child(3){
+            top: 0;
+            right: 90px;
+            width: 222px;
+        }
+        .main-section ul li:nth-child(4){
+            top: 226px;
+            right: 0;
+            width: 239px;
+        }
+        .main-section ul{
+            list-style: none;
+        }
+        .main-section ul li a{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-section ul li .inter{
+            border: 1px solid #f3f3f3;
+            padding: 0 18px 0 18px;
+            transform: all 0.3s;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        } */
+        .main-section{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 100px 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .main-section div{
+            overflow: hidden;
+        }
+        .main-section img{
+            width: 100%;
+            vertical-align: middle;
+            transition: 0.3s;
+        }
+        .main-section img:hover{
+            /* transform: scale(1.1); */
+            opacity: 0.7;
+
+        }
+
+
+
+
+
+        .section1,.section3{
             background-color: #fbf9f9;
             padding: 93px 0 90px;
         }
         section{
             text-align: center;
+            margin-bottom: 50px;
         }
         .innerw{
             margin: 0 auto;
             position: relative;
             width: 1000px;
         }
-        .section1 .deco{
+        .deco{
             position: absolute;
             right: -40px;
             top: -72px;
@@ -155,11 +315,87 @@
             font-size: 16px;
         }
         .innerw .images{
-            display: flex;
-            margin-bottom: 50px;
-            width: 100%;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
         }
+        .innerw .images img{
+            width: 100%;
+        }
+        .upper h3{
+            text-align: left;
+            margin-top: 50px;
+        }
+        .upper p{
+            text-align: left;
+            line-height: 1.7;
+            color: rgb(81, 81, 81);
+        }
+        ul.lohen{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 76px;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+        }
+        ul.lohen li{
+            position: relative;
+            height: 600px;
+            width: calc((100% - 100px) / 3);
+        }
+        ul.lohen li img{
+            align-self: center;
+            width: 246px;
+        }
+        .lohen-flex{
+            display: flex;
+            flex-direction: column;
+        }
+        ul.lohen li img.lohen-upper{
+            margin-bottom: 29px;
+            width: 138px;
+            align-self: center;
+            max-width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+        .md{
+            display: block;
+            font-size: 28px;
+            margin: 6px 0 0;
+        }
+        .dw{
+            color: #bcaf95;
+            display: block;
+            font-size: 14px;
+            margin-top: -5px;
+        }
+        a.btt1{
+            border: 1px solid #bfbfbf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-top: 40px;
+            height: 55px;
+            width: 100%;
+            text-decoration: none;
+            color: #000;
+            transition: 0.5s;
+        }
+        a.btt1:hover{
+            background: rgb(63, 63, 63);
+            color: #fff;
+        }
+
+
+
+
+
+
+
+
 
 
         
@@ -168,26 +404,29 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(252, 216, 55, 0.5);
+            background-color: rgba(138, 109, 23, 0.5);
             position: fixed;
             right: 1.875rem;
             bottom: 6.875rem;
             padding: 0.625rem;
             z-index: 3;
-            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
+            box-shadow: 0px 5px 3px 0px rgba(130, 130, 130, 0.1);
         }
         #gototop a img{
             width: 100%;
             opacity: 0.5;
         }
+
+
         .footerimg{
             background-image: url(./UX/footerimg3.webp);
             background-size: cover;
             background-position:center center;
             width: 100%;
             height: 220px;
-            margin-top: 60px;
         }
+
+
 
         .footer-section{
             background-color: rgb(255, 255, 255);
@@ -195,6 +434,7 @@
             color : rgb(58, 58, 58);
             padding-top: 60px;
             width: 100%;
+            /* margin-top: 70px; */
         }
         .footer-wrap{
             max-width: 1200px;
@@ -254,16 +494,71 @@
                         <a href="aboutus.html">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a href="product-category.html">全部商品</a>
+                        <a href="">全部商品</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">咖啡豆</a>
+                        <a href="product-category.html">咖啡豆</a>
+                        <ul class="layer1">
+                            <li>
+                                <a href="">產地</a>
+                                <ul class="layer2">
+                                    <li>非洲</li>
+                                    <li>亞洲</li>
+                                    <li>北/中/南美洲</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">烘焙度</a>
+                                <ul class="layer2">
+                                    <li>淺焙</li>
+                                    <li>淺中焙</li>
+                                    <li>中焙</li>
+                                    <li>中深焙</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">處理法</a>
+                                <ul class="layer2">
+                                    <li>日曬</li>
+                                    <li>水洗</li>
+                                    <li>特殊處理</li>
+                                    <li>厭氧處理</li>
+                                    <li>蜜處理</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="">咖啡器具</a>
+                        <ul class="layer1" style="min-width: 400px;">
+                            <li>
+                                <a href="">磨豆機</a>
+                                <ul class="layer2">
+                                    <li>手磨</li>
+                                    <li>電磨</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">手沖器材</a>
+                                <ul class="layer2">
+                                    <li>濾杯</li>
+                                    <li>手沖壺</li>
+                                    <li>容器/耗材類</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="coffee-knowledge.html">咖啡知識</a>
+                        <a class="thispage" href="coffee-knowledge.html">咖啡知識</a>
+                        <ul class="layer1" style="min-width: 200px;">
+                            <li>
+                                <a href="">咖啡知識</a>
+                                <ul class="layer2">
+                                    <li>咖啡豆挑選</li>
+                                    <li>手沖咖啡入門</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <div class="search-panel">
@@ -280,7 +575,7 @@
                             </a>
                         </li>
                         <li class="icon">
-                            <a href="">
+                            <a href="member-login.html">
                                 <img src="./UX/person.svg" alt="">
                             </a>
                         </li>
@@ -293,28 +588,62 @@
 
 
         <div class="top-photo">
-            <h2>咖啡豆的挑選</h2>
+            <h2>咖啡豆挑選</h2>
         </div>
-        <div class="breadcrumb">
+        <!-- <div class="breadcrumb">
             <div class="breadcrumb-inner">
-                <span>首頁>咖啡知識>咖啡豆挑選</span>
+                <span>首頁&nbsp;>&nbsp;咖啡知識&nbsp;>&nbsp;咖啡豆挑選</span>
             </div>
-        </div>
+        </div> -->
         <section class="main-section">
+            <div><img src="./UX/top1.webp" alt=""></div>
+            <div><img src="./UX/top2.webp" alt=""></div>
+            <div><img src="./UX/top3.webp" alt=""></div>
+            <div><img src="./UX/top4.webp" alt=""></div>
+        </section>
+        <!-- <section class="main-section">
             <img class="imager" src="./UX/mn.jpeg" alt="">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                    <a href="#ac1">
+                        <div class="inter">
+                            <p>生產地</p>
+                            <p>−Producing Area−</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ac2">
+                        <div class="inter">
+                            <p>生產地</p>
+                            <p>−Producing Area−</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ac3">
+                        <div class="inter">
+                            <p>生產地</p>
+                            <p>−Producing Area−</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ac4">
+                        <div class="inter">
+                            <p>生產地</p>
+                            <p>−Producing Area−</p>
+                        </div>
+                    </a>
+                </li>
             </ul>
-        </section>
+        </section> -->
 
 
         <div class="anchor" id="ac1"></div>
         <section class="section1">
             <div class="innerw">
-                <img class="deco" src="./UX/decosp.png" alt="">
+                <!-- <img class="deco" src="./UX/decosp.png" alt=""> -->
                 <h3 class="minder">
                     <span class="bigers">生產地</span>
                     <br>
@@ -326,10 +655,164 @@
                 </div>
                 <div class="text">
                     <div class="upper">
-                        <p></p>
-                        <p></p>
+                        <p>全世界大約有六十多個國家生產咖啡，由於地質、氣候等要求，產地大部分位於南北迴歸線之間的熱帶、亞熱帶地區內，平均氣溫都在20℃以上，海拔1500米左右。這一咖啡栽培區被稱為“咖啡帶（Coffee Belt）”。</p>
+                        <br>
+                        <p>咖啡種植區集中在北非、中南美、東南亞和大洋洲北部。咖啡屬的植物約有40種，但能夠生產出具有商品價值咖啡豆的僅有Arabica、Robusta、Liberica，這三種稱為“咖啡三大原生種”。 Arabica風味絕佳，但產量低且不耐病害蟲害，對氣候土壤等種植條件要求很高，一般精品咖啡都是Arabica。 Robusta風味不如Arabica，但產量高生長速度快，抗病蟲害性好，種植要求也沒Arabica高，常被用作商業用豆。</p>
+                        <br>
+                        <p>Arabica咖啡豆主要產地為南美洲（阿根廷與巴西部分區域除外）、中美洲、非洲（肯尼亞、埃塞俄比亞等地，主要是東非諸國）、亞洲（包括也門、印度、巴布亞新幾內亞的部分區域）。 Robusta咖啡豆主要生產國是印度尼西亞、越南及以科特迪瓦、阿爾及利亞、安哥拉為中心的西非諸國。</p>
+                        <h3>單品咖啡種類</h3>
+                        <p>單品咖啡，即用原產地出產的單一咖啡豆磨製而成，飲用時不加奶或糖的純正咖啡。口感強烈，主要以咖啡豆的出產地命名。</p>
+                        <p>（1）藍山咖啡 產於牙買加。純正牙買加藍山咖啡將咖啡中獨特的酸、苦、甘、醇等味道完美地融合在一起，香味十分濃鬱，香醇甘滑、有持久的水果味，形成強烈誘人的優雅氣息，可謂是咖啡之極品。
+
+                            （2）Cubita 產於古巴水晶山。以其醇厚香濃的口感而著名，是海島豆中較特殊的咖啡豆，被譽為獨特加勒比海風味咖啡。
+                            
+                            （3）哥倫比亞咖啡 產於哥倫比亞。烘焙後的咖啡豆，會釋放出甘甜的清香，具有酸中帶甘、苦味中平的良質特性，且濃度適中，並帶有持久水果清香，有時有堅果香。因為濃度合宜的緣故，也被應用於高級的混合咖啡。
+                            
+                            （4）巴西咖啡 產於巴西。種類繁多，多數的咖啡帶有適度的酸性特徵，其甘、苦、醇三味屬中性，濃度適中，口味滑爽而特殊，主要用於混合咖啡。</p>
                         <img src="" alt="">
                     </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="anchor" id="ac2"></div>
+        <section class="section2">
+            <div class="innerw">
+                <!-- <img class="deco" src="./UX/decosp.png" alt=""> -->
+                <h3 class="minder">
+                    <span class="bigers">烘焙度</span>
+                    <br>
+                    <span class="smalls">−Roasting−</span>
+                </h3>
+                <div class="images">
+                    <img src="./UX/img3.jpeg" alt="">
+                    <img src="./UX/img4.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <div class="upper">
+                        <p>咖啡豆的烘焙時間由短至長，大致可以分為淺焙、中焙和深焙3種程度，烘焙的時間越長，咖啡豆外觀顏色會逐漸加深；酸味會慢慢變淡；苦味則會加重。</p>
+                        <p>咖啡豆的加工程序越少，保留的水果酸質越高，也越能代表咖啡豆原始的風味及品質，因此咖啡杯測時，經常使用淺焙咖啡豆來測試。淺焙咖啡豆的顏色較淡，外觀的油脂比較少，沖煮出來的咖啡呈現淡褐色，通常帶有淡淡的花果香氣，風味明亮順口。</p>
+                        <h3>淺焙咖啡：保留咖啡豆最原始的風味</h3>
+                        <p>咖啡豆的加工程序越少，保留的水果酸質越高，也越能代表咖啡豆原始的風味及品質，因此咖啡杯測時，經常使用淺焙咖啡豆來測試。淺焙咖啡豆的顏色較淡，外觀的油脂比較少，沖煮出來的咖啡呈現淡褐色，通常帶有淡淡的花果香氣，風味明亮順口。</p>
+                        <h3>中焙咖啡：在醇厚口感與酸度中取得平衡</h3>
+                        <p>中度烘焙的咖啡豆表面會開始分泌油脂，顏色較接近栗子色，沖煮後的風味及香氣比淺焙咖啡更濃郁，可以同時品嘗到淡淡的酸味及咖啡的苦味，但相對地，花果香氣就會隨著烘焙時間拉長而減少。</p>
+                        <h3>深焙咖啡：醇厚且濃烈的口感</h3>
+                        <p>經過長時間的烘焙，深焙咖啡豆的外觀呈現深褐色，沖煮後的咖啡風味醇厚、濃郁，但幾乎無法品嚐到原始咖啡的風味特性，花果香氣已經完全被咖啡濃厚的風味取代。大部分Espresso咖啡就是使用深焙咖啡豆，加入牛奶或水製作成拿鐵及美式咖啡。</p>
+                    </div>
+                </div>
+                <ul class="lohen">
+                    <li>
+                        <div class="lohen-flex">
+                            <div class="texts">
+                                <img class="lohen-upper" src="./UX/bl1.png" alt="">
+                                <br>
+                                <span class="md">淺焙</span>
+                                <br>
+                                <span class="dw">light roast</span>
+                                <br>
+                            </div>
+                            <img src="./UX/cf1.png" alt="">
+                        </div>
+                        <a class="btt1" href=""><span>立即前往選購</span></a>
+                    </li>
+                    <li>
+                        <div class="lohen-flex">
+                            <div class="texts">
+                                <img class="lohen-upper" src="./UX/bl2.png" alt="">
+                                <br>
+                                <span class="md">中深焙</span>
+                                <br>
+                                <span class="dw">mild roast</span>
+                                <br>
+                            </div>
+                            <img src="./UX/cf2.png" alt="">
+                        </div>
+                        <a class="btt1" href=""><span>立即前往選購</span></a>
+                    </li>
+                    <li>
+                        <div class="lohen-flex">
+                            <div class="texts">
+                                <img class="lohen-upper" src="./UX/bl3.png" alt="">
+                                <br>
+                                <span class="md">深焙</span>
+                                <br>
+                                <span class="dw">dark roast</span>
+                                <br>
+                            </div>
+                            <img src="./UX/cf3.png" alt="">
+                        </div>
+                        <a class="btt1" href=""><span>立即前往選購</span></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="anchor" id="ac3"></div>
+        <section class="section3">
+            <div class="innerw">
+                <!-- <img class="deco" src="./UX/decosp.png" alt=""> -->
+                <h3 class="minder">
+                    <span class="bigers">研磨度</span>
+                    <br>
+                    <span class="smalls">−Grind−</span>
+                </h3>
+                <div class="images">
+                    <img src="./UX/img5.jpeg" alt="">
+                    <img src="./UX/img6.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <div class="upper">
+                        <p>好咖啡的秘訣在於萃取，但萃取究竟代表什麼？萃取是咖啡豆的風味與香氣物質，被釋放到水中跟水結合的過程，結果就是杯美味的咖啡。然而，這些風味及芳香物質都代表某種風味，有些物質會帶來甜味、有些則是苦味，有些會帶來水果風味、有些則帶來澀味。這些物質也會在不同時間點被萃取出來。</p>
+                        <br>
+                        <p>2014及2016年美國沖煮冠軍Todd告訴作者，咖啡萃取出的物質順序為：
+                            酸質、甜味、苦味，最後則為澀味。</p>
+                        <p>這代表控制萃取率的同時，你可以控制多少物質會溶解到咖啡中，換句話說，你可以決定咖啡的風味。不論你是手沖還是煮濃縮咖啡，這都是創造一個沖煮配方的基本準則。</p>
+                        <p>而研磨粗細當然也是其中的考量。</p>
+                        <h3>研磨粗細是沖煮過程最大的變因之一，增加更多咖啡的表面積，讓熱水在相同時間下可以萃出更多物質。</h3>
+                        <p>如果咖啡粉太粗，通常沖出來的咖啡口感會較薄、濃度較低，因為萃取出的風味及物質較少。記得，當研磨越粗，表面積越小因而降低萃取率。此外，如果磨得太細，可能會萃取太多物質，你可能會得到苦味甚至灰燼般的味道。同時這咖啡風味會太濃烈，導致難以下嚥甚至入口。</p>
+                        
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="anchor" id="ac4"></div>
+        <section class="section4">
+            <div class="innerw">
+                <!-- <img class="deco" src="./UX/decosp.png" alt=""> -->
+                <h3 class="minder">
+                    <span class="bigers">保存條件</span>
+                    <br>
+                    <span class="smalls">−Storage−</span>
+                </h3>
+                <div class="images">
+                    <img src="./UX/img7.jpeg" alt="">
+                    <img src="./UX/img8.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <div class="upper">
+                        <p>想要完整保存咖啡的風味，首先要了解：「咖啡豆的風味成分揮發性高，屬於生鮮食材，不是乾貨」，建議在購買後一個月內使用完畢，如果想要延長保存的時間，可以利用低溫及高壓保存兩種方法，存放於 -18℃以下的溫度環境，或是在容器裡打進高壓氮氣。</p>
+                        <br>
+                        <h3>低溫保存</h3>
+                        <p>與多數食材一樣，低溫有助於降低分子活性，從而減緩食材變性的化學變化速度。這裡講的低溫，指的是低於-18℃的溫度環境，這也是多數生鮮食品凍藏保存的工業標準。
+
+                            家用冰箱的冷藏室通常保持在3~5℃，顯然不合適。冷凍庫是可能的選擇，但要怎麼知道它有沒有達到-18℃？
+                            
+                            去買盒冰淇淋回來，冰在您家中冰箱的冷凍庫。一個星期後取出開蓋瞧瞧，冰淇淋維持原樣或堅硬如鐵的，冷凍庫溫度肯定低於-18℃；常見的是變成高級奶昔，這樣的溫度對保存熟豆就沒什麼大幫助。
+                            
+                            個人做過實驗，把幾包半磅的新鮮熟豆裝袋放進冷凍庫裡，置放半年後取出。與新鮮烘焙的同品項熟豆杯測比較，除了沒有產生不好的味道外，原風味因揮發而降低，但大概還保留著70~80%左右的好味道。</p>
+                        <br>
+                        <h3>高壓雖有效，但很貴</h3>
+                        <p>化學上的勒沙特列原理（Le Chatelier principle）告訴我們：
+
+                            化學平衡是動態平衡，如果改變影響平衡的一個因素，平衡就向能夠減弱這種改變的方向移動，以抗衡該改變。
+                            新鮮熟豆老化的過程，總伴隨著氣體的排放，所以您會在手沖新鮮咖啡豆時見到粉層不斷地往上鼓脹。那麼，如果我們在保存新鮮熟豆的容器裡打進高壓氮氣，不就能讓熟豆老化的平衡往回走，減緩老化的速度？
+                            
+                            答案是肯定的，義大利豆商 Illy 就是應用這個方法來保存桶裝熟豆，以便產品銷往全球，成績斐然。不過您得為了這個方法訂製昂貴的耐壓容器，有時容器本身就比熟豆還貴。</p>
+                        
+                        <img src="" alt="">
+                    </div>
+
                 </div>
             </div>
         </section>

@@ -51,15 +51,11 @@
             color: #000;
             transition: 0.3s;
         }
-        a.thispage{
-            color: rgb(209, 131, 30);
-            font-weight: 700;
-            border-bottom: 3px solid rgb(186, 129, 5);
-        }
         .nav-item>a:hover{
             color: rgb(209, 131, 30);
             font-weight: 700;
             border-bottom: 3px solid rgb(186, 129, 5);
+
         }
         .navbar-nav li.nav-item{
             padding: 34px 20px;
@@ -170,63 +166,24 @@
 
 
 
-        .about-us{
+        .main-content{
+            padding-top: 90px;
+        }
+        .loginplace{
+            background: #f8f8f8;
+            margin-bottom: 20px;
+        }
+        .login-container{
             max-width: 1200px;
-            margin: 0 auto;
         }
-        .about-us h1{
-            padding: 150px 0 40px;
-            text-align: center;
+        .login-row{
+            width: 600px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: #fff;
+            max-width: 100%;
+            overflow: hidden;
         }
-        .about-us p{
-            line-height: 1;
-            color: rgb(49, 49, 49);
-            font-weight: 600;
-            
-        }
-        .about-us p:nth-child(2n){
-            line-height: 2;
-            margin-bottom: 50px;
-            color: rgb(112, 112, 112);
-            font-weight: normal;
-        }
-
-
-
-        .belt-img{
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-gap: 10px;
-        }
-        .belt-img img{
-            width: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-            aspect-ratio: 16/10;
-        }
-
-
-
-        .our-location{
-            max-width: 1200px;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-        }
-        .our-location p{
-            color: rgb(49, 49, 49);
-            font-weight: 600;
-        }
-        .shop-info{
-            padding: 0;
-            list-style-type: none;
-            color: rgb(113, 113, 113);
-            line-height: 2;
-        }
-
-
 
 
 
@@ -324,7 +281,7 @@
             <div class="main-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="thispage" href="aboutus.html">關於我們</a>
+                        <a href="aboutus.html">關於我們</a>
                     </li>
                     <li class="nav-item">
                         <a href="">全部商品</a>
@@ -418,47 +375,19 @@
         </header>
         <!-- header -->
 
-        <div class="about-us">
-            <h1>關於我們</h1>
-            <p>從小就對咖啡擁有濃厚的興趣以及擁有獨特的見解，2010年由澳洲打工度假回國後，開始購買烘焙機在家裡烘焙咖啡豆，依照伯元對品質的要求為客戶挑選有保證的咖啡豆莊園，在2015年成立網路商店Gary Cafe (自家烘焙咖啡館)，堅持三大品質目標：品嚐新鮮、品質篩選、品味精選</p>
-            <p>品味精選：</p>
-            <p>由於咖啡生豆是從國外進口，無論是莊園或農場所種植，每批的生豆中品質仍有出入，因此Gary細心為消費者精選優良的咖啡生豆，透過本專業的技術，烘培出最適合的咖啡風味，但通常這好風味很快就會賣完而缺貨，欲品嘗這好風味者請速購。</p>
-            <p>品質篩選：</p>
-            <p>手工篩選生豆，剔除發霉、蟲咬、破損等不良或有雜質者，由於咖啡生豆屬農產品之一，即使莊園級的咖啡生豆依然有參差不齊的豆兒，再次手工挑出約10%~25%的不良生豆，就是為了要確保咖啡風味及品質。</p>
-            <p>品嚐新鮮：</p>
-            <p>咖啡採接單烘培生產，咖啡豆皆以半磅單向排氣閥包裝，皆會標註『製造日期』與『有效日期』(兩個月為建議賞味期限)，保證收到的咖啡豆是一週內的新鮮烘焙咖啡豆，再透過烘焙日後5-7天的養豆期，即可品味伯元咖啡喔！</p>
-            <p></p>
-            <p>2018 TISCA 手沖咖啡競賽 冠軍<br>
-                2018 TISCA 杯測挑戰賽 第四名<br>
-                2016 大港盃烘豆比賽 第五名 <br>
-                CQI Q-Grader<br>
-                SCA 感官杯測中級認證 SCA Sensory Skills intermediate<br>
-                SCA 金杯初中級認證 *5 Brewing intermediate <br>
-                SCA 烘焙初中認證 Roasting intermediate <br>
-                2011 USTART大專生創業團隊 優選<br>
-                2012 嘉義市行銷文創商品-旅遊筆記書 優選</p>
-            
-        </div>
-        <div class="belt-img">
-            <img src="./UX/kurasubkk_80037958_407424759971588_7360947174666174981_n_1_1200x.webp" alt="">
-            <img src="./UX/L1350988_1800x.webp" alt="">
-        </div>
-        <div class="our-location">
-            <div>
-                <p>店家資訊</p>
-                <ul class="shop-info">
-                    <li>10491台灣台北市中山區中山北路一段9X號</li>
-                    <li>服務專線</li>
-                    <li>0800-800-824</li>
-                    <li>週一至週五 9:30~18:00(國定例假日除外)</li>
-                </ul>
+
+
+        <div class="main-content">
+            <div class="loginplace">
+                <div class="login-container">
+                    <div class="login-row">
+
+                    </div>
+
+                </div>
 
             </div>
-            <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6573.276661266708!2d133.31844900000002!3d34.53739000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15811039c62516f6!2sSUIREN%2B%20Coffee%20Roaster!5e0!3m2!1szh-TW!2sus!4v1664803434700!5m2!1szh-TW!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-
         </div>
-        
-
 
 
 

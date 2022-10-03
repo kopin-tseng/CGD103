@@ -12,7 +12,7 @@
         }
 
 
-        /* header start */
+        /* header  */
         .header{
             background-color: white;
             height: 90px;
@@ -31,6 +31,7 @@
         .logo img{
             width: 70px;
             height: 70px;
+            /* padding-top: 10px; */
         }
         .main-navbar{
             display: flex;
@@ -43,14 +44,85 @@
             list-style-type: none;
             align-items: center;
             flex-grow: 1;
+            /* height: 100%; */
         }
         .nav-item a{
             text-decoration: none;
             color: #000;
+            transition: 0.3s;
         }
-        .navbar-nav .nav-item{
-            padding: 0 20px;
+        .nav-item>a:hover{
+            color: rgb(209, 131, 30);
+            font-weight: 700;
+            border-bottom: 3px solid rgb(186, 129, 5);
+
         }
+        .navbar-nav li.nav-item{
+            padding: 34px 20px;
+            position: relative;
+            
+            
+        }
+        .navbar-nav li.nav-item:hover ul.layer1{
+            display: flex;
+        }
+        .navbar-nav li.nav-item:hover ul.layer1 ul{
+            display: block;
+            
+        }
+        .navbar-nav li.nav-item ul.layer1{
+            display: none;
+            min-width: 600px;
+            padding-left: 0;
+            list-style-type: none;
+            background-color: white;
+            opacity: 0.9;
+            position: absolute;
+            border: 1px solid rgb(235, 235, 235);
+            left: 0;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            z-index: 10;
+            padding: 20px;
+            top: 100%;
+            transition: 1s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 10px 0;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul li{
+            padding: 10px 0;
+            font-size: 15px;
+            /* opacity: 0.7; */
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li{
+            flex: 1;
+            margin: 10px;
+        }
+        .navbar-nav li.nav-item ul.layer2 li{
+            margin: 10px 0 10px 10px;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        .navbar-nav li.nav-item ul.layer1 li li:hover{
+            background-color: rgb(209, 209, 209);
+        }
+
+
+
+
+        
+        
         .search-panel{
             padding-left: 40px;
             position: relative;
@@ -66,12 +138,17 @@
         }
         .search-panel input{
             max-width: 300px;
+            /* width: 300px; */
             height: 40px;
             box-sizing: border-box;
             background-color: #eee;
             border-width: 0;
             border-radius: 0.25rem;
             padding: 0 45px;
+            transition: 0.5s;
+        }
+        .search-panel input:hover{
+            background-color: rgb(255, 234, 180);
         }
         .header-icon .icon-list{
             display: flex;
@@ -83,7 +160,7 @@
             margin: 0 15px;
 
         }
-        /* header end */
+        /* header  */
 
 
 
@@ -94,26 +171,29 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(252, 216, 55, 0.5);
+            background-color: rgba(138, 109, 23, 0.5);
             position: fixed;
             right: 1.875rem;
             bottom: 6.875rem;
             padding: 0.625rem;
             z-index: 3;
-            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
+            box-shadow: 0px 5px 3px 0px rgba(130, 130, 130, 0.1);
         }
         #gototop a img{
             width: 100%;
             opacity: 0.5;
         }
+
+
         .footerimg{
-            background-image: url(/UX/footerimg3.webp);
+            background-image: url(./UX/footerimg3.webp);
             background-size: cover;
             background-position:center center;
             width: 100%;
             height: 220px;
-            margin-top: 60px;
         }
+
+
 
         .footer-section{
             background-color: rgb(255, 255, 255);
@@ -121,6 +201,7 @@
             color : rgb(58, 58, 58);
             padding-top: 60px;
             width: 100%;
+            /* margin-top: 70px; */
         }
         .footer-wrap{
             max-width: 1200px;
@@ -180,16 +261,71 @@
                         <a href="aboutus.html">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a href="product-category.html">全部商品</a>
+                        <a href="">全部商品</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">咖啡豆</a>
+                        <a href="product-category.html">咖啡豆</a>
+                        <ul class="layer1">
+                            <li>
+                                <a href="">產地</a>
+                                <ul class="layer2">
+                                    <li>非洲</li>
+                                    <li>亞洲</li>
+                                    <li>北/中/南美洲</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">烘焙度</a>
+                                <ul class="layer2">
+                                    <li>淺焙</li>
+                                    <li>淺中焙</li>
+                                    <li>中焙</li>
+                                    <li>中深焙</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">處理法</a>
+                                <ul class="layer2">
+                                    <li>日曬</li>
+                                    <li>水洗</li>
+                                    <li>特殊處理</li>
+                                    <li>厭氧處理</li>
+                                    <li>蜜處理</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="">咖啡器具</a>
+                        <ul class="layer1" style="min-width: 400px;">
+                            <li>
+                                <a href="">磨豆機</a>
+                                <ul class="layer2">
+                                    <li>手磨</li>
+                                    <li>電磨</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">手沖器材</a>
+                                <ul class="layer2">
+                                    <li>濾杯</li>
+                                    <li>手沖壺</li>
+                                    <li>容器/耗材類</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="coffee-knowledge.html">咖啡知識</a>
+                        <ul class="layer1" style="min-width: 200px;">
+                            <li>
+                                <a href="">咖啡知識</a>
+                                <ul class="layer2">
+                                    <li>咖啡豆挑選</li>
+                                    <li>手沖咖啡入門</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <div class="search-panel">
@@ -206,7 +342,7 @@
                             </a>
                         </li>
                         <li class="icon">
-                            <a href="">
+                            <a href="member-login.html">
                                 <img src="./UX/person.svg" alt="">
                             </a>
                         </li>

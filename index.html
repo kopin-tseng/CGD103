@@ -53,11 +53,13 @@
         .nav-item>a:hover{
             color: rgb(209, 131, 30);
             font-weight: 700;
+            border-bottom: 3px solid rgb(186, 129, 5);
 
         }
         .navbar-nav li.nav-item{
             padding: 34px 20px;
             position: relative;
+            
             
         }
         .navbar-nav li.nav-item:hover ul.layer1{
@@ -142,6 +144,10 @@
             border-width: 0;
             border-radius: 0.25rem;
             padding: 0 45px;
+            transition: 0.5s;
+        }
+        .search-panel input:hover{
+            background-color: rgb(255, 234, 180);
         }
         .header-icon .icon-list{
             display: flex;
@@ -175,10 +181,12 @@
             color: #fff;
             font-style: italic;
             font-weight: 600;
+            opacity: 0.9;
         }
         .slick img{
             width: 100%;
             vertical-align: middle;
+            aspect-ratio: 22/10;
         }
         .new-message{
             width: 100%;
@@ -239,7 +247,7 @@
             width: calc(20% - 20px);
             /* border: 1px solid rgb(234, 234, 234); */
             box-sizing: border-box;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow:hidden;
             position: relative;
         }
@@ -250,7 +258,7 @@
             object-fit: cover;
             object-position: center;
             /* aspect-ratio: 1/1; */
-            border-radius: 10px;
+            border-radius: 15px;
             transition: 0.4s;
         }
         .quick-item a p{
@@ -346,13 +354,14 @@
         .inner dl dt img{
             /* display: block; */
             width: 100%;
-            border-radius: 10px;
+            border-radius: 7px;
             vertical-align: top;
             border: 0;
+            aspect-ratio: 16/10;
         }
         .inner dl dd{
             width: 50%;
-            padding: 0 0 0 10%;
+            padding: 0 0 0 5%;
             max-width: 540px;
             min-width: 360px;
         }
@@ -386,6 +395,7 @@
         .inner dl dd p{
             font-size: 15px;
             line-height: 1.8;
+            color: rgb(113, 113, 113);
         }
         .inner dl dd a{
             margin: 40px 0 0;
@@ -398,9 +408,16 @@
             font-weight: bold;
             transition: all 300ms ease;
             position: relative;
+            /* background-color: #000;
+            color: #fff; */
+            border: 1px solid rgb(100, 100, 100);
+            color: #000;
+            text-decoration: none;
+        }
+        .inner dl dd a:hover{
             background-color: #000;
             color: #fff;
-            text-decoration: none;
+
         }
         /* section  endline*/
 
@@ -413,11 +430,12 @@
             margin: 0 auto;
             padding: 0 20px;
             box-sizing: border-box;
+            border-top: 2px solid rgb(220, 220, 220);
         }
         h2.title{
             text-align: center;
-            padding-bottom: 40px;
             font-size: 30px;
+            margin: 40px 0 50px; 
         }
         .feature-list{
             /* display: flex; */
@@ -438,14 +456,33 @@
             width: 100%;
             vertical-align: middle;
         }
+        .feature-item p{
+            padding: 15px;
+            margin: 0;
+        }
+        .feature-item p:nth-child(1){
+            font-size: 14px;
+            color: rgb(88, 88, 88);
+        }
         .feature-item .add-cart{
             text-align: center;
-            background-color: #000;
+            background-color: rgb(255, 255, 255);
             padding: 10px 0;
+            border: 1px solid black;
+            transition: 0.3s;
         }
         .feature-item .add-cart a{
-            color: #fff;
             text-decoration: none;
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+        }
+        .feature-item .add-cart:hover a{
+            color: rgb(255, 255, 255);
+        }
+        .feature-item .add-cart:hover{
+            background-color: rgb(0, 0, 0);
+            /* border: none; */
+            
         }
         /* feature end */
 
@@ -455,11 +492,12 @@
 
         .product-intro{
             width: 100%;
+            background-color: rgb(242, 242, 242);
         }
         .product-intro .intro-wrap{
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 50px 30px;
         }
         .intro-wrap .intro-list{
             display: flex;
@@ -468,6 +506,7 @@
         }
         .intro-wrap .intro-list:nth-child(2){
             flex-direction: row-reverse;
+            margin-bottom: 0;
         }
         .intro-list .intro{
             text-align: right;
@@ -475,7 +514,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            padding: 60px;
+            padding: 50px;
             width: 0;
             /* background-color: rgb(242, 242, 242);  */
             flex-grow: 2;
@@ -488,7 +527,7 @@
             justify-content: flex-start;
         }
         .intro-box{
-            width: 70%;
+            /* width: 75%; */
         }
         .intro-box div{
             display: flex;
@@ -497,9 +536,16 @@
         .intro-box div a{
             text-align: center;
             text-decoration: none;
+            /* background-color: rgb(255, 255, 255); */
+            color: rgb(0, 0, 0);
+            border: 1px solid black;
+            padding: 10px 30px;
+            transition: 0.4s;
+        }
+        .intro-box div a:hover{
             background-color: #000;
             color: #fff;
-            padding: 10px 30px;
+
         }
         .intro input{
             width: 100px;
@@ -513,10 +559,23 @@
             height: 600px;
             object-fit: cover;
             vertical-align: middle;
+            border-radius: 10px;
+            transition: 0.5s;
         }
+        .intro-photo img:hover{
+            /* filter: brightness(80%); */
+            transform: scale(1.03);
+
+        }
+
+
+
         .product-more{
-            width: 100%;
-            padding: 60px 0;
+            /* width: 100%; */
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding-bottom: 60px;
+            border-top: 1px solid rgb(220, 220, 220);
         }
         .product-more .more-content{
             max-width: 1200px;
@@ -577,6 +636,9 @@
 
         .coffee-info{
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgb(220, 220, 220);
         }
         .coffee-info .info-list{
             max-width: 1200px;
@@ -615,11 +677,21 @@
             font-weight: 300;
 
         }
+        a.info-item div{
+            overflow: hidden;
+        }
         a.info-item div img{
             width: 100%;
             vertical-align: middle;
             object-fit: cover;
             aspect-ratio: 16/10;
+            transition: 0.5s;
+        }
+        a.info-item:hover div img{
+            transform: scale(1.1);
+        }
+        a.info-item:hover{
+            background: rgb(249, 249, 249);
         }
 
 
@@ -723,10 +795,10 @@
                         <a href="aboutus.html">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a href="product-category.html">全部商品</a>
+                        <a href="">全部商品</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">咖啡豆</a>
+                        <a href="product-category.html">咖啡豆</a>
                         <ul class="layer1">
                             <li>
                                 <a href="">產地</a>
@@ -759,7 +831,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="">咖啡器具</a>
-                        <ul class="layer1">
+                        <ul class="layer1" style="min-width: 400px;">
                             <li>
                                 <a href="">磨豆機</a>
                                 <ul class="layer2">
@@ -772,20 +844,19 @@
                                 <ul class="layer2">
                                     <li>濾杯</li>
                                     <li>手沖壺</li>
-                                    <li>相關器材</li>
+                                    <li>容器/耗材類</li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a href="coffee-knowledge.html">咖啡知識</a>
-                        <ul class="layer1">
+                        <ul class="layer1" style="min-width: 200px;">
                             <li>
-                                <a href="">次title</a>
+                                <a href="">咖啡知識</a>
                                 <ul class="layer2">
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
+                                    <li>咖啡豆挑選</li>
+                                    <li>手沖咖啡入門</li>
                                 </ul>
                             </li>
                         </ul>
@@ -805,7 +876,7 @@
                             </a>
                         </li>
                         <li class="icon">
-                            <a href="">
+                            <a href="member-login.html">
                                 <img src="./UX/person.svg" alt="">
                             </a>
                         </li>
@@ -849,7 +920,7 @@
             </div>
             <div class="quick-item">
                 <a href="">
-                    <img src="./UX/Mills.jpeg" alt="">
+                    <img src="./UX/c40.jpeg" alt="">
                     <p>磨豆機</p>
                 </a>
             </div>
@@ -878,15 +949,15 @@
             <div class="inner">
                 <dl>
                     <dt>
-                        <img src="./UX/1.jpeg" alt="">
+                        <img src="./UX/cb2.webp" alt="">
                     </dt>
                     <dd>
                         <h1>
-                            <small style="font-weight: 300;">希望讓更多人喝到舒服的一杯好咖啡</small>
+                            <small style="font-weight: 400;color: rgb(113, 113, 113);">希望讓更多人喝到舒服的一杯好咖啡</small>
                             自家烘焙咖啡豆
                         </h1>
                         <p>從生豆挑選到烘焙的過程皆為您嚴格把關。<br>為了追求一杯心目中的精品優質的咖啡，從生豆到烘焙到沖煮，都希望能給客戶一個買得起又好喝的咖啡。團隊成員也陸續取得多種證照，提升gary cafe的咖啡專業能力，證照包括CQI Q grader/SCAE 金杯/烘焙認證/SCA感官杯測認證</p>
-                        <a href="">立即選購</a>
+                        <a href="">前往選購</a>
                     </dd>
                 </dl>
             </div>
@@ -1139,12 +1210,12 @@
 
         </div>
 
-        <div class="footerimg"></div>
-
-
-
-
+        
+        
+        
+        
         <!-- footer -->
+        <div class="footerimg"></div>
         <footer class="footer-section">
             <div class="footer-wrap">
                 <div class="footer-link">
