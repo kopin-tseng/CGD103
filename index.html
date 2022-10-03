@@ -43,14 +43,83 @@
             list-style-type: none;
             align-items: center;
             flex-grow: 1;
+            /* height: 100%; */
         }
         .nav-item a{
             text-decoration: none;
             color: #000;
+            transition: 0.3s;
         }
-        .navbar-nav .nav-item{
-            padding: 0 20px;
+        .nav-item>a:hover{
+            color: rgb(209, 131, 30);
+            font-weight: 700;
+
         }
+        .navbar-nav li.nav-item{
+            padding: 34px 20px;
+            position: relative;
+            
+        }
+        .navbar-nav li.nav-item:hover ul.layer1{
+            display: flex;
+        }
+        .navbar-nav li.nav-item:hover ul.layer1 ul{
+            display: block;
+            
+        }
+        .navbar-nav li.nav-item ul.layer1{
+            display: none;
+            min-width: 600px;
+            padding-left: 0;
+            list-style-type: none;
+            background-color: white;
+            opacity: 0.9;
+            position: absolute;
+            border: 1px solid rgb(235, 235, 235);
+            left: 0;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            z-index: 10;
+            padding: 20px;
+            top: 100%;
+            transition: 1s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 10px 0;
+        }
+        .navbar-nav li.nav-item ul.layer1 li ul li{
+            padding: 10px 0;
+            font-size: 15px;
+            /* opacity: 0.7; */
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li{
+            flex: 1;
+            margin: 10px;
+        }
+        .navbar-nav li.nav-item ul.layer2 li{
+            margin: 10px 0 10px 10px;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+            transition: 0.2s;
+        }
+        .navbar-nav li.nav-item ul.layer1 li a:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        .navbar-nav li.nav-item ul.layer1 li li:hover{
+            background-color: rgb(209, 209, 209);
+        }
+
+
+
+
+        
+        
         .search-panel{
             padding-left: 40px;
             position: relative;
@@ -87,9 +156,25 @@
         /* header  */
 
 
+
+
+
         .slick{
             box-sizing: border-box;
-            padding-top: 90px;
+            margin-top: 90px;
+            /* padding-top: 90px; */
+            position: relative;
+        }
+        .slick p{
+            position: absolute;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            top: 40%;
+            font-size: 60px;
+            color: #fff;
+            font-style: italic;
+            font-weight: 600;
         }
         .slick img{
             width: 100%;
@@ -152,8 +237,11 @@
         .quick-opt .quick-item{
             margin: 0 10px 0 10px;
             width: calc(20% - 20px);
-            border: 1px solid rgb(234, 234, 234);
+            /* border: 1px solid rgb(234, 234, 234); */
             box-sizing: border-box;
+            border-radius: 10px;
+            overflow:hidden;
+            position: relative;
         }
         .quick-item a img{
             width: 100%;
@@ -162,6 +250,27 @@
             object-fit: cover;
             object-position: center;
             /* aspect-ratio: 1/1; */
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .quick-item a p{
+            margin: 0;
+            display: none;
+            z-index: 100;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            font-size: 35px;
+            font-weight: 400;
+            bottom: 15%;
+            left: 15%;
+        }
+        .quick-item a img:hover{
+            /* box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 25%); */
+            filter: blur(3px) brightness(50%);
+            transform: scale(1.1);
+        }
+        .quick-item a img:hover~p{
+            display: block;
         }
 
 
@@ -263,7 +372,7 @@
             z-index: -1;
             top: -50px;
             right: 30px;
-            background: url(beans_machine.png) no-repeat center center;
+            background: url(./UX/beans_machine.png) no-repeat center center;
             background-size: contain;
 
         }
@@ -348,7 +457,7 @@
             width: 100%;
         }
         .product-intro .intro-wrap{
-            max-width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 30px;
         }
@@ -401,7 +510,7 @@
         }
         .intro-photo img{
             width: 100%;
-            height: 700px;
+            height: 600px;
             object-fit: cover;
             vertical-align: middle;
         }
@@ -418,12 +527,24 @@
             grid-template-rows: repeat(2,1fr);
             gap: 30px;
         }
+        .more-item a{
+            text-decoration: none;
+            color: rgb(47, 47, 47);
+        }
+        .more-item div{
+            overflow: hidden;
+        }
         .more-item img{
             width: 100%;
             vertical-align: middle;
             object-fit: cover;
             object-position: center;
             aspect-ratio: 16/10;
+            transition: 1s;
+        }
+        .more-item img:hover{
+            /* filter: brightness(50%); */
+            transform: scale(1.2);
         }
         
 
@@ -483,13 +604,13 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(252, 216, 55, 0.5);
+            background-color: rgba(138, 109, 23, 0.5);
             position: fixed;
             right: 1.875rem;
             bottom: 6.875rem;
             padding: 0.625rem;
             z-index: 3;
-            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
+            box-shadow: 0px 5px 3px 0px rgba(130, 130, 130, 0.1);
         }
         #gototop a img{
             width: 100%;
@@ -498,7 +619,7 @@
 
 
         .footerimg{
-            background-image: url(footerimg3.webp);
+            background-image: url(./UX/footerimg3.webp);
             background-size: cover;
             background-position:center center;
             width: 100%;
@@ -568,7 +689,7 @@
         <!-- header -->
         <header class="header">
             <div class="logo">
-                <a href="/index.html"><img src="LOGO.png" alt="GARY CAFE LOGO ICON"></a>
+                <a href="/index.html"><img src="./UX/LOGO.png" alt="GARY CAFE LOGO ICON"></a>
             </div>
             <div class="main-navbar">
                 <ul class="navbar-nav">
@@ -580,17 +701,73 @@
                     </li>
                     <li class="nav-item">
                         <a href="">咖啡豆</a>
+                        <ul class="layer1">
+                            <li>
+                                <a href="">產地</a>
+                                <ul class="layer2">
+                                    <li>非洲</li>
+                                    <li>亞洲</li>
+                                    <li>北/中/南美洲</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">烘焙度</a>
+                                <ul class="layer2">
+                                    <li>淺焙</li>
+                                    <li>淺中焙</li>
+                                    <li>中焙</li>
+                                    <li>中深焙</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">處理法</a>
+                                <ul class="layer2">
+                                    <li>日曬</li>
+                                    <li>水洗</li>
+                                    <li>特殊處理</li>
+                                    <li>厭氧處理</li>
+                                    <li>蜜處理</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="">咖啡器具</a>
+                        <ul class="layer1">
+                            <li>
+                                <a href="">磨豆機</a>
+                                <ul class="layer2">
+                                    <li>手磨</li>
+                                    <li>電磨</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">手沖器材</a>
+                                <ul class="layer2">
+                                    <li>濾杯</li>
+                                    <li>手沖壺</li>
+                                    <li>相關器材</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="coffee-knowledge.html">咖啡知識</a>
+                        <a href="./UX/coffee-knowledge.html">咖啡知識</a>
+                        <ul class="layer1">
+                            <li>
+                                <a href="">次title</a>
+                                <ul class="layer2">
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <div class="search-panel">
                     <a href="">
-                        <img src="search.svg" alt="">
+                        <img src="./UX/search.svg" alt="">
                     </a>
                     <input id="global-search" type="text" placeholder="搜尋">
                 </div>
@@ -598,12 +775,12 @@
                     <ul class="icon-list">
                         <li class="icon">
                             <a href="">
-                                <img src="shopping_cart.svg" alt="">
+                                <img src="./UX/shopping_cart.svg" alt="">
                             </a>
                         </li>
                         <li class="icon">
                             <a href="">
-                                <img src="person.svg" alt="">
+                                <img src="./UX/person.svg" alt="">
                             </a>
                         </li>
                     </ul>
@@ -616,7 +793,10 @@
 
         <div class="slick"><!-- 使用slick套件 -->
             <a>
-                <img src="banner1.jpeg" alt="banner">
+                <img src="./UX/banner1.jpeg" alt="banner">
+                <p>A little treat
+                   <br> for a day
+                   <br> with specialty</p>
             </a>
         </div>
 
@@ -637,27 +817,32 @@
         <div class="quick-opt">
             <div class="quick-item">
                 <a href="">
-                    <img src="coffeebeans.jpeg" alt="">
+                    <img src="./UX/coffeebeans.jpeg" alt="">
+                    <p>咖啡豆</p>
                 </a>
             </div>
             <div class="quick-item">
                 <a href="">
-                    <img src="Mills.jpeg" alt="">
+                    <img src="./UX/Mills.jpeg" alt="">
+                    <p>磨豆機</p>
                 </a>
             </div>
             <div class="quick-item">
                 <a href="">
-                    <img src="Drippers.webp" alt="">
+                    <img src="./UX/Drippers.webp" alt="">
+                    <p>濾杯</p>
                 </a>
             </div>
             <div class="quick-item">
                 <a href="">
-                    <img src="Filters.webp" alt="">
+                    <img src="./UX/Filters.webp" alt="">
+                    <p>濾紙</p>
                 </a>
             </div>
             <div class="quick-item">
                 <a href="">
-                    <img src="Kettles.webp" alt="">
+                    <img src="./UX/Kettles.webp" alt="">
+                    <p>手沖壺</p>
                 </a>
             </div>
         </div>
@@ -667,7 +852,7 @@
             <div class="inner">
                 <dl>
                     <dt>
-                        <img src="1.jpeg" alt="">
+                        <img src="./UX/1.jpeg" alt="">
                     </dt>
                     <dd>
                         <h1>
@@ -690,7 +875,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-1.webp" alt="">
+                                <img src="./UX/products-1.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -704,7 +889,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-2.webp" alt="">
+                                <img src="./UX/products-2.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -718,7 +903,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-3.webp" alt="">
+                                <img src="./UX/products-3.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -732,7 +917,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-4.webp" alt="">
+                                <img src="./UX/products-4.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -748,7 +933,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-1.webp" alt="">
+                                <img src="./UX/products-1.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -762,7 +947,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-2.webp" alt="">
+                                <img src="./UX/products-2.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -776,7 +961,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-3.webp" alt="">
+                                <img src="./UX/products-3.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -790,7 +975,7 @@
                     <div class="feature-item">
                         <div>
                             <a href="">
-                                <img src="products-4.webp" alt="">
+                                <img src="./UX/products-4.webp" alt="">
                             </a>
                         </div>
                         <div>
@@ -823,7 +1008,7 @@
                     </div>
                     <div class="intro-photo">
                         <a href="">
-                            <img src="intro-photo1-ORIGAMI.webp" alt="">
+                            <img src="./UX/intro-photo1-ORIGAMI.webp" alt="">
                         </a>
                     </div>
 
@@ -842,7 +1027,7 @@
                     </div>
                     <div class="intro-photo">
                         <a href="">
-                            <img src="intro-photo2.jpeg" alt="">
+                            <img src="./UX/intro-photo2.jpeg" alt="">
                         </a>
                     </div>
 
@@ -857,20 +1042,36 @@
             <h2 class="title">精選咖啡器具</h2>
             <div class="more-content">
                 <div class="more-item">
-                    <img src="more-p1-r220b.jpeg" alt="">
-                    <h3>FUJI ROYAL 株式会社富士珈機 R-220鬼齒磨豆機</h3>
+                    <a href="">
+                        <div>
+                            <img src="./UX/more-p1-r220b.jpeg" alt="">
+                        </div>
+                        <h3>FUJI ROYAL 株式会社富士珈機 R-220鬼齒磨豆機</h3>
+                    </a>
                 </div>
                 <div class="more-item">
-                    <img src="more-p2.webp" alt="">
-                    <h3>珈堂 M1 星芒濾杯「極」 KADOU & HASAMI 波佐見燒</h3>
+                    <a href="">
+                        <div>
+                            <img src="./UX/more-p2.webp" alt="">
+                        </div>
+                        <h3>珈堂 M1 星芒濾杯「極」 KADOU & HASAMI 波佐見燒</h3>
+                    </a>
                 </div>
                 <div class="more-item">
-                    <img src="more-p3-FELLOW STAGG EKG.webp" alt="">
-                    <h3>FELLOW STAGG EKG【智慧電子溫控壺】</h3>
+                    <a href="">
+                        <div>
+                            <img src="./UX/more-p3-FELLOW STAGG EKG.webp" alt="">
+                        </div>
+                        <h3>FELLOW STAGG EKG【智慧電子溫控壺】</h3>
+                    </a>
                 </div>
                 <div class="more-item">
-                    <img src="more-p4.webp" alt="">
-                    <h3>HARIO ZEBRANG DRIPPER 矽膠濾杯連濾紙套裝</h3>
+                    <a href="">
+                        <div>
+                            <img src="./UX/more-p4.webp" alt="">
+                        </div>
+                        <h3>HARIO ZEBRANG DRIPPER 矽膠濾杯連濾紙套裝</h3>
+                    </a>
                 </div>
             </div>
         </div>
@@ -882,7 +1083,7 @@
             <div class="info-list">
                 <a class="info-item" href="">
                     <div>
-                        <img src="coffee lesson.jpeg" alt="">
+                        <img src="./UX/coffee lesson.jpeg" alt="">
                     </div>
                     <span>2022/09/09</span>
                     <h3>Gary Cafe手沖咖啡小教室</h3>
@@ -890,7 +1091,7 @@
                 </a>
                 <a class="info-item" href="">
                     <div>
-                        <img src="Coffee-Cherry-Plant.jpeg" alt="">
+                        <img src="./UX/Coffee-Cherry-Plant.jpeg" alt="">
                     </div>
                     <span>2022/05/13</span>
                     <h3>咖啡豆如何挑選</h3>
@@ -898,7 +1099,7 @@
                 </a>
                 <a class="info-item" href="">
                     <div>
-                        <img src="coffee dripper.webp" alt="">
+                        <img src="./UX/coffee dripper.webp" alt="">
                     </div>
                     <span>2022/09/20</span>
                     <h3>手沖咖啡器具挑選</h3>
@@ -939,13 +1140,13 @@
                     </div>
                     <div class="footer-icon">
                         <a href="">
-                            <img width="40px" height="40px" src="3069725_circle_line_messenger_round icon_icon.svg" alt="">
+                            <img width="40px" height="40px" src="./UX/3069725_circle_line_messenger_round icon_icon.svg" alt="">
                         </a>
                         <a href="">
-                            <img width="40px" height="40px" src="317752_facebook_social media_social_icon.svg" alt="">
+                            <img width="40px" height="40px" src="./UX/317752_facebook_social media_social_icon.svg" alt="">
                         </a>
                         <a href="">
-                            <img width="40px" height="40px" src="3225191_app_instagram_logo_media_popular_icon.svg" alt="">
+                            <img width="40px" height="40px" src="./UX/3225191_app_instagram_logo_media_popular_icon.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -953,7 +1154,7 @@
             
             <div class="footer-legal">
                 <div id="gototop">
-                    <a href="#"><img src="gototop.svg" alt=""></a>
+                    <a href="#"><img src="./UX/gototop.svg" alt=""></a>
                   </div>
                 <div class="footer-legal-copyright">Copyright © 2022 GARY CAFE. 保留一切權利。</div>
                 <div class="footer-legal-link">

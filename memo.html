@@ -1,0 +1,88 @@
+CSS
+1.優先權 important > inline style > ID > class > tag > * > inharit
+2.偽元素(pseudo-element) ::before  ::after
+3.偽類(pseudo-class) :hover :active :visited
+4. .a.b (a class內同時有b class時)
+   .a .b (a class子層有 b class時)
+   .a+.b (a內的第一個b)
+5.pseudo-class 是以 : 為開頭
+pseudo-element 是以 :: 為開頭
+
+
+
+position
+
+沒有定位的物件預設層級後比前高，有定位則相反。
+z-index ＋層級較高。少用負值。
+contant 看的是空間
+item 看的是子物件
+related  參考原本自己的位子
+fixed    參考viewport的位子
+absolute 參考有定位之父層位子
+sticky   參考父層
+
+relative 參考自己原本的位置，會保留原本的位置
+absolute 參考具定位之父層(找不到就往上層往上找)，不會保留原本的位置
+fixed 參考viewport位置，不會保留原本的位置，會在固定位置不動
+sticky 參考父層空間，會佔位，離開父層就會被捲走
+
+
+置中
+text-align:center 對容器內的元件水平置中
+vertical-align    只對inline table 有垂直置中作用
+
+等比例
+aspect-ratio 1/1 
+
+
+RWD
+基本原理
+媒體查詢
+斷點控制
+RWD實作
+由小到大/由大到小的設計概念
+格線系統
+
+RWD選單原理
+選單控制
+
+
+框架
+
+
+
+
+JavaScript
+    變數    
+    1.弱型別(變數不需要宣告型別),變數沒有型別，值或物件才有。
+    2.變數命名可使用abc _ $,不可使用保留字及關鍵字
+    3.有區分大小寫
+    4.var, let const(ES6新增)
+    5.所有沒有透過 var 宣告的變數都會自動變成"全域變數"
+    6.基本型別：string、number、boolean、null、undefined
+      物件型別：其他
+      判斷型別：typeof
+   陣列
+
+   函式
+   IIFE : 立即執行函式
+   callback function : 在函式中呼叫另一個函式
+   函式及變數的提升
+   作用域Scope
+   prototype chain
+   DOM BOM
+   MVC
+   this
+   箭頭函式
+   同步/非同步
+   
+   物件
+
+
+1.首頁
+3.關於我
+2.主商品列表
+4.商品選購頁
+5.咖啡知識-咖啡豆挑選
+6.咖啡知識-咖啡沖煮入門
+7.會員登入/註冊
