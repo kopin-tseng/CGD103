@@ -251,7 +251,7 @@
             object-position: center;
             /* aspect-ratio: 1/1; */
             border-radius: 10px;
-            transition: 1s;
+            transition: 0.4s;
         }
         .quick-item a p{
             margin: 0;
@@ -266,7 +266,7 @@
         }
         .quick-item a img:hover{
             /* box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 25%); */
-            filter: blur(3px) brightness(50%);
+            filter: blur(3px) brightness(70%);
             transform: scale(1.1);
         }
         .quick-item a img:hover~p{
@@ -527,9 +527,28 @@
             grid-template-rows: repeat(2,1fr);
             gap: 30px;
         }
+        .more-item{
+            position: relative;
+        }
         .more-item a{
             text-decoration: none;
             color: rgb(47, 47, 47);
+        }
+        .more-item a p{
+            position: absolute;
+            /* width: 100%; */
+            /* margin: 0 auto; */
+            text-align: center;
+            left: 42%;
+            top:38%;
+            padding: 10px 15px;
+            font-size: 20px;
+            transition: 1s;
+            display: none;
+            color: white;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            font-weight: 300;
         }
         .more-item div{
             overflow: hidden;
@@ -540,11 +559,18 @@
             object-fit: cover;
             object-position: center;
             aspect-ratio: 16/10;
-            transition: 1s;
+            transition: 0.5s;
         }
         .more-item img:hover{
-            /* filter: brightness(50%); */
-            transform: scale(1.2);
+            filter: brightness(50%);
+            transform: scale(1.1);
+        }
+        .more-item div:hover~p{
+            display: block;
+            opacity: 1;
+        }
+        .more-item div:hover~h3{
+            color: rgb(142, 108, 20);
         }
         
 
@@ -752,7 +778,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="./UX/coffee-knowledge.html">咖啡知識</a>
+                        <a href="coffee-knowledge.html">咖啡知識</a>
                         <ul class="layer1">
                             <li>
                                 <a href="">次title</a>
@@ -1046,6 +1072,7 @@
                         <div>
                             <img src="./UX/more-p1-r220b.jpeg" alt="">
                         </div>
+                        <p>瞭解更多</p>
                         <h3>FUJI ROYAL 株式会社富士珈機 R-220鬼齒磨豆機</h3>
                     </a>
                 </div>
@@ -1054,6 +1081,7 @@
                         <div>
                             <img src="./UX/more-p2.webp" alt="">
                         </div>
+                        <p>瞭解更多</p>
                         <h3>珈堂 M1 星芒濾杯「極」 KADOU & HASAMI 波佐見燒</h3>
                     </a>
                 </div>
@@ -1062,6 +1090,7 @@
                         <div>
                             <img src="./UX/more-p3-FELLOW STAGG EKG.webp" alt="">
                         </div>
+                        <p>瞭解更多</p>
                         <h3>FELLOW STAGG EKG【智慧電子溫控壺】</h3>
                     </a>
                 </div>
@@ -1070,6 +1099,7 @@
                         <div>
                             <img src="./UX/more-p4.webp" alt="">
                         </div>
+                        <p>瞭解更多</p>
                         <h3>HARIO ZEBRANG DRIPPER 矽膠濾杯連濾紙套裝</h3>
                     </a>
                 </div>
