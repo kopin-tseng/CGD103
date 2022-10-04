@@ -9,6 +9,7 @@
     <style>
         .main{
             width: 100%;
+            background-color: #f9f9f9;
         }
 
 
@@ -170,25 +171,49 @@
 
 
 
+        .main-section{
+            box-sizing: border-box;
+            width: 100%;
+            /* padding: 100px 0; */
+            display: flex;
+            gap: 10px;
+        }
+        .main-section div{
+            overflow: hidden;
+        }
+        .main-section img{
+            width: 100%;
+            vertical-align: middle;
+            transition: 0.3s;
+        }
+        .main-section img:hover{
+            transform: scale(1.1);
+            opacity: 0.9;
+
+        }
+
+
+
         .about-us{
             max-width: 1200px;
             margin: 0 auto;
-        }
-        .about-us h1{
-            padding: 150px 0 40px;
-            text-align: center;
-        }
-        .about-us p{
-            line-height: 1;
-            color: rgb(49, 49, 49);
-            font-weight: 600;
             
         }
-        .about-us p:nth-child(2n){
+        .about-us h1{
+            padding: 200px 0 40px;
+            text-align: center;
+        }
+        .about-us .us-text p{
             line-height: 2;
             margin-bottom: 50px;
             color: rgb(112, 112, 112);
+            background: #f9f9f9;
             font-weight: normal;
+        }
+        .about-us  .us-text p:nth-child(2n){
+            line-height: 1;
+            color: rgb(49, 49, 49);
+            font-weight: 600;
         }
 
 
@@ -418,25 +443,43 @@
         </header>
         <!-- header -->
 
+
+        <!-- <section class="main-section">
+            <div><img src="./UX/top1.webp" alt=""></div>
+            <div><img src="./UX/top2.webp" alt=""></div>
+            <div><img src="./UX/top3.webp" alt=""></div>
+            <div><img src="./UX/top4.webp" alt=""></div>
+        </section> -->
+
+
         <div class="about-us">
             <h1>關於我們</h1>
-            <p>從小就對咖啡擁有濃厚的興趣以及擁有獨特的見解，2010年由澳洲打工度假回國後，開始購買烘焙機在家裡烘焙咖啡豆，依照伯元對品質的要求為客戶挑選有保證的咖啡豆莊園，在2015年成立網路商店Gary Cafe (自家烘焙咖啡館)，堅持三大品質目標：品嚐新鮮、品質篩選、品味精選</p>
-            <p>品味精選：</p>
-            <p>由於咖啡生豆是從國外進口，無論是莊園或農場所種植，每批的生豆中品質仍有出入，因此Gary細心為消費者精選優良的咖啡生豆，透過本專業的技術，烘培出最適合的咖啡風味，但通常這好風味很快就會賣完而缺貨，欲品嘗這好風味者請速購。</p>
-            <p>品質篩選：</p>
-            <p>手工篩選生豆，剔除發霉、蟲咬、破損等不良或有雜質者，由於咖啡生豆屬農產品之一，即使莊園級的咖啡生豆依然有參差不齊的豆兒，再次手工挑出約10%~25%的不良生豆，就是為了要確保咖啡風味及品質。</p>
-            <p>品嚐新鮮：</p>
-            <p>咖啡採接單烘培生產，咖啡豆皆以半磅單向排氣閥包裝，皆會標註『製造日期』與『有效日期』(兩個月為建議賞味期限)，保證收到的咖啡豆是一週內的新鮮烘焙咖啡豆，再透過烘焙日後5-7天的養豆期，即可品味伯元咖啡喔！</p>
-            <p></p>
-            <p>2018 TISCA 手沖咖啡競賽 冠軍<br>
-                2018 TISCA 杯測挑戰賽 第四名<br>
-                2016 大港盃烘豆比賽 第五名 <br>
-                CQI Q-Grader<br>
-                SCA 感官杯測中級認證 SCA Sensory Skills intermediate<br>
-                SCA 金杯初中級認證 *5 Brewing intermediate <br>
-                SCA 烘焙初中認證 Roasting intermediate <br>
-                2011 USTART大專生創業團隊 優選<br>
-                2012 嘉義市行銷文創商品-旅遊筆記書 優選</p>
+            <section class="main-section">
+                <div><img src="./UX/top1.webp" alt=""></div>
+                <div><img src="./UX/top2.webp" alt=""></div>
+                <div><img src="./UX/top3.webp" alt=""></div>
+                <div><img src="./UX/top4.webp" alt=""></div>
+            </section>
+            <div class="us-text">
+                <p>從小就對咖啡擁有濃厚的興趣以及擁有獨特的見解，2010年由澳洲打工度假回國後，開始購買烘焙機在家裡烘焙咖啡豆，對品質的要求為客戶挑選有保證的咖啡豆莊園，在2015年成立網路商店Gary Cafe (自家烘焙咖啡館)，堅持三大品質目標：品嚐新鮮、品質篩選、品味精選</p>
+                <p>品味精選：</p>
+                <p>由於咖啡生豆是從國外進口，無論是莊園或農場所種植，每批的生豆中品質仍有出入，因此Gary細心為消費者精選優良的咖啡生豆，透過本專業的技術，烘培出最適合的咖啡風味，但通常這好風味很快就會賣完而缺貨，欲品嘗這好風味者請速購。</p>
+                <p>品質篩選：</p>
+                <p>手工篩選生豆，剔除發霉、蟲咬、破損等不良或有雜質者，由於咖啡生豆屬農產品之一，即使莊園級的咖啡生豆依然有參差不齊的豆兒，再次手工挑出約10%~25%的不良生豆，就是為了要確保咖啡風味及品質。</p>
+                <p>品嚐新鮮：</p>
+                <p>咖啡採接單烘培生產，咖啡豆皆以半磅單向排氣閥包裝，皆會標註『製造日期』與『有效日期』(兩個月為建議賞味期限)，保證收到的咖啡豆是一週內的新鮮烘焙咖啡豆，再透過烘焙日後5-7天的養豆期，即可品味伯元咖啡喔！</p>
+                <p></p>
+                <p>2018 TISCA 手沖咖啡競賽 冠軍<br>
+                    2018 TISCA 杯測挑戰賽 第四名<br>
+                    2016 大港盃烘豆比賽 第五名 <br>
+                    CQI Q-Grader<br>
+                    SCA 感官杯測中級認證 SCA Sensory Skills intermediate<br>
+                    SCA 金杯初中級認證 *5 Brewing intermediate <br>
+                    SCA 烘焙初中認證 Roasting intermediate <br>
+                    2011 USTART大專生創業團隊 優選<br>
+                    2012 嘉義市行銷文創商品-旅遊筆記書 優選</p>
+
+            </div>
             
         </div>
         <div class="belt-img">

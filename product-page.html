@@ -244,7 +244,7 @@
             border-left: 3px solid rgb(155, 155, 155);
             margin: 15px 0;
             font-size: 14px;
-            color: rgb(129, 129, 129);
+            color: rgb(86, 86, 86);
             background-color: rgb(243, 243, 243);
         }
         .product-price{
@@ -287,9 +287,12 @@
             padding: 10px;
             overflow: hidden;
             align-items: center;
-            background-color: #000;
+            /* background-color: #000;
+            color: #fff; */
+            background-color: rgb(240, 168, 0);
             color: #fff;
             box-sizing: border-box;
+            border-radius: 3px;
         }
         .variations-carousel ul li:nth-child(odd) a{
             background-color: #fff;
@@ -318,6 +321,7 @@
         .input-group span img{
             width: 35px;
             height: 35px;
+            cursor: pointer;
         }
         .product-main__add-bag{
             width: 100%;
@@ -329,10 +333,17 @@
             font-size: 16px;
             padding: 10px;
             line-height: 1.4;
-            /* border-radius: 4px; */
             background-color: #000;
             color: #fff;
-            border: none;
+            border: 1px solid black;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .product-add-bag:hover{
+            border: 1px solid rgb(255, 179, 0);
+            background-color: rgb(240, 168, 0);
+            color: #fff;
+
         }
         .wishlist-block div img{
             width: 20px;
@@ -340,7 +351,7 @@
             vertical-align: top;
         }
         .wishlist-block div span{
-            font-weight: 600;
+            font-weight: 400;
         }
 
 
@@ -431,6 +442,7 @@
             padding: 10px 0;
             border: 1px solid black;
             transition: 0.3s;
+            border-radius: 3px;
         }
         .feature-item .add-cart a{
             text-decoration: none;
@@ -691,19 +703,19 @@
 
                     <div class="product-gallery">
                         <div class="image-shortcut">
-                            <img src="./UX/pd-img.webp" alt="">
+                            <img src="./UX/yui.webp" alt="">
                         </div>
                         <a class="image">
-                            <img src="./UX/pd-img.webp" alt="">
+                            <img src="./UX/yui.webp" alt="">
                         </a>
                     </div>
 
 
                     <div class="product-info">
                         <div class="box-info">
-                            <h1 class="product-title">2022 Panama Ninety Plus Kemgin Gesha</h1>
+                            <h1 class="product-title">衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</h1>
                             <div class="special-info">全店，單筆消費滿1500元，享免運費優惠</div>
-                            <div class="product-price">NT$950</div>
+                            <div class="product-price">NT$280</div>
                             <div class="variation-section">
                                 <div class="variation-section-content">
                                     <span class="variation-section-title">選擇SIZE</span>
@@ -724,7 +736,7 @@
                                 <div class="product-main-actions">
                                     <div class="input-group">
                                         <span class="input-group-btn">
-                                            <img src="./UX/reduce-circle.svg" alt="">
+                                            <img style="opacity: 0.5;cursor: not-allowed;" src="./UX/reduce-circle.svg" alt="">
                                             <!-- <button>-</button> -->
                                         </span>
                                         <input type="text" name="" id="" value="1">

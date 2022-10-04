@@ -176,8 +176,12 @@
             margin: 0 auto;
             width: 100%;
             text-align: center;
-            top: 40%;
-            font-size: 60px;
+            /* top: 40%; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* font-size: 60px; */
+            font-size: 4em;
             color: #fff;
             font-style: italic;
             font-weight: 600;
@@ -214,6 +218,7 @@
             font-size: 14px;
             font-weight: 600;
             line-height: 1;
+            animation: breath 2s linear 1s infinite alternate;
         }
         .new-message dl dt span:nth-child(2){
             display: inline-block;
@@ -229,11 +234,22 @@
         }
         .new-message dl dd a{
             font-size: 16px;
-            font-weight: bold;
+            /* font-weight: bold; */
             line-height: 1;
             text-decoration: none;
-            color: #333;
+            color: rgb(0, 0, 0);
+            opacity: 1;
+            /* animation: breath 1s linear 1.5s infinite alternate; */
         }
+        @keyframes breath{
+            0%{color: rgb(255, 255, 255);background-color: rgb(0, 0, 0);}
+            100%{color: rgb(0, 0, 0);background-color: rgb(0,rgb(255, 255, 255));}
+        }
+
+
+        
+        
+
 
 
 
@@ -253,6 +269,8 @@
             border-radius: 15px;
             overflow:hidden;
             position: relative;
+            /* box-shadow: 8px 8px 16px 5px rgba(0,0,0,0.2); */
+            transition: 0.4s;
         }
         .quick-item a img{
             width: 100%;
@@ -262,7 +280,7 @@
             object-position: center;
             /* aspect-ratio: 1/1; */
             border-radius: 15px;
-            transition: 0.4s;
+            transition: all 0.4s;
         }
         .quick-item a p{
             margin: 0;
@@ -274,14 +292,21 @@
             font-weight: 400;
             bottom: 15%;
             left: 15%;
+            /* display: block;
+            opacity: 0;
+            transition: 0.4s; */
+        }
+        .quick-item:hover{
+            box-shadow: 5px 5px 16px 5px rgba(0,0,0,0.2);
+
         }
         .quick-item a img:hover{
-            /* box-shadow: 1px 5px 1px 1px rgb(0 0 0 / 25%); */
             filter: blur(3px) brightness(70%);
             transform: scale(1.1);
         }
         .quick-item a img:hover~p{
             display: block;
+            /* opacity: 1; */
         }
 
 
@@ -292,6 +317,7 @@
             transition: opacity 1024ms ease ,transform 1024ms ease ;
         }
         .main-product{
+            max-width: 100%;
             background: transparent;
             margin: 40px auto 140px;
             padding: 100px 0 110px;
@@ -323,16 +349,106 @@
             width: 70vw;
             height: 350px;
         }
-        @media screen and(min-width:1200px) {
-            .inner{
+        @media screen and (max-width: 959px){
+            .main-product {
+                margin: 40px auto 40px;
+                padding-bottom: 40px;
+            }
+        }
+        @media screen and (min-width:1281px) {
+            .main-product>.inner{
                 position: static;
             }
         }
+        @media screen and (max-width: 959px){
+            .main-product>.inner{
+                padding: 0 20px;
+            }
+        }
+
+        @media screen and (max-width: 959px){
+            .main-product:before {
+                font-size: 27.5vw;
+                top: 30px;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dt {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding-top: 60%;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dt:before {
+                top: unset;
+                left: unset;
+                right: 40px;
+                bottom: -24px;
+                font-size: 50px;
+                color: rgb(157, 110, 18);
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dt img{
+                border-radius: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dd {
+                width: 100%;
+                max-width: none;
+                min-width: auto;
+                margin-top: -70px;
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dd h1 {
+                font-size: 23px;
+                margin: 0 0 calc(60% + 90px);
+            }
+        }       
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dd h1 small {
+                font-size: 14px;
+                margin: 0 0 6px;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dd h1:after {
+                width: 70px;
+                top: -40px;
+                right: 0;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product>.inner dl dd a.btn {
+                margin: 40px auto 0;
+            }
+        }
+        @media screen and (max-width: 959px){
+            .main-product:after {
+                height: 400px;
+            }
+        }
+
+
+
+        
         .inner{
             width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 40px;
+            position: relative;
         }
         .inner dl{
             display: flex;
@@ -355,12 +471,12 @@
             top: -54px;
         }
         .inner dl dt img{
-            /* display: block; */
+            display: block;
             width: 100%;
-            border-radius: 7px;
+            border-radius: 10px;
             vertical-align: top;
             border: 0;
-            aspect-ratio: 16/10;
+            aspect-ratio: 683/409.8;
             box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 25%);
         }
         .inner dl dd{
@@ -387,7 +503,6 @@
             right: 30px;
             background: url(./UX/beans_machine.png) no-repeat center center;
             background-size: contain;
-
         }
         .inner dl dd small{
             font-size: 16px;
@@ -398,22 +513,24 @@
         }
         .inner dl dd p{
             font-size: 15px;
-            line-height: 1.8;
+            line-height: 2;
             color: rgb(113, 113, 113);
+            margin-right: 80px;
         }
         .inner dl dd a{
-            margin: 40px 0 0;
-            background: transparent;
-            display: block;
-            max-width: 360px;
+            /* margin: 40px 0 0; */
+            /* background: transparent; */
+            display:block;
+            width: 100%;
+            max-width: 250px;
             padding: 22px;
+            /* margin: 0 auto; */
+            /* margin-right: 50px; */
             text-align: center;
             font-size: 16px;
             font-weight: bold;
-            transition: all 300ms ease;
+            /* transition: all 300ms ease; */
             position: relative;
-            /* background-color: #000;
-            color: #fff; */
             border: 1px solid rgb(100, 100, 100);
             color: #000;
             text-decoration: none;
@@ -472,9 +589,17 @@
             text-align: center;
             background-color: rgb(255, 255, 255);
             padding: 10px 0;
-            border: 1px solid black;
+            border: 1px solid rgb(118, 118, 118);
+            border-radius: 3px;
             transition: 0.3s;
+            /* opacity: 1; */
+            /* animation: breath 2s linear 1s infinite alternate; */
         }
+
+        /* @keyframes breath{
+            0%{opacity: 1;}
+            100%{opacity: 0;}
+        } */
         .feature-item .add-cart a{
             text-decoration: none;
             color: rgb(0, 0, 0);
@@ -545,6 +670,7 @@
             border: 1px solid black;
             padding: 10px 30px;
             transition: 0.4s;
+            border-radius: 3px;
         }
         .intro-box div a:hover{
             background-color: #000;
@@ -569,7 +695,6 @@
         .intro-photo img:hover{
             /* filter: brightness(80%); */
             transform: scale(1.03);
-
         }
 
 
@@ -597,13 +722,17 @@
             text-decoration: none;
             color: rgb(47, 47, 47);
         }
+        /* .more-item div.more-img{
+            position: relative;
+        } */
         .more-item a p{
             position: absolute;
-            /* width: 100%; */
-            /* margin: 0 auto; */
             text-align: center;
-            left: 42%;
+            left: 40%;
             top:38%;
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
             padding: 10px 15px;
             font-size: 20px;
             transition: 1s;
@@ -909,7 +1038,8 @@
                     <span>2022.06.01</span>
                 </dt>
                 <dd>
-                    <a href="">新冠肺炎防疫規範最新須知....Read more</a>
+                    <!-- <a href="">新冠肺炎防疫規範最新須知....</a> -->
+                    <a href="">111/12/1日前全館單筆消費滿1500,免運費優惠!</a>
                 </dd>
             </dl>
         </div>
@@ -960,7 +1090,7 @@
                             <small style="font-weight: 400;color: rgb(113, 113, 113);">希望讓更多人喝到舒服的一杯好咖啡</small>
                             自家烘焙咖啡豆
                         </h1>
-                        <p>從生豆挑選到烘焙的過程皆為您嚴格把關。<br>為了追求一杯心目中的精品優質的咖啡，從生豆到烘焙到沖煮，都希望能給客戶一個買得起又好喝的咖啡。團隊成員也陸續取得多種證照，提升gary cafe的咖啡專業能力，證照包括CQI Q grader/SCAE 金杯/烘焙認證/SCA感官杯測認證</p>
+                        <p>為了追求一杯心目中的精品優質的咖啡，從生豆到烘焙到沖煮，都希望能給客戶一個買得起又好喝的咖啡。</p>
                         <a href="">前往選購</a>
                     </dd>
                 </dl>
@@ -1110,6 +1240,7 @@
                     <div class="intro-photo">
                         <a href="">
                             <img src="./UX/intro-photo1-ORIGAMI.webp" alt="">
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xoj9FVUyB74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </a>
                     </div>
 
@@ -1144,7 +1275,7 @@
             <div class="more-content">
                 <div class="more-item">
                     <a href="">
-                        <div>
+                        <div class="more-img">
                             <img src="./UX/more-p1-r220b.jpeg" alt="">
                         </div>
                         <p>瞭解更多</p>
