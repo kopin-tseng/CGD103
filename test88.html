@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        a{
+            padding: 20px;
+            margin: 0 10px;
+            background-color: aqua;
+            position: relative;
+        }
+
+
+        ul>li::before {
+            content: "";
+            width: 0%;
+            height: 4px;
+            background-color: #7b8dc8;
+            position: absolute;
+            top: 75%;
+            transform: translateX(-50%);
+            left: 50%;
+            transition: width .3s;
+            border-radius: 4px;
+        }
+        ul>li a:hover {
+            content: "";
+            width: 0%;
+            height: 4px;
+            background-color: #7b8dc8;
+            position: absolute;
+            top: 75%;
+            transform: translateX(-50%);
+            left: 50%;
+            transition: width .3s;
+            border-radius: 4px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="">關於我</a></li>
+            <li><a href="">商品</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ccc;
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px;
+        }
+        .logo img{
+            vertical-align: top;
+        }/* 圖片會有一點空白空間 */
+        .main-nav a{
+            display: block;
+            padding: 10px;
+        }
+        #menu-switch{
+            display: none;
+        }
+        @media screen and (max-width:767px) { /*對手機版有作用*/
+            .main-nav{
+                /* display: none; */
+                position: absolute;
+                background-color: rgb(160, 241, 153);
+                width: 100%;
+                left: -100%;
+                top: 100%;
+                opacity: 0;
+                transition: opacity 1s 0s ,left 0s 1s;
+            }
+            
+            #menu-switch:checked + .header .hb{
+                position: relative;
+            }
+            .hb span:nth-child(1){
+                top: 7px;
+            }
+            .hb span:nth-child(2){
+                top: 19px;
+            }
+            .hb span:nth-child(3){
+                top: 31px;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(1){
+                animation: no1 1s 1s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(2){
+                animation: no2 1s 0s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(3){
+                animation: no3 1s 1s forwards;
+            }
+            #menu-switch:checked + .header .main-nav{
+                left: 0;
+                opacity: 1;
+                transition: opacity 1s 2s;
+            }
+            @keyframes no1 {
+                0%{top: 7px;transform: rotate(0deg);}
+                50%{top: 19px;transform: rotate(0deg);}
+                100%{top: 19px;transform: rotate(225deg);}
+            }
+            @keyframes no2 {
+                0%{opacity: 1;}
+                100%{opacity: 0;}
+
+            }
+            @keyframes no3 {
+                0%{top: 31px;transform: rotate(0deg);}
+                50%{top: 19px;transform: rotate(0deg);}
+                100%{top: 19px;transform: rotate(-225deg);}
+            }
+            .hb{
+                width: 40px;
+                height: 40px;
+                background-color: #666;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+            }
+            .hb span{
+                /* display: block; */
+                width: 32px;
+                height: 2px;
+                /* margin: 8px auto 0; */
+                background-color: #000;
+                position: absolute;
+                
+            }
+            
+        }
+        @media screen and (min-width:768px) {/*對平版以上裝置有作用*/
+            .hb{display: none;}
+            .main-nav{
+                display: flex;
+                position: relative;
+                width: fit-content;
+                background-color: transparent;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <div class="header">
+        <div class="logo">
+            <img src="https://fakeimg.pl/80x40/200">
+        </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="main-nav">
+            <a href="">link1</a>
+            <a href="">link2</a>
+            <a href="">link3</a>
+            <a href="">link4</a>
+        </nav>
+    </div>
+    
+
+</body>
+</html>

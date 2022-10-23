@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstraps CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- bootstraps CDN -->
+    <!-- reset CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- reset CSS -->
+    <title>Document</title>
+    <style>
+        html {
+            scroll-padding-top: 100px;
+        } 
+        .m-header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main{
+            width: 100%;
+            background-color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        ul, li{
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .Cartbanner{
+            background-image: url(./UX//img111.jpeg);background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            height: 55vh;
+        }
+        .main-content{
+            padding: 50px 0;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        
+        .shopping-cart{
+            background-color: #fff;
+            /* height: 500px; */
+            margin-bottom: 30px;
+        }
+        h3.cart-title{
+            background-color: rgb(255, 203, 17);
+            color: #fff;
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+
+        .cart-manipulate{
+            display: flex;
+            padding: 15px;
+
+        }
+        .cart-btn{
+            padding: 5px 15px;
+            margin: 0 5px;
+            background-color: rgb(230, 230, 230);
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .cart-items{
+            padding: 10px;
+        }
+        .table-header,.table-row{
+            display: grid;
+            grid-template-columns:50px 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid rgb(186, 186, 186);
+        }
+        .table-header div,.table-row div{
+            padding: 10px;
+            /* outline: 1px solid rgb(232, 232, 232); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .markerDiv{
+            /* outline: 1px solid rgb(186, 186, 186); */
+            background-color: rgb(241, 241, 241);
+        }
+        .table-row span{
+            display: block;
+            padding: 10px;
+        }
+        .table-items{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .table-items a{
+            display: block;
+            width: 30%;
+        }
+        .items-img{
+            width: 100%;
+        }
+        p.items-txt{
+            display: block;
+            width: 70%;
+            padding: 15px;
+            margin: 0;
+        }
+        .items-price{
+            color: red;
+        }
+
+
+
+
+
+        
+        .shopping-row{
+            display: flex;
+        }
+        .shopping-row h4{
+            font-size: 16px;
+            /* padding: 10px 20px; */
+        }
+        .shopping-pay{
+            width: 70%;
+            background-color: #fff;
+            margin-right: 10px;
+            /* height: 300px; */
+        }
+        .shopping-info{
+            width: 30%;
+        }
+
+        .cart-pay{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(205, 205, 205);
+            margin-bottom: 10px;
+        }
+        .pay-opt{
+            width: 60%;
+            font-size: 14px;
+        }
+        .pay-opt input{
+            margin:0 10px;
+        }
+        .pay-info{
+            width: 40%;
+            font-size: 14px;
+        }
+
+
+        .pay-row{
+            padding: 0 20px;
+        }
+        .pay-row{
+            margin-bottom: 20px;
+        }
+        .pay-row h4{
+            padding: 20px 0 30px;
+        }
+        .pay-row select{
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+
+
+
+        .info-body div{
+            padding: 10px;
+            background-color: #fff;
+        }
+        .info-body div div{
+            /* background-color: brown; */
+            margin: 10px 0;
+        }
+        .info-body div a{
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(69, 168, 62);
+            border-radius: 5px;
+            color: #fff;
+        }
+        .info div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .info div p{
+            margin: 0;
+        }
+
+
+
+
+
+        @media screen and (max-width:1024px) { /*對平版以下有作用*/
+        
+        }
+        @media screen and (max-width:959px) { /*對平版以下有作用*/
+        
+        }
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+            .shopping-row{
+                display: block;
+            }
+            .shopping-pay, .shopping-info{
+                width: 100%;
+
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 外部引用header區塊 -->
+        <div class="m-header"></div>
+        <!-- 外部引用header區塊 -->
+    
+    
+        <div class="Cartbanner"></div>
+
+
+        <div class="main-content">
+            <div class="cart-wrap">
+                
+                <div class="cart-content">
+                    <section class="shopping-cart">
+                        <h3 class="cart-title">訂單明細</h3>
+                        <div class="cart-manipulate">
+                            <div class="cart-btn">全選</div>
+                            <div class="cart-btn">整批刪除</div>
+                            <div class="cart-btn">整批加入購物車</div>
+                        </div>
+                        <div class="cart-items">
+                            <div class="table-header">
+                                <div></div>
+                                <div>產品資料</div>
+                                <div>價格</div>
+                                <div>數量</div>
+                                <div>小計</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="markerDiv">
+                                    <input type="checkbox" name="btn" id="">
+                                </div>
+                                <div class="table-items">
+                                    <a href="">
+                                        <img class="items-img" src="./UX/go01-2.jpeg" alt="">
+                                    </a>
+                                    <p class="items-txt">Kalita カリタ コーヒーミル 桐モダン 弐 （２段）</p>
+                                </div>
+                                <div><span>49,500円</span></div>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                    </select>
+                                </div>
+                                <div class="items-price"><span>49,500円</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="markerDiv">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div class="table-items">
+                                    <a href="">
+                                        <img class="items-img" src="./UX/cart-02.jpeg" alt="">
+                                    </a>
+                                    <p class="items-txt">Kalita カリタ 電気ケトル ネイビー KEDP-600</p>
+                                </div>
+                                <div><span>29,700円</span></div>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                    </select>
+                                </div>
+                                <div class="items-price"><span>29,700円</span></div>
+                            </div>
+                        </div>
+                        <div class="cart-manipulate">
+                            <div class="cart-btn">全選</div>
+                            <div class="cart-btn">整批刪除</div>
+                            <div class="cart-btn">整批加入購物車</div>
+                        </div>
+                        <div class="cart-promotions"></div>
+                    </section>
+
+
+                    <section class="shopping-row">
+                        <div class="shopping-pay">
+                            <h3 class="cart-title">選擇付款及送貨方式</h3>
+                            <div class="pay-row">
+                                <h4>付款方式</h4>
+                                <div class="cart-pay">
+                                    <div class="pay-opt">
+                                        <input type="radio" name="" id="" checked>
+                                        <label>信用卡</label>
+                                    </div>
+                                    <div class="pay-info">※ 使用信用卡支付時，單筆訂單最低結帳金額為5元。</div>
+                                </div>
+                                <div class="cart-pay">
+                                    <div class="pay-opt">
+                                        <input type="radio" name="" id="">
+                                        <label>銀聯</label>
+                                    </div>
+                                    <div class="pay-info">※ 使用銀聯卡支付時，單筆訂單最低結帳金額為5元。</div>
+                                </div>
+                                <div class="cart-pay">
+                                    <div class="pay-opt">
+                                        <input type="radio" name="" id="">
+                                        <label for="">ATM轉帳</label>
+                                    </div>
+                                    <div class="pay-info">※ 使用ATM 虛擬帳號支付時，單筆訂單最低結帳金額為11元。</div>
+                                </div>
+                                <div class="cart-pay">
+                                    <div class="pay-opt">
+                                        <input type="radio" name="" id="">
+                                        <label for="">超商代碼 (須自行至超商機台輸入代碼，產生繳費單後至櫃台繳費)</label>
+                                    </div>
+                                    <div class="pay-info">※ 結帳金額不滿500元，需支付手續費30元。</div>
+                                </div>
+                                <div class="cart-pay">
+                                    <div class="pay-opt">
+                                        <input type="radio" name="" id="">
+                                        <label for=""><img src="./ux/bw_pay_linepay.png" alt=""></label>
+                                    </div>
+                                    <div class="pay-info"></div>
+                                </div>
+                            </div>
+                            <div class="pay-row">
+                                <h4>送貨方式</h4>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">請選擇送貨方式</option>
+                                        <option value="">全家取貨付款</option>
+                                        <option value="">全家取貨不付款</option>
+                                        <option value="">7-11取貨付款</option>
+                                        <option value="">7-11取貨不付款</option>
+                                        <option value="">宅配</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="shopping-info">
+                            <h3 class="cart-title">支付金額</h3>
+                            <div class="info-body">
+                                <div class="info">
+                                    <div>
+                                        <p>小計：</p>
+                                        <p>79,200円</p>
+                                    </div>
+                                    <div>
+                                        <p>運費：</p>
+                                        <p>300円</p>
+                                    </div>
+                                    <div>
+                                        <p>合計：</p>
+                                        <p>79,260円</p>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="">前往結賬</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    
+        
+        
+        <!-- 外部引用footer區塊 -->
+        <div class="m-footer"></div>
+        <!-- 外部引用footer區塊 -->
+
+    </div>
+
+
+
+
+
+
+
+
+    
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jquery -->
+
+    <script>
+        $(function() {
+			$('.m-header').load('./m-header.html')
+			$('.m-footer').load('./m-footer.html')
+		})
+
+
+
+
+        $('.markerDiv').on('click', function(){
+            console.log('asdd');
+            var checkbox = $(this).children('input[type="checkbox"]');
+            checkbox.prop('checked', !checkbox.prop('checked'));
+        });
+        console.log('ffggg');
+
+    </script>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- bootstrap JS -->
+</body>
+</html>

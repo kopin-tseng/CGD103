@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Document</title>
+    <style>
+        
+        #menu-switch{
+            display: none;
+        }
+        .header-section{
+            width: 100%;
+            /* box-shadow: 0px 3px 3px 0px rgb(0 0 0 / 10%); */
+            box-shadow: 0 0 10px rgb(46 46 46 / 16%);
+            background-color: #ffffff;
+            /* background-color: #395246; */
+            /* opacity: 0.7; */
+            
+        }
+
+
+        .header{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            padding: 0 15px;
+            position: sticky;
+            top: 0;
+        }
+        .logo{
+            padding: 5px;
+        }
+        a.logo-link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        a.logo-link img{
+            /* width: 70px; */
+            height: 70px;
+            vertical-align: top;
+            aspect-ratio: 463/538;
+        }
+        a.logo-link h1{
+            font-size: 25px;
+            color: #262626;
+            font-weight: 700;
+            padding: 0 10px;
+            opacity : 1;
+        }
+        a.logo-link:hover{
+            /* color: #878787; */
+            opacity: 0.9;
+            
+        }
+        
+        
+
+
+        .main-nav{
+            flex-grow: 1;
+            /* margin-left: 30px; */
+        }
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            margin-left: 40px;
+        }
+
+
+
+        .navbar-nav>li:before {
+            content: "";
+            width: 0%;
+            height: 4px;
+            background-color: #af7200;
+            position: absolute;
+            top: 80%;
+            transform: translateX(0%);
+            left: 20%;
+            transition: width .3s;
+            border-radius: 1px;
+        }
+        .navbar-nav>li:hover::before{
+            width: 60%;
+        }
+        .navbar-nav>li:hover a{
+            color: rgb(218, 158, 19);
+            font-weight: 700;
+        }
+
+
+        .nav-item{
+            list-style: none;
+            position: relative;
+            text-align: center;
+            /* overflow: hidden; */
+        }
+        .nav-item>a{
+            display: block;
+            padding: 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 17px;
+            line-height: 100%;
+            position: relative;
+        }
+        .nav-item.mobile{
+            display: none;
+        }
+        
+        
+        
+        ul.layer1{
+            display: none;
+            list-style: none;
+            padding-left: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            opacity: 0.9;
+            background: rgb(255, 255, 255);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .mainCat{
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+        .mainCat a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            display: block;
+            width: 120px;
+        }
+        ul.layer1 li{
+            background-color: #fff;
+            padding:10px;
+        }
+        .nav-item:hover ul.layer1{ /**/
+            display: flex;
+            position: absolute;
+            width: auto;
+            top: 100%;
+            left: 0;
+        }
+        ul.layer2{
+            list-style: none;
+            padding-left: 0;
+            color: rgb(84, 84, 84);
+        }
+        ul.layer2 li{
+            padding: 10px 0;
+        }
+        ul.layer2 li:hover{
+            background-color: rgb(57, 59, 98);
+            color: #fff;
+        }
+
+
+
+
+
+        ul.icon-list{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.icon-list li{
+            padding: 0 10px;
+        }
+        ul.icon-list img{
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+
+
+        @media screen and (max-width:959px){
+            .nav-item>a{
+                padding: 5px;
+            }
+            .header{
+                justify-content: space-between;
+            }
+            .main-nav{
+                flex-grow: 0;
+            }
+            .navbar-nav{
+                margin-left: 0;
+            }
+            ul.layer1 a{
+                width: 12vw;
+            }
+        }
+
+
+        @media screen and (max-width:767px) { /*對手機版有作用*/
+            .header{
+                justify-content: space-between;
+                align-items: center;
+            }
+            .main-nav{
+                /* display: none; */
+                position: absolute;
+                background-color: rgb(255, 255, 255);
+                height:  90vh;
+                overflow: scroll;
+                width: 70%;
+                left: -100%;
+                top: 100%;
+                opacity: 0;
+                transition: opacity 1s 0s ,left 0s 1s;
+                /* box-sizing: border-box; */
+            }
+            .navbar-nav{
+                display: block;
+            }
+            .navbar-nav a{
+                /* font-size: 25px; */
+            }
+            .nav-item>a{
+                padding: 20px;
+                margin: 10px 30px 10px 20px;
+                background-color: #362d52;
+                color: #fff;
+            }
+            ul.layer1 li{
+                display: none;
+            }
+            /* .nav-item:hover ul.layer1{
+                display: block;
+                position: static;
+                top: 0;
+                left: 0;
+            } */
+            .navbar-nav>li:hover::before{
+                width: 0;
+            }
+            .nav-item.mobile{
+                display: block;
+            }
+            
+
+
+
+
+
+            .header-icon{
+                display: none;
+            }
+
+
+
+
+            /* 漢堡 */
+            #menu-switch:checked + .header .hb{
+                position: relative;
+            }
+            .hb span:nth-child(1){
+                top: 7px;
+            }
+            .hb span:nth-child(2){
+                top: 19px;
+            }
+            .hb span:nth-child(3){
+                top: 31px;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(1){
+                animation: no1 .5s .5s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(2){
+                animation: no2 .5s 0s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(3){
+                animation: no3 .5s .5s forwards;
+            }
+            #menu-switch:checked + .header .main-nav{
+                left: 0;
+                opacity: 1;
+                transition: opacity .5s 1s;
+            }
+            @keyframes no1 {
+                0%{top: 7px;transform: rotate(0deg);}
+                50%{top: 19px;transform: rotate(0deg);}
+                100%{top: 19px;transform: rotate(45deg);}
+            }
+            @keyframes no2 {
+                0%{opacity: 1;}
+                100%{opacity: 0;}
+
+            }
+            @keyframes no3 {
+                0%{top: 31px;transform: rotate(0deg);}
+                50%{top: 19px;transform: rotate(0deg);}
+                100%{top: 19px;transform: rotate(-45deg);}
+            }
+            .hb{
+                width: 40px;
+                height: 40px;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+            }
+            .hb span{
+                /* display: block; */
+                width: 32px;
+                height: 2px;
+                /* margin: 8px auto 0; */
+                background-color: #000;
+                position: absolute;
+                
+            }
+            /* 漢堡 */
+            
+            
+            
+        }
+
+        /*對平版以上裝置有作用*/
+        @media screen and (min-width:768px) {
+            .hb{display: none;}
+            .main-nav{
+                display: flex;
+                position: relative;
+                width: fit-content;
+                background-color: transparent;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <input type="checkbox" name="" id="menu-switch">
+
+        <div class="header">
+            <div class="logo">
+                <a class="logo-link" href="index.html">
+                    <img src="./UX//LOGO-pic.png" alt="GARY CAFE LOGO ICON">
+                    <h1>GARY COFFEE</h1>
+                </a>
+            </div>
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mobile">
+                        <a href="#">登入/註冊
+                            
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="aboutus.html">關於我們
+                            
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="product-category.html">咖啡豆
+                            
+                        </a>
+                        <ul class="layer1">
+                            <li>
+                                <div class="mainCat">
+                                    <a href="">產地</a>
+                                </div>
+                                <ul class="layer2">
+                                    <li>非洲</li>
+                                    <li>亞洲</li>
+                                    <li>北/中/南美洲</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="mainCat">
+                                    <a href="">烘焙度</a>
+                                </div>
+                                <ul class="layer2">
+                                    <li>淺焙</li>
+                                    <li>淺中焙</li>
+                                    <li>中焙</li>
+                                    <li>中深焙</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="mainCat">
+                                    <a href="">處理法</a>
+                                </div>
+                                <ul class="layer2">
+                                    <li>日曬</li>
+                                    <li>水洗</li>
+                                    <li>特殊處理</li>
+                                    <li>厭氧處理</li>
+                                    <li>蜜處理</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="coffee-goods.html">咖啡器具</a>
+                        <ul class="layer1" >
+                            <li>
+                                <div  class="mainCat">
+                                    <a href="">磨豆機</a>
+                                </div>
+                                
+                                <ul class="layer2">
+                                    <li>手挽きミル</li>
+                                    <li>電動ミル</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div  class="mainCat">
+
+                                    <a href="">手沖器材</a>
+                                </div>
+                                <ul class="layer2">
+                                    <li>濾杯</li>
+                                    <li>手沖壺</li>
+                                    <li>咖啡壺/耗材</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="coffee-knowledge.html">咖啡知識</a>
+                        <ul class="layer1" >
+                            <li>
+                                <div  class="mainCat">
+                                    <a href="">咖啡知識</a>
+                                </div>
+                                <ul class="layer2">
+                                    <li>咖啡豆挑選</li>
+                                    <li>手沖咖啡入門</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div class="search-panel">
+                <a href="">
+                    <img src="./UX/search.svg" alt="">
+                </a>
+                <input id="global-search" type="text" placeholder="搜尋">
+            </div> -->
+            <div class="header-icon">
+                <ul class="icon-list">
+                    <li class="icon">
+                        <a href="">
+                            <img src="./UX/search.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="./cart.html">
+                            <img src="./UX/shopping_cart.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="member-login.html">
+                            <img src="./UX/person.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+</body>
+</html>

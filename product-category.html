@@ -4,219 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome to GARY CAFE!</title>
+    <!-- bootstraps CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- bootstraps CDN -->
+    <!-- reset CSS -->
     <link rel="stylesheet" href="normalize.css">
+    <!-- reset CSS -->
+    <title>Wellcome to GARY CAFE!</title>
     <style>
         .main{
             width: 100%;
+            background-color: #fcfcfc;
         }
 
-
-
-        /* header  */
-        .header{
-            background-color: white;
-            height: 90px;
-            width: 100%;
-            max-width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-evenly;
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
-            padding: .8rem 3rem;
-            box-sizing: border-box;
-        }
-        .logo img{
-            width: 70px;
-            height: 70px;
-            /* padding-top: 10px; */
-        }
-        .main-navbar{
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-        }
-        .navbar-nav{
-            display: flex;
-            font-size: 18px;
-            list-style-type: none;
-            align-items: center;
-            flex-grow: 1;
-            /* height: 100%; */
-        }
-        .nav-item a{
+        a{
             text-decoration: none;
             color: #000;
-            transition: 0.3s;
-        }
-        a.thispage{
-            color: rgb(209, 131, 30);
-            font-weight: 700;
-            border-bottom: 3px solid rgb(186, 129, 5);
-        }
-        .nav-item>a:hover{
-            color: rgb(209, 131, 30);
-            font-weight: 700;
-            border-bottom: 3px solid rgb(186, 129, 5);
-
-        }
-        .navbar-nav li.nav-item{
-            padding: 34px 20px;
-            position: relative;
-            
-            
-        }
-        .navbar-nav li.nav-item:hover ul.layer1{
-            display: flex;
-        }
-        .navbar-nav li.nav-item:hover ul.layer1 ul{
-            display: block;
-            
-        }
-        .navbar-nav li.nav-item ul.layer1{
-            display: none;
-            min-width: 600px;
-            padding-left: 0;
-            list-style-type: none;
-            background-color: white;
-            opacity: 0.9;
-            position: absolute;
-            border: 1px solid rgb(235, 235, 235);
-            left: 0;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            box-sizing: border-box;
-            z-index: 10;
-            padding: 20px;
-            top: 100%;
-            transition: 1s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li ul{
-            list-style-type: none;
-            padding-left: 0;
-            margin: 10px 0;
-        }
-        .navbar-nav li.nav-item ul.layer1 li ul li{
-            padding: 10px 0;
-            font-size: 15px;
-            /* opacity: 0.7; */
-            transition: 0.2s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li{
-            flex: 1;
-            margin: 10px;
-        }
-        .navbar-nav li.nav-item ul.layer2 li{
-            margin: 10px 0 10px 10px;
-        }
-        .navbar-nav li.nav-item ul.layer1 li a{
-            display: block;
-            padding: 10px;
-            border-bottom: 1px solid #000;
-            transition: 0.2s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li a:hover{
-            background-color: rgb(209, 209, 209);
-        }
-        .navbar-nav li.nav-item ul.layer1 li li:hover{
-            background-color: rgb(209, 209, 209);
         }
 
+        .m-header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .banner-img{
+            background-image: url(./UX/banner-13.webp);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 50vh;
+        }
+        ul{
+            padding-left: 0;
+        }
 
 
 
         
-        
-        .search-panel{
-            padding-left: 40px;
-            position: relative;
-        }
-        .search-panel a{
-            text-decoration: none;
-            position: absolute;
-        }
-        .search-panel a img{
-            width: 35px;
-            height: 35px;
-            margin-top: 2px;
-        }
-        .search-panel input{
-            max-width: 300px;
-            /* width: 300px; */
-            height: 40px;
-            box-sizing: border-box;
-            background-color: #eee;
-            border-width: 0;
-            border-radius: 0.25rem;
-            padding: 0 45px;
-            transition: 0.5s;
-        }
-        @media screen and (max-width: 959px){
-            .search-panel input{
-                display: none;
-            }
-            .search-panel a{
-                position: relative;
-            }
-            .search-panel a img{
-                margin: 0 15px;
-            }
-            .header-icon .icon-list{
-                padding-left: 0;
-            }
-            
-        }
-        .search-panel input:hover{
-            background-color: rgb(255, 234, 180);
-        }
-        .header-icon .icon-list{
-            display: flex;
-            list-style-type: none;
-        }
-        .header-icon .icon-list li a img{
-            width: 35px;
-            height: 35px;
-            margin: 0 15px;
-
-        }
-        /* header  */
 
 
 
         .main-wrapper{
             width: 100%;
             max-width: 1200px;
-            margin: 150px auto 0;
+            margin: 50px auto 0;
             display: flex;
         }
         .product-sidebar{
             width: 25%;
         }
-        .left-box ul{
-            padding-left: 0;
+        .left-box{
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            /* border: 1px solid gold; */
         }
+        .product-search{
+            padding: 40px 30px 0;
+        }
+        .product-search h3{
+            padding:0 10px 10px;
+            margin-bottom: 15px;
+            
+            border-bottom: 1px solid #28292b;
+            font-size: 20px;
+        }
+        .searchbox{
+            position: relative;
+        }
+        .searchbox-in{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .searchbtn{
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            background: url(./UX/search.svg);
+            background-size: cover;
+            padding: 15px;
+            height: 20px;
+            width: 20px;
+            border: none;
+            color: #fff;
+            /* cursor: pointer; */
+            color: transparent;
+        }
+
         .left-box li.List-item{
             list-style-type: none;
             font-size: 16px;
             line-height: 1.6;
             font-weight: bold;
-            padding: 5px 23px 5px 0;
+            padding: 5px 0;
+            font-weight: 400;
+            position: relative;
+        }
+        .ProductList-categoryMenu{
+            padding: 40px 30px;
+        }
+        .ProductList-categoryMenu h3{
+            padding:0 10px 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #28292b;
+            font-size: 20px;
+        }
+        .ProductList-categoryMenu ul{
+            display: none;
         }
         .ProductList-dropdown{
-            padding: 10px 0;
+            /* padding: 10px 0; */
+            padding-bottom: 10px;
         }
         .ProductList-dropdown li.List-item{
-            color: #999;
+            color: rgb(94, 94, 94);
+            padding:10px 10px;
+            /* border: 1px solid gainsboro; */
+
+            background: #fff;
+            margin: 10px 20px 10px 0;
+            border-radius: 5px;
         }
-        .left-box li.List-item a{
+        .List-item>a{
             text-decoration: none;
-            color: #000;
+            display: block;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: 0.5s;
+            position: relative;
+            background: #323f6b;
+        }
+        .List-item a:hover{
+            background-color: rgb(118, 136, 209);
         }
 
+        .List-item>a::before{
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 28px;
+            width: 13px;
+            border-bottom: 2px solid #fff;
+        }
+        .List-item>a::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 23px;
+            height: 13px;
+            border-left: 2px solid #fff;
+        }
+        a.rmminus::after{
+            height: 0;
+        }
+
+       
+
+        
 
 
+        /* 商品排序及顯示 */
         .product-content{
             width: 75%;
             display: flex;
@@ -224,19 +175,29 @@
             flex: 0 0 auto;
             padding: 0 0.9375rem;
         }
-        .product-content .product-tools{
+        .Breadcrumbs{
+            padding: 10px 20px;
+            /* background: #995f0e; */
+            background-color: #28292b;
+            border-radius: 3px;
+        }
+        .Breadcrumbs span{
+            display: block;
+            color: #fff;
+        }
+        .product-tools{
             margin-bottom: 20px;
-            padding-top: 20px;
+            padding: 40px 20px 10px;
             display: flex;
             justify-content: space-between;
         }
-        .product-content .product-tools h1{
+        .product-tools h1{
             padding: 0;
             margin: 0;
             font-size: 24px;
             line-height: 1.5;
         }
-        .product-content .product-tools div{
+        .ProductList-settings-sort{
             /* width: 50%; */
             /* margin: 0 5px; */
             margin-right: 10px;
@@ -247,24 +208,24 @@
         }
         .ProductList-settings select{
             display: block;
-            padding: 5px 20px 5px 10px;
-            background: #f7f7f7;
-            color: #999;
-            border: 1px solid gainsboro;
+            padding: 7px 20px 7px 10px;
+            background: #f3f3f3;
+            color: rgb(68, 68, 68);
+            border: 1px solid rgb(172, 172, 172);
+            border-radius: 3px;
         }
-        /* .product-results{
-            padding-top: 1.25rem;
-        }
-        .product-grid{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-gap: 50px 20px;
-        }
-        .product-grid .feature-item div a img{
-            width: 100%;
-            vertical-align: middle;
-        } */
+        /* 商品排序及顯示 */
 
+
+        
+        
+
+
+
+
+
+
+        
 
 
         /* feature start */
@@ -286,8 +247,9 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             /* grid-template-rows: repeat(2,1fr); */
-            margin: 40px 0;
-            gap: 15px;
+            margin:0 0 40px;
+            grid-gap: 20px;
+            /* gap: 15px; */
         }
         .feature-list .feature-item{
             /* padding: 10px; */
@@ -302,326 +264,82 @@
         }
         .feature-item p{
             padding: 0 15px;
+            margin-bottom: 20px;
         }
+        .item-txt{
+            padding: 20px 10px 0;
+            /* border: 1px solid gold; */
+            height: 160px;
+        }
+
+
         .feature-item p:nth-child(1){
             font-size: 14px;
             color: rgb(88, 88, 88);
         }
         .feature-item .add-cart{
             text-align: center;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(255, 153, 0);
             padding: 10px 0;
-            border: 1px solid black;
+            margin: 0 10px;
+            border: 1px solid rgb(255, 169, 19);
             transition: 0.3s;
-            border-radius: 3px;
+            border-radius: 10px;
+            /* visibility: hidden; */
+            display: none;
         }
         .feature-item .add-cart a{
             text-decoration: none;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             transition: 0.3s;
         }
         .feature-item .add-cart:hover a{
             color: rgb(255, 255, 255);
         }
         .feature-item .add-cart:hover{
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 105, 12);
+            border: 1px solid rgb(255, 164, 29);
+        }
+        .item-card:hover .add-cart{
+            display: block;
         }
         /* feature end */
 
 
 
 
-        /* footer start */
-        #gototop{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(138, 109, 23, 0.5);
-            position: fixed;
-            right: 1.875rem;
-            bottom: 6.875rem;
-            padding: 0.625rem;
-            z-index: 3;
-            box-shadow: 0px 5px 3px 0px rgba(130, 130, 130, 0.1);
-        }
-        #gototop a img{
-            width: 100%;
-            opacity: 0.5;
-        }
-
-
-        .footerimg{
-            background-image: url(./UX/footerimg3.webp);
-            background-size: cover;
-            background-position:center center;
-            width: 100%;
-            height: 220px;
-        }
-
-
-
-        .footer-section{
-            background-color: rgb(255, 255, 255);
-            font-weight: 400;
-            color : rgb(58, 58, 58);
-            padding-top: 60px;
-            width: 100%;
-            /* margin-top: 70px; */
-        }
-        .footer-wrap{
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-link{
-            display: flex;
-            justify-content: space-evenly;
-            margin-bottom: 40px;
-        }
-        .footer-list{
-            margin: 0 40px;
-        }
-        .footer-list h3{
-            font-weight: 300;
-            font-size: 16px;
-        }
-        .footer-list ul{
-            padding: 0;
-        }
-        .footer-list ul li{
-            list-style-type: none;
-            font-size: 14px;
-            color: rgb(83, 83, 83);
-        }
-        .footer-icon a{
-            text-decoration: none;
-        }
-        .footer-legal{
-            background-color: rgb(255, 203, 99);
-            padding: 10px 0 20px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 300;
-        }
-        .footer-legal-link a{
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-        }
-        /* footer end */
+        
     </style>
 </head>
 <body>
     <div class="main">
-        <!-- header -->
-        <header class="header">
-            <div class="logo">
-                <a href="index.html"><img src="./UX/LOGO.png" alt="GARY CAFE LOGO ICON"></a>
-            </div>
-            <div class="main-navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="aboutus.html">關於我們</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">全部商品</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="thispage" href="product-category.html">咖啡豆</a>
-                        <ul class="layer1">
-                            <li>
-                                <a href="">產地</a>
-                                <ul class="layer2">
-                                    <li>非洲</li>
-                                    <li>亞洲</li>
-                                    <li>北/中/南美洲</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">烘焙度</a>
-                                <ul class="layer2">
-                                    <li>淺焙</li>
-                                    <li>淺中焙</li>
-                                    <li>中焙</li>
-                                    <li>中深焙</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">處理法</a>
-                                <ul class="layer2">
-                                    <li>日曬</li>
-                                    <li>水洗</li>
-                                    <li>特殊處理</li>
-                                    <li>厭氧處理</li>
-                                    <li>蜜處理</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">咖啡器具</a>
-                        <ul class="layer1" style="min-width: 400px;">
-                            <li>
-                                <a href="">磨豆機</a>
-                                <ul class="layer2">
-                                    <li>手磨</li>
-                                    <li>電磨</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">手沖器材</a>
-                                <ul class="layer2">
-                                    <li>濾杯</li>
-                                    <li>手沖壺</li>
-                                    <li>容器/耗材類</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="coffee-knowledge.html">咖啡知識</a>
-                        <ul class="layer1" style="min-width: 200px;">
-                            <li>
-                                <a href="">咖啡知識</a>
-                                <ul class="layer2">
-                                    <li>咖啡豆挑選</li>
-                                    <li>手沖咖啡入門</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="search-panel">
-                    <a href="">
-                        <img src="./UX/search.svg" alt="">
-                    </a>
-                    <input id="global-search" type="text" placeholder="搜尋">
-                </div>
-                <div class="header-icon">
-                    <ul class="icon-list">
-                        <li class="icon">
-                            <a href="">
-                                <img src="./UX/shopping_cart.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="icon">
-                            <a href="member-login.html">
-                                <img src="./UX/person.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <!-- header -->
+ 
+        
+
+        <!-- 外部引用header區塊 -->
+        <div class="m-header"></div>
+        <!-- 外部引用header區塊 -->
+
+        <div class="banner-img"></div>
         
         <div class="main-wrapper">
             <aside class="product-sidebar">
-                <!-- <nav class="refinement-nav">
-                    <section class="refinement-section">
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">精選商品</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">競標/莊園直購</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">非洲</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">肯亞</li>
-                                        <li class="refinement-category-item">馬拉威</li>
-                                        <li class="refinement-category-item">盧安達</li>
-                                        <li class="refinement-category-item">衣索比亞</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">亞洲</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">臺灣</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">北/中/南美洲</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">巴西</li>
-                                        <li class="refinement-category-item">秘魯</li>
-                                        <li class="refinement-category-item">巴拿馬</li>
-                                        <li class="refinement-category-item">瓜地馬拉</li>
-                                        <li class="refinement-category-item">薩爾瓦多</li>
-                                        <li class="refinement-category-item">宏都拉斯</li>
-                                        <li class="refinement-category-item">尼加拉瓜</li>
-                                        <li class="refinement-category-item">哥倫比亞</li>
-                                        <li class="refinement-category-item">哥斯大黎加</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">烘焙度</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">淺焙</li>
-                                        <li class="refinement-category-item">淺中焙</li>
-                                        <li class="refinement-category-item">中焙</li>
-                                        <li class="refinement-category-item">中深焙</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="refinement-content">
-                            <div class="refinement-list">
-                                <button class="refinement-title">
-                                    <span class="refinement-title-text">處理法</span>
-                                </button>
-                                <div class="refinement-content-wrapper">
-                                    <ul class="refinement-category">
-                                        <li class="refinement-category-item">日曬</li>
-                                        <li class="refinement-category-item">水洗</li>
-                                        <li class="refinement-category-item">特殊處理</li>
-                                        <li class="refinement-category-item">厭氧處理</li>
-                                        <li class="refinement-category-item">蜜處理</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </nav> -->
                 <div class="left-box">
+                    <div class="product-search">
+                        <h3>商品をさがす</h3>
+                        <form action="./product-category.html" class="searchbox">
+                            <input class="searchbox-in" type="text" placeholder="お探しの商品は？">
+                            <input class="searchbtn" type="submit" value="">
+                        </form>
+                    </div>
                     <ul class="ProductList-categoryMenu">
+                        <h3>カテゴリー</h3>
                         <li class="List-item">
                             <a href="">精選商品</a>
                             <ul class="ProductList-dropdown">
                                 <li class="List-item">競標/莊園直購</li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="ProductList-categoryMenu">
                         <li class="List-item">
                             <a href="">非洲</a>
                             <ul class="ProductList-dropdown">
@@ -631,16 +349,12 @@
                                 <li class="List-item">衣索比亞</li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="ProductList-categoryMenu">
                         <li class="List-item">
                             <a href="">亞洲</a>
                             <ul class="ProductList-dropdown">
                                 <li class="List-item">臺灣</li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="ProductList-categoryMenu">
                         <li class="List-item">
                             <a href="">北/中/南美洲</a>
                             <ul class="ProductList-dropdown">
@@ -655,8 +369,6 @@
                                 <li class="List-item">哥斯大黎加</li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="ProductList-categoryMenu">
                         <li class="List-item">
                             <a href="">烘焙度</a>
                             <ul class="ProductList-dropdown">
@@ -666,8 +378,6 @@
                                 <li class="List-item">中深焙</li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="ProductList-categoryMenu">
                         <li class="List-item">
                             <a href="">處理法</a>
                             <ul class="ProductList-dropdown">
@@ -681,12 +391,17 @@
                     </ul>
                 </div>
             </aside>
+
+
+
             <section class="product-content">
+                <div class="Breadcrumbs">
+                    <span>Home&nbsp;>&nbsp;コーヒー豆&nbsp;</span>
+                </div>
                 <div class="product-tools">
-                    <h1>非洲</h1>
+                    <h1>コーヒー豆</h1>
                     <div class="ProductList-settings">
                         <div class="ProductList-settings-sort">
-                            <!-- <span>商品排序</span> -->
                             <select name="" id="">
                                 <option value="">商品排序</option>
                                 <option value="">上架時間:由新到舊</option>
@@ -696,7 +411,6 @@
                             </select>
                         </div>
                         <div class="ProductList-settings-limit">
-                            <!-- <span>每頁顯示24個</span> -->
                             <select name="" id="">
                                 <option value="">顯示數量</option>
                                 <option value="">每頁顯示 24 個</option>
@@ -707,256 +421,137 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="product-results">
-                    <div class="product-grid">
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-1.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                <p>NT$400</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-2.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                <p>NT$450</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-3.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                <p>NT$325</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-4.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                                <p>NT$1200</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-    
-                        
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-1.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                <p>NT$400</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-2.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                <p>NT$450</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-3.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                <p>NT$325</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div>
-                                <a href="">
-                                    <img src="/UX/products-4.webp" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                                <p>NT$1200</p>
-                            </div>
-                            <div class="add-cart">
-                                <a href="">加入購物車</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div> -->
+                
 
                 <div class="feature-product">
                     <div class="feature-wrap">
-                        <!-- <h2 class="title">精選咖啡豆</h2> -->
                         <div class="feature-list">
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="product-page.html">
-                                        <img src="./UX/yui.webp" alt="">
+                                        <img src="./UX/items-no08.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
+                                            <p>NT$280</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
-                                    <p>NT$280</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-1.webp" alt="">
+                                        <img src="./UX/items-no01.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                            <p>NT$400</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                    <p>NT$400</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-2.webp" alt="">
+                                        <img src="./UX/items-no02.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p>NT$450</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                    <p>NT$450</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-3.webp" alt="">
+                                        <img src="./UX/items-no03.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
+                                            <p>NT$325</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                    <p>NT$325</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-4.webp" alt="">
+                                        <img src="./UX/items-no04.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>タリーズ ブラジル ファゼンダバウ</p>
+                                            <p>NT$1200</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                                    <p>NT$1200</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
         
                             <!-- clo2 -->
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-1.webp" alt="">
+                                        <img src="./UX/items-no05.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                            <p>NT$400</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                    <p>NT$400</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-2.webp" alt="">
+                                        <img src="./UX/items-no06.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p>NT$450</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                    <p>NT$450</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-3.webp" alt="">
+                                        <img src="./UX/items-no07.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p>NT$325</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                    <p>NT$325</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div>
+                                <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/products-4.webp" alt="">
+                                        <img src="./UX/items-no08.jpeg" alt="">
+                                        <div class="item-txt">
+                                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                                            <p>NT$1200</p>
+                                            <div class="add-cart">
+                                                <a href="">カートに入れる</a>
+                                            </div>
+                                        </div>
                                     </a>
-                                </div>
-                                <div>
-                                    <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                                    <p>NT$1200</p>
-                                </div>
-                                <div class="add-cart">
-                                    <a href="">加入購物車</a>
                                 </div>
                             </div>
                             <!-- clo2 -->
@@ -968,60 +563,56 @@
             </section>
         </div>
 
-
-        <!-- footer -->
-        <div class="footerimg"></div>
-        <footer class="footer-section">
-            <div class="footer-wrap">
-                <div class="footer-link">
-                    <div class="footer-list">
-                        <h3>聯繫我們</h3>
-                        <ul>
-                            <li>服務專線</li>
-                            <li>0800-800-824</li>
-                            <li>週一至週五 9:30~18:00(國定例假日除外)</li>
-                            <li>Line 線上客服</li>
-                        </ul>
-                    </div>
-                    <div class="footer-list">
-                        <h3>顧客服務</h3>
-                        <ul>
-                            <li>訂單狀態</li>
-                            <li>退換貨說明</li>
-                            <li>網路訂購商品條款</li>
-                            <li>運送服務</li>
-                            <li>常見問題</li>
-                            <li>會員權益條款</li>
-                        </ul>
-                    </div>
-                    <div class="footer-icon">
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/3069725_circle_line_messenger_round icon_icon.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/317752_facebook_social media_social_icon.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/3225191_app_instagram_logo_media_popular_icon.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-legal">
-                <div id="gototop">
-                    <a href="#"><img src="./UX/gototop.svg" alt=""></a>
-                  </div>
-                <div class="footer-legal-copyright">Copyright © 2022 GARY CAFE. 保留一切權利。</div>
-                <div class="footer-legal-link">
-                    <a href="">隱私權政策 |</a>
-                    <a href="">使用條款 |</a>
-                    <a href="">法律聲明 |</a>
-                    <a href="">網站地圖</a>
-                </div>
-            </div>
-        </footer>
-        <!-- footer -->
+        <!-- 外部引用footer區塊 -->
+        <div class="m-footer"></div>
+        <!-- 外部引用footer區塊 -->
+        
     </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jquery -->
+
+    <script>
+        $(function() {
+			$('.m-header').load('./m-header.html')
+			$('.m-footer').load('./m-footer.html')
+		})
+    </script>
+
+
+
+
+
+    <script>
+        $('.List-item>a').click(function (e) { 
+            e.preventDefault();
+            $(this).parent().siblings().find('ul').slideUp();
+            $(this).parent().find('ul').slideToggle();
+            // $(this).addClass()
+            // $('.List-item>a:after').css('border','none');
+            $(this).parent().siblings().find('a').removeClass('rmminus');
+            $(this).toggleClass('rmminus');
+
+        });
+        
+        
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- bootstrap JS -->
+
 </body>
 </html>

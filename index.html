@@ -4,192 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome to GARY CAFE!</title>
+    <!-- bootstraps CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- bootstraps CDN -->
+    <!-- reset CSS -->
     <link rel="stylesheet" href="normalize.css">
+    <!-- reset CSS -->
+    <title>Wellcome to GARY CAFE!</title>
     <style>
+        *{
+            font-size: 15px;
+
+        }
         .main-content{
             width: 100%;
+            position: relative;
         }
-
-        /* header  */
-        .header{
-            background-color: white;
-            height: 90px;
-            width: 100%;
-            max-width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-evenly;
-            position: fixed;
+        .m-header{
+            position: sticky;
             top: 0;
-            left: 0;
-            box-shadow: 0px 5px 3px 0px rgb(0 0 0 / 25%);
-            padding: .8rem 3rem;
-            box-sizing: border-box;
+            z-index: 1000;
         }
-        .logo img{
-            width: 70px;
-            height: 70px;
-            /* padding-top: 10px; */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .main-navbar{
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-        }
-        .navbar-nav{
-            display: flex;
-            font-size: 18px;
-            list-style-type: none;
-            align-items: center;
-            flex-grow: 1;
-            /* height: 100%; */
-        }
-        .nav-item a{
-            text-decoration: none;
+        a{
             color: #000;
-            transition: 0.3s;
-        }
-        .nav-item>a:hover{
-            color: rgb(209, 131, 30);
-            font-weight: 700;
-            border-bottom: 3px solid rgb(186, 129, 5);
-
-        }
-        .navbar-nav li.nav-item{
-            padding: 34px 20px;
-            position: relative;
-            
-            
-        }
-        .navbar-nav li.nav-item:hover ul.layer1{
-            display: flex;
-        }
-        .navbar-nav li.nav-item:hover ul.layer1 ul{
-            display: block;
-            
-        }
-        .navbar-nav li.nav-item ul.layer1{
-            display: none;
-            min-width: 600px;
-            padding-left: 0;
-            list-style-type: none;
-            background-color: white;
-            opacity: 0.9;
-            position: absolute;
-            border: 1px solid rgb(235, 235, 235);
-            left: 0;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            box-sizing: border-box;
-            z-index: 10;
-            padding: 20px;
-            top: 100%;
-            transition: 1s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li ul{
-            list-style-type: none;
-            padding-left: 0;
-            margin: 10px 0;
-        }
-        .navbar-nav li.nav-item ul.layer1 li ul li{
-            padding: 10px 0;
-            font-size: 15px;
-            /* opacity: 0.7; */
-            transition: 0.2s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li{
-            flex: 1;
-            margin: 10px;
-        }
-        .navbar-nav li.nav-item ul.layer2 li{
-            margin: 10px 0 10px 10px;
-        }
-        .navbar-nav li.nav-item ul.layer1 li a{
-            display: block;
-            padding: 10px;
-            border-bottom: 1px solid #000;
-            transition: 0.2s;
-        }
-        .navbar-nav li.nav-item ul.layer1 li a:hover{
-            background-color: rgb(209, 209, 209);
-        }
-        .navbar-nav li.nav-item ul.layer1 li li:hover{
-            background-color: rgb(209, 209, 209);
-        }
-
-
-
-
-        
-        
-        .search-panel{
-            padding-left: 40px;
-            position: relative;
-        }
-        .search-panel a{
             text-decoration: none;
-            position: absolute;
         }
-        .search-panel a img{
-            width: 35px;
-            height: 35px;
-            margin-top: 2px;
-        }
-        .search-panel input{
-            max-width: 300px;
-            /* width: 300px; */
-            height: 40px;
-            box-sizing: border-box;
-            background-color: #eee;
-            border-width: 0;
-            border-radius: 0.25rem;
-            padding: 0 45px;
-            transition: 0.5s;
-        }
-        @media screen and (max-width: 959px){
-            .search-panel input{
-                display: none;
-            }
-            .search-panel a{
-                position: relative;
-            }
-            .search-panel a img{
-                margin: 0 15px;
-            }
-            .header-icon .icon-list{
-                padding-left: 0;
-            }
-            
-        }
-
-
 
         
-        .search-panel input:hover{
-            background-color: rgb(255, 234, 180);
-        }
-        .header-icon .icon-list{
-            display: flex;
-            list-style-type: none;
-            
-        }
-        .header-icon .icon-list li a img{
-            width: 35px;
-            height: 35px;
-            margin: 0 15px;
-
-        }
-        /* header  */
 
 
 
 
-
+        /* slick */
         .slick{
             box-sizing: border-box;
-            margin-top: 90px;
+            /* margin-top: 90px; */
             /* padding-top: 90px; */
             position: relative;
+            overflow: hidden;
+            /* background-attachment: fixed;
+            background-image: url(./UX/PC_18_3000x.webp);
+            background-size: cover;
+            background-position: center center;
+            height: 100vh; */
         }
         .slick p{
             position: absolute;
@@ -201,373 +63,562 @@
             left: 50%;
             transform: translate(-50%, -50%);
             /* font-size: 60px; */
-            font-size: 4em;
+            font-size: 3em;
             color: #fff;
-            font-style: italic;
-            font-weight: 600;
+            /* font-style: italic; */
+            font-weight: 300;
             opacity: 0.9;
         }
         .slick img{
             width: 100%;
             vertical-align: middle;
-            aspect-ratio: 22/10;
-        }
-        .new-message{
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 40px;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
-        .new-message dl{
-            padding: 20px 0;
-            margin: 0;
-        }
-        .new-message dl dt{
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 20px 0 0;
-        }
-        .new-message dl dt span:nth-child(1){
-            display: inline-block;
-            vertical-align: middle;
-            padding: 10px 15px;
-            margin: 0 20px 0 0;
-            background-color: rgb(0, 0, 0);
-            color: #eee;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1;
-            animation: breath 2s linear 1s infinite alternate;
-        }
-        .new-message dl dt span:nth-child(2){
-            display: inline-block;
-            vertical-align: middle;
-            color: rgb(183, 183, 183);
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1;
-        }
-        .new-message dl dd{
-            display: inline-block;
-            margin: 0;
-        }
-        .new-message dl dd a{
-            font-size: 16px;
-            /* font-weight: bold; */
-            line-height: 1;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            opacity: 1;
-            /* animation: breath 1s linear 1.5s infinite alternate; */
-        }
-        @keyframes breath{
-            0%{color: rgb(255, 255, 255);background-color: rgb(0, 0, 0);}
-            100%{color: rgb(0, 0, 0);background-color: rgb(0,rgb(255, 255, 255));}
-        }
-
-
-        
-        
-
-
-
-
-
-        .quick-opt,.feature-product{
-            width: 100%;
-            /* max-width: 100%; */
-            padding: 60px 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .quick-opt .quick-item{
-            margin: 0 10px 0 10px;
-            width: calc(20% - 20px);
-            /* border: 1px solid rgb(234, 234, 234); */
-            box-sizing: border-box;
-            border-radius: 15px;
-            overflow:hidden;
-            position: relative;
-            /* box-shadow: 8px 8px 16px 5px rgba(0,0,0,0.2); */
-            transition: 0.4s;
-        }
-        .quick-item a img{
-            width: 100%;
-            height: 100%;
-            vertical-align: middle;
             object-fit: cover;
             object-position: center;
-            /* aspect-ratio: 1/1; */
-            border-radius: 15px;
-            transition: all 0.4s;
+            aspect-ratio: 19/10;
+            animation: big 30s linear 1.5s infinite alternate;
+            
         }
-        .quick-item a p{
-            margin: 0;
-            display: none;
-            z-index: 100;
-            color: rgb(255, 255, 255);
-            position: absolute;
-            font-size: 35px;
-            font-weight: 400;
-            bottom: 15%;
-            left: 15%;
-            /* display: block;
-            opacity: 0;
-            transition: 0.4s; */
+        @keyframes big {
+            0%{ scale: 1;}
+            100%{ scale: 1.3;}
+            
         }
-        .quick-item:hover{
-            box-shadow: 5px 5px 16px 5px rgba(0,0,0,0.2);
-
-        }
-        .quick-item a img:hover{
-            filter: blur(3px) brightness(70%);
-            transform: scale(1.1);
-        }
-        .quick-item a img:hover~p{
-            display: block;
-            /* opacity: 1; */
+        /* slick */
+        @media screen and (max-width:1024px){
+            .slick img{
+                aspect-ratio: 4/3;
+            }
         }
 
 
-        /* section  START*/
-        .visible{
-            opacity: 1;
-            transform: translate(0,0);
-            transition: opacity 1024ms ease ,transform 1024ms ease ;
+
+        /* story */
+        .quick-opt{
+            padding-top: 150px;
+            background-image: url(./UX/bg-main.png);
         }
-        .main-product{
-            max-width: 100%;
-            background: transparent;
-            margin: 40px auto 140px;
-            padding: 100px 0 110px;
-            display: block;
+        .p-top-about{
+            width: 100%;
+            margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            overflow-y: visible;
-        }
-        div.main-product::before{
-            content: "BEANS";
-            display: block;
-            font-size: 206px;
-            font-weight: bold;
+            background-color: #FFF;
+            color: #fef6ee;
             line-height: 1;
-            color: rgb(249, 246, 244);
-            position: absolute;
-            z-index: -2;
-            right: 0;
-            top: 0;
+        
         }
-        div.main-product::after{
-            content: "";
-            display: block;
-            background: #e7dcd5;
+        .p-top-about__body{
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            background-color: #28292b;
+            /* background-color: #395246; */
+        }
+        .about-statement{
+            padding: 0 0 11% 0;
+            display: flex;
+            background-color: #28292b;
+            /* background-color: #395246; */
+            position: relative;
+        }
+        .about-statement:before{
             position: absolute;
-            z-index: -1;
-            left: 0;
             bottom: 0;
-            width: 70vw;
-            height: 350px;
+            right: 0;
+            width: 46.5%;
+            height: 40%;
+            content: '';
+            /* background-color: #1a1b1c; */
+            background-image: url(./UX/bg-main.png);
         }
-        @media screen and (max-width: 959px){
-            .main-product {
-                margin: 40px auto 40px;
-                padding-bottom: 40px;
-            }
+        :before {
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 0;
+            text-decoration: inherit;
+            vertical-align: inherit;
         }
-        @media screen and (min-width:1281px) {
-            .main-product>.inner{
-                position: static;
-            }
+        .about-statement__text {
+            width: 45%;
+            /* background-color: #FFF; */
+            padding: 150px 0 0 0;
+            background-image: url(./UX/bg-main.png);
         }
-        @media screen and (max-width: 959px){
-            .main-product>.inner{
-                padding: 0 20px;
-            }
+        .about-statement__text-inner {
+            background-color: #28292b;
+            /* background-color: #395246; */
+            padding: 150px 16% 15px 16%;
         }
 
-        @media screen and (max-width: 959px){
-            .main-product:before {
-                font-size: 27.5vw;
-                top: 30px;
+        .p-top-about__title span{
+            display: block;
+            font-size: 2rem;
+            letter-spacing: .12em;
+            line-height: 1;
+            font-weight: 600;
+            position: relative;
+            /* display: inline-block; */
+        }
+        .js-scroll__split .js-split {
+            overflow: hidden;
+            padding-bottom: 4px;
+        }
+        .about-statement__catch{
+            margin-top: 55px;
+        }
+        .about-statement__catch span{
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1;
+            letter-spacing: .12rem;
+            margin-bottom: 22px;
+            font-weight: 600;
+        }
+
+
+        .about-statement__visual, .about-statement__visual-inner {
+            display: none;
+        }
+        .about-statement__visual img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+
+
+
+
+
+        .about-statement__read span{
+            display: block;
+            font-size: 1rem;
+            line-height: 2;
+            letter-spacing: .08rem;
+            margin-top: 7px;
+            font-weight: 300;
+            color: #ccc;
+        }
+
+        .about-statement__bgvisual {
+            width: 55%;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-statement__bgvisual-inner {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(./UX/slide02.jpeg);
+        }
+
+
+        
+        /* story */
+        @media screen and (max-width:1024px) { /*對平版以下有作用*/
+            .about-statement__text-inner {
+                padding: 60px 11.5% 15px 11.5%;
+            }
+            .about-statement__bgvisual {
+                /* width: 48%; */
             }
         }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dt {
-                position: absolute;
-                top: 0;
-                left: 0;
+        @media screen and (max-width:959px) {
+            .quick-opt{
+                padding-top: 0;
+            }
+            .about-statement__bgvisual, .about-statement__bgvisual-inner {
+                display: none;
+            }
+            .about-statement__visual, .about-statement__visual-inner {
+                display: block;
                 width: 100%;
-                padding-top: 60%;
+                margin: 10px auto 0;
+                overflow: hidden;
             }
-        }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dt:before {
-                top: unset;
-                left: unset;
-                right: 40px;
-                bottom: -24px;
-                font-size: 50px;
-                color: rgb(157, 110, 18);
+            .about-statement__text-inner {
+                padding: 50px 10% 15px 10%;
             }
-        }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dt img{
-                border-radius: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+            .about-statement:before{
+                width: 0;
             }
-        }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dd {
+            .about-statement {
+                display: block;
+            }
+            .about-statement__text {
                 width: 100%;
-                max-width: none;
-                min-width: auto;
-                margin-top: -70px;
-                padding: 0;
+                padding-top: 0;
+            }
+            .about-statement__read {
+                margin-top: 25px;
             }
         }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dd h1 {
-                font-size: 23px;
-                margin: 0 0 calc(60% + 90px);
-            }
-        }       
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dd h1 small {
-                font-size: 14px;
-                margin: 0 0 6px;
-            }
+        
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+            
         }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dd h1:after {
-                width: 70px;
-                top: -40px;
-                right: 0;
-            }
-        }
-        @media screen and (max-width: 959px){
-            .main-product>.inner dl dd a.btn {
-                margin: 40px auto 0;
-            }
-        }
-        @media screen and (max-width: 959px){
-            .main-product:after {
-                height: 400px;
-            }
-        }
+
+
+
 
 
 
         
-        .inner{
+
+
+
+
+
+
+        /* moreabout */
+        .moreabout-inner{
             width: 100%;
-            max-width: 1280px;
+            padding: 150px 60px;
+            background-image: url(./UX/bg-main.png);
+        }
+        .moreabout{
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
+            display: flex; 
             position: relative;
         }
-        .inner dl{
-            display: flex;
-            align-items: center;
-        }
-        .inner dl dt{
-            max-width: 700px;
+        .moreabout-img{
             position: relative;
+            flex-grow: 1;
+            height: 500px;
         }
-        .inner dl dt::before{
-            content: "BEANS";
-            display: block;
-            font-size: 80px;
-            font-weight: bold;
-            line-height: 1;
-            color: rgb(0, 0, 0);
+        .moreabout-img-list{
             position: absolute;
+            z-index: 1;
+            right: -30px;
+        }
+        .moreabout-text{
+            padding-top: 280px;
             z-index: 2;
-            left: calc(-47px);
-            top: -54px;
         }
-        .inner dl dt img{
-            display: block;
+        .moreabout-text-list{
+            color: rgb(255, 255, 255);
+        }
+        .moreabout-text-list p{
+            line-height: 3;
+            font-size: 14px;
+            font-weight: 300;
+
+            letter-spacing: 0.2rem;
+        }
+        /* moreabout */
+
+        @media screen and (max-width:1024) { /*對平版以下有作用*/
+        
+        }
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+            .moreabout{
+                display: block;
+            }
+            .moreabout-inner{
+                padding: 60px;
+            }
+            .moreabout-img-list {
+                right: -70px;
+            }
+            .moreabout-text {
+                padding-top: 20px;
+                z-index: 2;
+            }
+            .moreabout-text-list{
+                padding: 40px;
+            }
+        }
+
+
+
+
+
+        /*MENU*/
+        .p-top-menu {
             width: 100%;
-            border-radius: 10px;
-            vertical-align: top;
-            border: 0;
-            aspect-ratio: 683/409.8;
-            box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 25%);
-        }
-        .inner dl dd{
-            width: 50%;
-            padding: 0 0 0 5%;
-            max-width: 540px;
-            min-width: 360px;
-        }
-        .inner dl dd h1{
-            font-size: 30px;
-            font-weight: bold;
-            line-height: 1.6;
-            margin: 0 0 30px;
+            margin: 0 auto;
             position: relative;
-        }
-        .inner dl dd h1::after{
-            content: "";
-            display: block;
-            width: 96px;
-            height: 136px;
-            position: absolute;
-            z-index: -1;
-            top: -50px;
-            right: 30px;
-            background: url(./UX/beans_machine.png) no-repeat center center;
-            background-size: contain;
-        }
-        .inner dl dd small{
-            font-size: 16px;
-            font-weight: bold;
+            background-image: url(./UX/bg-beige.png);
+            color: #28292b;
             line-height: 1;
-            display: block;
-            margin: 0 0 10px;
+            padding: 70px 0;
         }
-        .inner dl dd p{
-            font-size: 15px;
-            line-height: 2;
-            color: rgb(113, 113, 113);
-            margin-right: 80px;
-        }
-        .inner dl dd a{
-            /* margin: 40px 0 0; */
-            /* background: transparent; */
-            display:block;
+        .p-top-menu__body {
             width: 100%;
-            max-width: 200px;
-            padding: 22px;
-            /* margin: 0 auto; */
-            /* margin-right: 50px; */
-            text-align: center;
-            font-size: 16px;
-            font-weight: 400;
-            /* transition: all 300ms ease; */
             position: relative;
-            border: 1px solid rgb(100, 100, 100);
-            color: #000;
-            text-decoration: none;
-            border-radius: 4px;
-            letter-spacing:1px;
-            transition: 0.5s;
         }
-        .inner dl dd a:hover{
-            border: 1px solid rgb(233, 145, 4);
-            background-color: rgb(233, 145, 4);
-            color: #fff;
+        .p-top-menu__title {
+            font-size: 2.8rem;
+            letter-spacing: .12em;
+            line-height: 1;
+            text-align: center;
+        }
+        .js-split {
+            overflow: hidden;
+            padding-bottom: 4px;
+        }
+        .js-split span{
+            font-size: 30px;
+            font-weight: 700;
 
         }
-        /* section  endline*/
+        .p-top-menu__title span {
+            position: relative;
+            display: inline-block;
+        }
+        .js-scroll__split .js-split:before {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            background-color: #28292b;
+            height: 2px;
+            content: '';
+            left: 0;
+        }
+        .p-top-menu__read {
+            font-size: 1.6rem;
+            letter-spacing: .1em;
+            line-height: 2;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .menu-lst__unit {
+            width: 100%;
+            margin: 40px auto 0;
+            padding-left: 100px;
+        }
+        .menu-lst {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 7%;
+            background-color: #FFF;
+        }
+        .menu-lst__inner {
+            width: 100%;
+            display: flex;
+            background-color: #FFF;
+        }
+        .menu-lst__visual {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+        }
+        .menu-lst__name {
+            position: absolute;
+            font-size: 20px;
+            color: #FFF;
+            left: 17px;
+            bottom: 17px;
+            z-index: 2;
+            letter-spacing: .08em;
+            line-height: 1;
+            font-weight: 700;
+        }
+        .menu-lst__visual-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-lst__visual-inner span {
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 50% 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .menu-lst__visual:after {
+            background-image: url(./UX/bg-beige.png);
+            width: 62%;
+            height: 20%;
+            position: absolute;
+            content: '';
+            z-index: 0;
+            bottom: -20%;
+            left: 0;
+        }
+        .menu-lst__text {
+            width: 50%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+        .menu-lst__text-inner {
+            width: 100%;
+            padding: 0 15% 0 60px;
+        }
+        .menu-lst__guide {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-lst__guide h3 {
+            /* font-size: 2.2rem; */
+            font-size: 22px;
+            line-height: 1;
+            letter-spacing: .04em;
+        }
+        .menu-lst__guide h3 span {
+            display: block;
+            /* font-size: 1.2rem; */
+            font-size: 12px;
+            margin-top: 10px;
+            color: #b5b5b5;
+            letter-spacing: .08em;
+        }
+        .menu-lst__copy {
+            position: relative;
+            margin-top: 28px;
+        }
+        .menu-lst__copy h3 {
+            /* font-size: 1.9rem; */
+            font-size: 19px;
+            line-height: 1.7;
+            letter-spacing: .08em;
+        }
+        .menu-lst__copy p {
+            /* font-size: 1.4rem; */
+            font-size: 14px;
+            color: #666;
+            line-height: 1.65;
+            margin-top: 20px;
+            letter-spacing: .07em;
+        }
+        .menu-lst__thumb {
+            width: 100%;
+            margin-top: 75px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-lst__thumb-lst {
+            width: 46%;
+            overflow: hidden;
+        }
+        .menu-lst__thumb-lst img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+            aspect-ratio: 15/10;
+            object-fit: cover;
+        }
+        /*MENU*/
+
+
+
+        
+
+
+        
+        @media screen and (max-width:1200px) { /*對手機以下有作用*/
+            /* .menu-lst__visual:after{
+                height: 17%;
+            } */
+            .menu-lst__copy h3{
+                font-size: 17px;
+            }
+            .menu-lst__thumb{
+                margin-top: 20px;
+            }       
+        }
+        @media screen and (max-width:1024px) { /*對平版以下有作用*/
+            .menu-lst__text-inner {
+                padding: 0 35px 0 35px;
+            }
+            .menu-lst__copy {
+                margin-top: 18px;
+            }
+
+            .menu-lst__thumb {
+                margin-top: 25px;
+            }
+        }
+        @media screen and (max-width:959px) { /*對平版以下有作用*/
+            
+            .p-top-menu__body {
+                padding: 100px 6%;
+            }
+            .menu-lst__unit {
+                margin: 60px auto 0;
+                padding: 0;
+            }
+            .menu-lst {
+                padding: 0;
+                margin-bottom: 95px;
+            }
+            .menu-lst__inner {
+                display: block;
+            }
+            .menu-lst__visual {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .menu-lst__visual-inner {
+                width: 92%;
+                margin: 0 auto;
+                z-index: 1;
+            }
+            .menu-lst__visual:after {
+                background-color: #f6f4ef;
+                width: 100%;
+                height: 90%;
+                position: absolute;
+                content: '';
+                z-index: 0;
+                top: 0;
+                left: 0;
+            }
+            .menu-lst__text {
+                width: 100%;
+            }
+            .menu-lst__text-inner {
+                padding: 50px 60px 70px;
+            }
+            .menu-lst__name {
+                left: 7%;
+                letter-spacing: .03em;
+            }
+                    
+        }
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+        
+        }
+
+
+
+
+
+
+
+
+
+
+       
 
 
         /* feature start */
+        .feature-product{
+            width: 100%;
+            max-width: 100%;
+            /* padding: 100px 0; */
+            display: flex;
+            flex-wrap:  nowrap;
+            gap: 10px;
+            /* background: #f6f4ef; */
+            background-image: url(./UX/bg-beige.png);
+            z-index: 10;
+        }
         .feature-wrap{
             width: 100%;
             max-width: 1200px;
@@ -575,31 +626,32 @@
             margin: 0 auto;
             padding: 0 20px;
             box-sizing: border-box;
-            border-top: 2px solid rgb(220, 220, 220);
-        }
-        h2.title{
-            text-align: center;
-            font-size: 30px;
-            margin: 40px 0 50px; 
+            /* border-top: 2px solid rgb(220, 220, 220); */
         }
         .feature-list{
             /* display: flex; */
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2,1fr);
-            margin: 40px 0;
-            gap: 15px;
+            /* grid-template-rows: repeat(2,1fr); */
+            margin: 40px 0 0;
+            gap: 35px;
         }
-        .feature-list .feature-item{
+        .feature-item{
             /* padding: 10px; */
             box-sizing: border-box;
             /* width: 25% */
             text-align: left;
             margin-bottom: 50px;
         }
-        .feature-list .feature-item img{
+        .feature-item div{
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .feature-item img{
             width: 100%;
             vertical-align: middle;
+            object-fit: cover;
+            aspect-ratio: 1/1;
         }
         .feature-item p{
             padding: 15px;
@@ -609,33 +661,22 @@
             font-size: 14px;
             color: rgb(88, 88, 88);
         }
-        .feature-item .add-cart{
+        .feature-btn{
+            margin: 10px auto 50px;
             text-align: center;
-            background-color: rgb(255, 255, 255);
-            padding: 10px 0;
-            border: 1px solid rgb(118, 118, 118);
-            border-radius: 3px;
-            transition: 0.3s;
-            /* opacity: 1; */
-            /* animation: breath 2s linear 1s infinite alternate; */
         }
-
-        /* @keyframes breath{
-            0%{opacity: 1;}
-            100%{opacity: 0;}
-        } */
-        .feature-item .add-cart a{
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            transition: 0.3s;
-        }
-        .feature-item .add-cart:hover a{
-            color: rgb(255, 255, 255);
-        }
-        .feature-item .add-cart:hover{
-            background-color: rgb(0, 0, 0);
-            /* border: none; */
-            
+        .feature-btn a{
+            width: 270px;
+            font-size: 15px;
+            padding: 14px 54px;
+            border-radius: 10px;
+            /* transition: opacity ease 0.2s; */
+            background: #323f6b;
+            text-align: center;
+            letter-spacing: 1.9px;
+            color: #fafafa;
+            align-items: center;
+            justify-content: center;
         }
         /* feature end */
 
@@ -643,297 +684,147 @@
 
 
 
-        .product-intro{
+
+
+        /* knowledge */
+        .coffee-knowledge{
+            background-image: url(./UX/bg_texture_dark.jpeg);
+            padding: 100px 0;
             width: 100%;
-            background-color: #f9f9f9;
         }
-        .product-intro .intro-wrap{
-            max-width: 1200px;
+        .knowledge{
             margin: 0 auto;
-            padding: 50px 30px;
-        }
-        .intro-wrap .intro-list{
             display: flex;
-            gap: 5px;
-            margin-bottom: 50px;
-        }
-        .intro-wrap .intro-list:nth-child(2){
-            flex-direction: row-reverse;
-            margin-bottom: 0;
-        }
-        .intro-list .intro{
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            padding: 50px;
-            width: 0;
-            /* background-color: rgb(242, 242, 242);  */
-            flex-grow: 2;
-        }
-        .intro-wrap .intro-list:nth-child(2) .intro{
-            text-align: left;
-            align-items: flex-start;
-        }
-        .intro-wrap .intro-list:nth-child(2) .intro-box div{
-            justify-content: flex-start;
-        }
-        .intro-box{
-            /* width: 75%; */
-        }
-        .intro-box div{
-            display: flex;
-            justify-content: flex-end;
-        }
-        .intro-box div a{
-            text-align: center;
-            text-decoration: none;
-            /* background-color: rgb(255, 255, 255); */
-            color: rgb(0, 0, 0);
-            border: 1px solid black;
-            padding: 10px 30px;
-            transition: 0.4s;
-            border-radius: 3px;
-        }
-        .intro-box div a:hover{
-            background-color: #000;
-            color: #fff;
-
-        }
-        .intro input{
-            width: 100px;
-        }
-        .intro-photo{
-            width: 0;
-            flex-grow: 7;
-        }
-        .intro-photo img{
+            box-sizing: border-box;
             width: 100%;
-            max-height: 600px;
-            object-fit: cover;
-            vertical-align: middle;
-            border-radius: 10px;
-            transition: 0.5s;
-            aspect-ratio: 4/3;
-        }
-        .intro-photo img:hover{
-            /* filter: brightness(80%); */
-            transform: scale(1.03);
-        }
-
-
-
-        .product-more{
-            /* width: 100%; */
             max-width: 1200px;
-            margin: 80px auto 0;
-            padding-bottom: 60px;
-            border-top: 1px solid rgb(220, 220, 220);
+            padding: 50px 0;
         }
-        .product-more .more-content{
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 60px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2,1fr);
-            gap: 30px;
-        }
-        .more-item{
-            position: relative;
-        }
-        .more-item a{
-            text-decoration: none;
-            color: rgb(47, 47, 47);
-        }
-        /* .more-item div.more-img{
-            position: relative;
-        } */
-        .more-item a p{
-            position: absolute;
+        .knowledge-container{
+            padding: 20px;
+            width: 34%;
             text-align: center;
-            left: 40%;
-            top:38%;
-            /* top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
-            padding: 10px 15px;
-            font-size: 20px;
-            transition: 1s;
-            display: none;
-            color: white;
-            border: 1px solid #fff;
-            border-radius: 3px;
-            font-weight: 300;
         }
-        .more-item div{
-            overflow: hidden;
+        .knowledge-header{
+            margin-bottom: 40px;
         }
-        .more-item img{
-            width: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-            object-position: center;
-            aspect-ratio: 16/10;
-            transition: 0.5s;
+        .knowledge-header span{
+            font-size: 14px;
         }
-        .more-item img:hover{
-            filter: brightness(50%);
-            transform: scale(1.1);
+        .knowledge-txt{
+            letter-spacing: 1.5px;
+            font-size: 15px;
+            line-height: 2.27;
         }
-        .more-item div:hover~p{
+
+        .knowledge-btn{
+            margin: 48px auto 0;
+            text-align: center;
+        }
+        .knowledge-btn a{
             display: block;
-            opacity: 1;
+            width: 270px;
+            font-size: 15px;
+            padding: 14px 54px;
+            border-radius: 10px;
+            /* transition: opacity ease 0.2s; */
+            background: #323f6b;
+            text-align: center;
+            letter-spacing: 1.9px;
+            color: #fafafa;
+            align-items: center;
+            justify-content: center;
         }
-        .more-item div:hover~h3{
-            color: rgb(142, 108, 20);
+
+        .knowledge-card{
+            width: 66%;
+            padding: 20px;
+        }
+        .knowledge-card-list{
+            display: flex;
+            gap: 30px;
+            height: 100%;
+        }
+        .knowledge-card-item{
+            width: 50%;
+        }
+        
+        .knowledge-card-thumb img{
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 16/10;
+        }
+        .knowledge-card-cont{
+            padding: 27px 30px 50px;
+            background-color: #fff;
+            opacity: 0.8;
+            height: 50%;
+        }
+        .knowledge-card-header{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .knowledge-card-txt{
+            font-size: 14px;
+        }
+        .knowledge-btn.sm{
+            display: none;
+        }
+        /* knowledge */
+        @media screen and (max-width: 1000px){
+            .knowledge{
+                flex-direction: column;
+            }
+            .knowledge-container {
+                padding: 0;
+                width: 100%;
+            }
+            .knowledge-card{
+                /* margin-top: 40px; */
+                padding: 0 10%;
+                width: 100%;
+            }
+            p.knowledge-btn{
+                display: none;
+            }
+            .knowledge-btn.sm{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+        }
+        @media screen and (max-width: 767px){
+            .knowledge-txt{
+                letter-spacing: 0.84px;
+                font-size: 3.7vw;
+                line-height: 1.86;                
+            }
+            .knowledge-card-list {
+                flex-direction: column;
+                width: 100%;
+            }
+            .knowledge-card{
+                width: 100%;
+            }
+            .knowledge-card-item{
+            width: 100%;
+            }
+            .knowledge-card-header{
+                font-size: 3.7vw;
+            }
+            .knowledge-card-txt{
+                font-size: 3.2vw;
+            }
+            .knowledge-btn.sm a{
+                width: 72vw;
+                font-size: 4vw;
+            }
         }
         
 
 
-        .coffee-info{
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-top: 1px solid rgb(220, 220, 220);
-        }
-        .coffee-info .info-list{
-            max-width: 1200px;
-            display: flex;
-            margin: 0 auto;
-            margin-bottom: 50px;
-        }
-        a.info-item{
-            display: block;
-            width: 33.333333%;
-            box-sizing: border-box;
-            text-decoration: none;
-            color: #000;
-            margin: 2rem 2.6%;
-        }
-        a.info-item span{
-            margin: 0.5rem 0;
-            display: block;
-            font-size: 15px;
-            font-weight: 300;
-        }
-        a.info-item h3{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-size: 16px;
-            line-height: 1.7rem;
-            font-weight: 400;
-            letter-spacing: 1.5px;
-        }
-        a.info-item p{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            opacity: 0.7;
-            text-align: justify;
-            font-size: 15px;
-            font-weight: 300;
-
-        }
-        a.info-item div{
-            overflow: hidden;
-        }
-        a.info-item div img{
-            width: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-            aspect-ratio: 16/10;
-            transition: 0.5s;
-        }
-        a.info-item:hover div img{
-            transform: scale(1.1);
-        }
-        a.info-item:hover{
-            background: rgb(249, 249, 249);
-        }
-
-
-
-
-        /* footer start */
-        #gototop{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(138, 109, 23, 0.5);
-            position: fixed;
-            right: 1.875rem;
-            bottom: 6.875rem;
-            padding: 0.625rem;
-            z-index: 3;
-            box-shadow: 0px 5px 3px 0px rgba(130, 130, 130, 0.1);
-        }
-        #gototop a img{
-            width: 100%;
-            opacity: 0.5;
-        }
-
-
-        .footerimg{
-            background-image: url(./UX/footerimg3.webp);
-            background-size: cover;
-            background-position:center center;
-            width: 100%;
-            height: 220px;
-        }
-
-
-
-        .footer-section{
-            background-color: rgb(255, 255, 255);
-            font-weight: 400;
-            color : rgb(58, 58, 58);
-            padding-top: 60px;
-            width: 100%;
-            /* margin-top: 70px; */
-        }
-        .footer-wrap{
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-link{
-            display: flex;
-            justify-content: space-evenly;
-            margin-bottom: 40px;
-        }
-        .footer-list{
-            margin: 0 40px;
-        }
-        .footer-list h3{
-            font-weight: 300;
-            font-size: 16px;
-        }
-        .footer-list ul{
-            padding: 0;
-        }
-        .footer-list ul li{
-            list-style-type: none;
-            font-size: 14px;
-            color: rgb(83, 83, 83);
-        }
-        .footer-icon a{
-            text-decoration: none;
-        }
-        .footer-legal{
-            background-color: rgb(255, 203, 99);
-            padding: 10px 0 20px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 300;
-        }
-        .footer-legal-link a{
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-        }
-        /* footer end */
+        
 
 
     </style>
@@ -941,497 +832,300 @@
 <body>
     <div class="main-content">
 
+        <!-- 外部引用header區塊 -->
+        <div class="m-header"></div>
+        <!-- 外部引用header區塊 -->
+        
 
-        <!-- header -->
-        <header class="header">
-            <div class="logo">
-                <a href="index.html"><img src="./UX/LOGO.png" alt="GARY CAFE LOGO ICON"></a>
-            </div>
-            <div class="main-navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="aboutus.html">關於我們</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">全部商品</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="product-category.html">咖啡豆</a>
-                        <ul class="layer1">
-                            <li>
-                                <a href="">產地</a>
-                                <ul class="layer2">
-                                    <li>非洲</li>
-                                    <li>亞洲</li>
-                                    <li>北/中/南美洲</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">烘焙度</a>
-                                <ul class="layer2">
-                                    <li>淺焙</li>
-                                    <li>淺中焙</li>
-                                    <li>中焙</li>
-                                    <li>中深焙</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">處理法</a>
-                                <ul class="layer2">
-                                    <li>日曬</li>
-                                    <li>水洗</li>
-                                    <li>特殊處理</li>
-                                    <li>厭氧處理</li>
-                                    <li>蜜處理</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">咖啡器具</a>
-                        <ul class="layer1" style="min-width: 400px;">
-                            <li>
-                                <a href="">磨豆機</a>
-                                <ul class="layer2">
-                                    <li>手磨</li>
-                                    <li>電磨</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">手沖器材</a>
-                                <ul class="layer2">
-                                    <li>濾杯</li>
-                                    <li>手沖壺</li>
-                                    <li>容器/耗材類</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="coffee-knowledge.html">咖啡知識</a>
-                        <ul class="layer1" style="min-width: 200px;">
-                            <li>
-                                <a href="">咖啡知識</a>
-                                <ul class="layer2">
-                                    <li>咖啡豆挑選</li>
-                                    <li>手沖咖啡入門</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="search-panel">
-                    <a href="">
-                        <img src="./UX/search.svg" alt="">
-                    </a>
-                    <input id="global-search" type="text" placeholder="搜尋">
+
+
+        <div class="slick"><!-- 使用slick套件 -->
+            <a><img src="./UX/PC_18_3000x.webp" alt="banner"></a>
+        </div>
+
+
+        <div class="quick-opt">
+            <section class="p-top-about">
+                <div class="p-top-about__body">
+                    <div class="about-statement">
+                        <div class="about-statement__text">
+                            <div class="about-statement__text-inner">
+                                <h2 class="p-top-about__title">
+                                    <span class="js-split">
+                                        Story
+                                    </span>
+                                </h2>
+                                <p class="about-statement__catch">
+                                    <span>ようこそ、漆器の街、輪島、KALPAへ。</span>
+                                    <span>一期一会の出会いを、</span>
+                                    <span>こだわりのコーヒーとスイーツ、</span>
+                                    <span>職人の技と魂が宿る種々の器で。</span>
+                                </p>
+                                <div class="about-statement__visual">
+                                    <div class="about-statement__visual-inner">
+                                        <img src="./UX/slide02.jpeg" alt="">
+
+                                    </div>
+                                </div>
+                                <p class="about-statement__read">
+                                    <span>
+                                        2014年、輪島きっての観光地として知られる朝市の一角にて、KALPAはひっそりと産声をあげました。漢字で「劫」と書く『KALPA（＝カルパ）』という言葉は、宇宙的なスケールで進む「極めて長い時間」を意味します。この場所で生まれる小さな出会いやささやかな会話の一つひとつが、永くつづく時の流れの中に溶け込んでいく。そんな豊かな体験を提供するために、一杯に、一皿に、想いを乗せていきます。 
+                                      </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-statement__bgvisual">
+                            <div class="about-statement__bgvisual-inner"></div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="header-icon">
-                    <ul class="icon-list">
-                        <li class="icon">
-                            <a href="">
-                                <img src="./UX/shopping_cart.svg" alt="">
+            </section>
+            
+        </div>
+
+
+
+        <section class="moreabout-inner">
+            <div class="moreabout">
+                <div class="moreabout-img">
+                    <div class="moreabout-img-list">
+                        <img src="/UX/pt-product01@2x.jpeg" width="1104" height="500" alt="">
+                    </div>
+                </div>
+                <div class="moreabout-text">
+                    <div class="moreabout-text-list">
+                        <h3>商品紹介</h3>
+                        <p>SHIRAFUSHIでは注文を頂いてから焙煎し、<br>焙煎後はすぐに発送致します。<br>香り、風味が高いうちにお楽しみ頂けます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="p-top-menu">
+            <div class="p-top-menu__body">
+                <h2 class="p-top-menu__title">
+                    <span class="js-split">
+                        <span>MENU</span>
+                    </span>
+                </h2>
+                <p class="p-top-menu__read">
+                    <span>地元の食材を使った“能登らしい”一品を、地元の食材を使った“能登らしい”一品を、地元の食材を使った“能登らしい”一品を、</span>
+                </p>
+                <div class="menu-lst__unit">
+                    <div class="menu-lst">
+                        <div class="menu-lst__inner">
+                            <div class="menu-lst__visual">
+                                <p class="menu-lst__name">ORIGINAL COFFEE</p>
+                                <div class="menu-lst__visual-inner">
+                                    <span style="background-image: url(https://kalpa-wajima.com/wp/wp-content/themes/kalpa/assets/images/home/menu/menu01.jpg);"></span>
+                                </div>
+                            </div>
+                            <div class="menu-lst__text">
+                                <div class="menu-lst__text-inner">
+                                    <div class="menu-lst__guide">
+                                        <h3 class="menu-lst__title">オリジナルコーヒー<span>ORIGINAL COFFEE</span>
+                                        </h3>
+                                    </div>
+                                    <div class="menu-lst__copy">
+                                        <h3 class="f-amg">おもてなしの心を、特別な一杯に乗せて。<br>スペシャルティーとブレンドから選べます。</h3>
+                                        <p>数種類の中から選べるスペシャルティーコーヒーは、お客様の好みに合わせてコーヒー豆をセレクトできます。ブレンドコーヒーでは、コーヒーらしい苦味や酸味を感じられるよう、バランスを追求。どちらも一杯ずつハンドドリップでじっくりと抽出します。</p>
+                                    </div>
+                                    <div class="menu-lst__thumb">
+                                        <div class="menu-lst__thumb-lst">
+                                            <img src="https://kalpa-wajima.com/wp/wp-content/themes/kalpa/assets/images/home/menu/menu-thumb01.jpg" class="js-scroll__scale scale-scroll-in" width="100%" height="auto" alt="">
+                                        </div>
+                                        <div class="menu-lst__thumb-lst">
+                                            <img src="https://kalpa-wajima.com/wp/wp-content/themes/kalpa/assets/images/home/menu/menu-thumb02.jpg" class="js-scroll__scale scale-scroll-in" width="100%" height="auto" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- feature -->
+                <div class="feature-product">
+                    <div class="feature-wrap">
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/items-no01.jpeg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/items-no02.jpeg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/items-no03.jpeg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/items-no04.jpeg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-btn"><a href="">商品をもっと見る</a></div>
+                    </div>
+                </div>
+                <!-- feature -->
+
+
+
+
+                <div class="menu-lst__unit">
+                    <div class="menu-lst">
+                        <div class="menu-lst__inner">
+                            <div class="menu-lst__visual">
+                                <p class="menu-lst__name">COFFEE GOODS</p>
+                                <div class="menu-lst__visual-inner">
+                                    <span style="background-image: url(./UX/s-1680x1260_v-fms_webp_4ed4ea64-8456-49b5-8843-ac2887c6d73c_middle.webp);"></span>
+                                </div>
+                            </div>
+                            <div class="menu-lst__text">
+                                <div class="menu-lst__text-inner">
+                                    <div class="menu-lst__guide">
+                                        <h3 class="menu-lst__title">オリジナルコーヒー<span>COFFEE GOODS</span>
+                                        </h3>
+                                    </div>
+                                    <div class="menu-lst__copy">
+                                        <h3 class="f-amg">おもてなしの心を、特別な一杯に乗せて。<br>スペシャルティーとブレンドから選べます。</h3>
+                                        <p>数種類の中から選べるスペシャルティーコーヒーは、お客様の好みに合わせてコーヒー豆をセレクトできます。ブレンドコーヒーでは、コーヒーらしい苦味や酸味を感じられるよう、バランスを追求。どちらも一杯ずつハンドドリップでじっくりと抽出します。</p>
+                                    </div>
+                                    <div class="menu-lst__thumb">
+                                        <div class="menu-lst__thumb-lst">
+                                            <img src="./UX/top3.webp" alt="">
+                                        </div>
+                                        <div class="menu-lst__thumb-lst">
+                                            <img src="./UX/top2.webp" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- feature -->
+                <div class="feature-product">
+                    <div class="feature-wrap">
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/Dripper01.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/Dripper02.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/Dripper03.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <a href=""><img src="./UX/Dripper04.webp" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-btn"><a href="">商品をもっと見る</a></div>
+                    </div>
+                </div>
+                <!-- feature -->
+
+
+            </div>
+        </section>
+
+
+
+        <section class="coffee-knowledge">
+            <div class="knowledge">
+                <div class="knowledge-container">
+                    <h2 class="knowledge-header">
+                        <span>知れば味わいも深まる</span><br>
+                        コーヒー豆知識</h2>
+                    <p class="knowledge-txt">飲食店、カフェのオーナー様。<br>
+                        また、いつかはお店を開きたい方。<br>
+                        
+                        コーヒーの困りごとがいっぱいだと思います。<br>
+                        ここの記事が解決の一助になれば嬉しいです。</p>
+                    <p class="knowledge-btn"><a href="">豆知識をもっと見る</a></p>
+                </div>
+                <div class="knowledge-card">
+                    <ul class="knowledge-card-list">
+                        <li class="knowledge-card-item">
+                            <a class="knowledge-card-link" href="">
+                                <div class="knowledge-card-thumb">
+                                    <img src="./UX/IMG_0972-1000x500.jpeg" alt="">
+                                </div>
+                                <div class="knowledge-card-cont">
+                                    <p class="knowledge-card-header">珈琲は、ゆっくり淹れるとおいしい？</p>
+                                    <p class="knowledge-card-txt">時間のあるときは、ゆっくりコーヒーを淹れて、ゆっくり飲みたいですよね。</p>
+                                </div>
                             </a>
                         </li>
-                        <li class="icon">
-                            <a href="member-login.html">
-                                <img src="./UX/person.svg" alt="">
+                        <li class="knowledge-card-item">
+                            <a class="knowledge-card-link" href="">
+                                <div class="knowledge-card-thumb">
+                                    <img src="./UX/19892981-1000x500.jpeg" alt="">
+                                </div>
+                                <div class="knowledge-card-cont">
+                                    <p class="knowledge-card-header">コーヒー豆のテカリについて</p>
+                                    <p class="knowledge-card-txt">表面がテカテカしているコーヒー豆、乾いているコーヒー豆、違いは？</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </header>
-        <!-- header -->
-
-
-
-        <div class="slick"><!-- 使用slick套件 -->
-            <a>
-                <img src="./UX/banner1.jpeg" alt="banner">
-                <p>A little treat
-                   <br> for a day
-                   <br> with specialty</p>
-            </a>
-        </div>
-
-
-        <div class="new-message">
-            <dl>
-                <dt>
-                    <span>NEWS</span>
-                    <span>2022.06.01</span>
-                </dt>
-                <dd>
-                    <!-- <a href="">新冠肺炎防疫規範最新須知....</a> -->
-                    <a href="">111/12/1日前全館單筆消費滿1500,免運費優惠!</a>
-                </dd>
-            </dl>
-        </div>
-
-
-        <div class="quick-opt">
-            <div class="quick-item">
-                <a href="">
-                    <img src="./UX/coffeebeans.jpeg" alt="">
-                    <p>咖啡豆</p>
-                </a>
-            </div>
-            <div class="quick-item">
-                <a href="">
-                    <img src="./UX/c40.jpeg" alt="">
-                    <p>磨豆機</p>
-                </a>
-            </div>
-            <div class="quick-item">
-                <a href="">
-                    <img src="./UX/Drippers.webp" alt="">
-                    <p>濾杯</p>
-                </a>
-            </div>
-            <div class="quick-item">
-                <a href="">
-                    <img src="./UX/Filters.webp" alt="">
-                    <p>濾紙</p>
-                </a>
-            </div>
-            <div class="quick-item">
-                <a href="">
-                    <img src="./UX/Kettles.webp" alt="">
-                    <p>手沖壺</p>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="main-product visible">
-            <div class="inner">
-                <dl>
-                    <dt>
-                        <img src="./UX/cb2.webp" alt="">
-                    </dt>
-                    <dd>
-                        <h1>
-                            <small style="font-weight: 400;color: rgb(113, 113, 113);">希望讓更多人喝到舒服的一杯好咖啡</small>
-                            自家烘焙咖啡豆
-                        </h1>
-                        <p>為了追求一杯心目中的精品優質的咖啡，從生豆到烘焙到沖煮，都希望能給客戶一個買得起又好喝的咖啡。</p>
-                        <a href="">前往選購</a>
-                    </dd>
-                </dl>
-            </div>
-
-        </div>
-
-        <!-- feature -->
-        <div class="feature-product">
-            <div class="feature-wrap">
-                <h2 class="title">精選咖啡豆</h2>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-1.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                            <p>NT$400</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-2.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                            <p>NT$450</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-3.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                            <p>NT$325</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-4.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                            <p>NT$1200</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-
-                    <!-- clo2 -->
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-1.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                            <p>NT$400</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-2.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                            <p>NT$450</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-3.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                            <p>NT$325</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div>
-                            <a href="">
-                                <img src="./UX/products-4.webp" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                            <p>NT$1200</p>
-                        </div>
-                        <div class="add-cart">
-                            <a href="">加入購物車</a>
-                        </div>
-                    </div>
-                    <!-- clo2 -->
-                </div>
-            </div>
-        </div>
-        <!-- feature -->
-
-
-
-
-        <div class="product-intro">
-            <div class="intro-wrap">
-                <div class="intro-list">
-                    <div class="intro">
-                        <div class="intro-box">
-                            <h2 style="font-size:30px;font-weight: 400;">ORIGAMI<br>陶瓷折紙濾杯<br>S號</h2>
-                            <p style="font-size:14px;font-weight: 400;">日本美濃燒陶瓷,可使用普遍的錐形濾紙或Kalita 155蛋糕濾紙,可選購專用木托盤</p>
-                            <div><a href="">瞭解更多</a></div>
-                        </div>
-                        
-                    </div>
-                    <div class="intro-photo">
-                        <a href="">
-                            <img src="./UX/intro-photo1-ORIGAMI.webp" alt="">
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xoj9FVUyB74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="intro-list">
-                    <div class="intro">
-                        <div class="intro-box">
-                            <h2 style="font-size:30px;font-weight: 400;">HARIO<br>台灣限定版<br>祥鶴濾杯</h2>
-                            <p style="font-size:14px;font-weight: 400;">半肋結構濾杯,能創造多層次咖啡風味,木質盒裝，值得收藏與傳遞溫暖心意</p>
-                            <div><a href="">瞭解更多</a></div>
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="intro-photo">
-                        <a href="">
-                            <img src="./UX/intro-photo2.jpeg" alt="">
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="product-more">
-            <h2 class="title">精選咖啡器具</h2>
-            <div class="more-content">
-                <div class="more-item">
-                    <a href="">
-                        <div class="more-img">
-                            <img src="./UX/more-p1-r220b.jpeg" alt="">
-                        </div>
-                        <p>瞭解更多</p>
-                        <h3>FUJI ROYAL 株式会社富士珈機 R-220鬼齒磨豆機</h3>
-                    </a>
-                </div>
-                <div class="more-item">
-                    <a href="">
-                        <div>
-                            <img src="./UX/more-p2.webp" alt="">
-                        </div>
-                        <p>瞭解更多</p>
-                        <h3>珈堂 M1 星芒濾杯「極」 KADOU & HASAMI 波佐見燒</h3>
-                    </a>
-                </div>
-                <div class="more-item">
-                    <a href="">
-                        <div>
-                            <img src="./UX/more-p3-FELLOW STAGG EKG.webp" alt="">
-                        </div>
-                        <p>瞭解更多</p>
-                        <h3>FELLOW STAGG EKG【智慧電子溫控壺】</h3>
-                    </a>
-                </div>
-                <div class="more-item">
-                    <a href="">
-                        <div>
-                            <img src="./UX/more-p4.webp" alt="">
-                        </div>
-                        <p>瞭解更多</p>
-                        <h3>HARIO ZEBRANG DRIPPER 矽膠濾杯連濾紙套裝</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="coffee-info">
-            <h2 class="title">咖啡知識</h2>
-            <div class="info-list">
-                <a class="info-item" href="">
-                    <div>
-                        <img src="./UX/coffee lesson.jpeg" alt="">
-                    </div>
-                    <span>2022/09/09</span>
-                    <h3>Gary Cafe手沖咖啡小教室</h3>
-                    <p>Gary教你如何手沖每杯美味的咖啡</p>
-                </a>
-                <a class="info-item" href="">
-                    <div>
-                        <img src="./UX/Coffee-Cherry-Plant.jpeg" alt="">
-                    </div>
-                    <span>2022/05/13</span>
-                    <h3>咖啡豆如何挑選</h3>
-                    <p>挑選方法、產地、品種,與您一同選出最適合的咖啡豆</p>
-                </a>
-                <a class="info-item" href="">
-                    <div>
-                        <img src="./UX/coffee dripper.webp" alt="">
-                    </div>
-                    <span>2022/09/20</span>
-                    <h3>手沖咖啡器具挑選</h3>
-                    <p>磨豆機、濾杯、手沖壺,手沖咖啡器材入門到進階</p>
-                </a>
-            </div>
-
-        </div>
-
+            <div class="knowledge-btn sm"><a href="">豆知識をもっと見る</a></div>
+        </section>
         
         
         
         
-        <!-- footer -->
-        <div class="footerimg"></div>
-        <footer class="footer-section">
-            <div class="footer-wrap">
-                <div class="footer-link">
-                    <div class="footer-list">
-                        <h3>聯繫我們</h3>
-                        <ul>
-                            <li>服務專線</li>
-                            <li>0800-800-824</li>
-                            <li>週一至週五 9:30~18:00(國定例假日除外)</li>
-                            <li>Line 線上客服</li>
-                        </ul>
-                    </div>
-                    <div class="footer-list">
-                        <h3>顧客服務</h3>
-                        <ul>
-                            <li>訂單狀態</li>
-                            <li>退換貨說明</li>
-                            <li>網路訂購商品條款</li>
-                            <li>運送服務</li>
-                            <li>常見問題</li>
-                            <li>會員權益條款</li>
-                        </ul>
-                    </div>
-                    <div class="footer-icon">
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/3069725_circle_line_messenger_round icon_icon.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/317752_facebook_social media_social_icon.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img width="40px" height="40px" src="./UX/3225191_app_instagram_logo_media_popular_icon.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-legal">
-                <div id="gototop">
-                    <a href="#"><img src="./UX/gototop.svg" alt=""></a>
-                  </div>
-                <div class="footer-legal-copyright">Copyright © 2022 GARY CAFE. 保留一切權利。</div>
-                <div class="footer-legal-link">
-                    <a href="">隱私權政策 |</a>
-                    <a href="">使用條款 |</a>
-                    <a href="">法律聲明 |</a>
-                    <a href="">網站地圖</a>
-                </div>
-            </div>
-        </footer>
-        <!-- footer -->
+        <!-- 外部引用footer區塊 -->
+        <div class="m-footer"></div>
+        <!-- 外部引用footer區塊 -->
 
 
 
 
     </div>
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jquery -->
+
+    <script>
+        $(function() {
+			$('.m-header').load('./m-header.html')
+			$('.m-footer').load('./m-footer.html')
+		})
+    </script>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- bootstrap JS -->
 
 
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="timePanel">現在時刻：</div>
+    <script>
+        //
+        function showTime(){
+            var now=new Date();
+            document.getElementById("timePanel").innerText=`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+        }
+        window.addEventListener("DOMContentLoaded",function(){
+            showTime(); //先執行一次
+            setInterval(showTime,1000); //一秒後才會執行的關係
+        })
+        //
+
+
+        ///身分證驗證 正規表示式
+        var regExp= /^[A-Z|a-z][12][0-9]{8}$/ ;
+        var isNum="A123456789";
+        if(regExp.test(isNum)){
+            document.write("Good");
+        }
+        else
+        document.write("Bad");
+        ///
+
+
+
+        ////
+        function $$id(id){
+            return document.getElementById(id);///抓id函式
+        }
+        window.addEventListener("load",function(){
+
+
+
+
+        })
+        ////
+
+
+
+        /////
+        
+
+        /////
+        
+    </script>
+</body>
+</html>

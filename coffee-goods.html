@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstraps CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- bootstraps CDN -->
+    <!-- reset CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- reset CSS -->
+    <title>Wellcome to GARY CAFE!</title>
+    <style>
+        html {
+            scroll-padding-top: 100px;
+        } 
+        .main{
+            width: 100%;
+
+            /* background-image: url(./UX/bg-beige.png); */
+            /* background-color: #f7f7f7; */
+        }
+        .m-header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        ul, li{
+            list-style: none;
+            padding-left: 0;
+        }
+        
+
+
+        .Catbanner{
+            background-image: url(./UX/mv_03_lg.jpeg);background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            height: 55vh;
+        }
+        .main-content{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding:50px 20px;
+        }
+
+
+
+
+
+        /* 商品分類 */
+        .CategoryTitle{
+            font-size: 2rem;
+            letter-spacing: .1em;
+            line-height: 1;
+            text-align: center;
+            background-color: #131d3d;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .mainCategory{
+            margin:0 0 40px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            padding:50px 30px;
+            border: 1px solid rgb(236, 236, 236);
+            border-radius:0 0 10px 10px;
+        }
+        .mainCategory-card{
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+        }
+        .mainCategory-list img{
+            padding: 10px;
+            width: 50%;
+            object-fit: cover;
+            vertical-align: top;
+            aspect-ratio: 1/1;
+            transition: 0.5s;
+        }
+        .mainCategory-list h3{
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .mainCategory-list:hover img{
+            transform: scale(1.1);
+        }
+        .mainCategory-list:hover .mainCategory-card{
+            outline: 1px solid rgb(217, 217, 217);
+            box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.2);
+        }
+        .mainCategory-list:hover h3{
+            font-size: 0;
+        }
+        .mainCategory-list:hover h3:after{
+            font-size: 16px;
+	        content: attr(data-hover);
+        }
+        /* 商品分類 */
+
+
+
+
+
+
+        /* 商品列表 */
+        .goodsList{
+            position: relative;
+        }
+        .goodsList-L{
+            width: 100%;
+            padding-top: 100px;
+            position: relative;
+        }
+        .goodsList-inner{
+            background-color: #f7f6f4;
+            display: flex;
+            position: relative;
+            z-index: 10;
+        }
+        /* .test{
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            font-size: 60px;
+            font-weight: 800;
+            padding: 0 15px;
+            top: -40px;
+            right: -70px;
+            color: #fff;
+            background-color: #ef7c7c;
+            z-index: 10;
+        } */
+        .goodsList-inner::before{
+            content: 'おすすめメニュー';
+            position: absolute;
+            font-size: 50px;
+            font-weight: 800;
+            padding: 0 15px;
+            top: -40px;
+            right: -15px;
+            color: #fff;
+            background-color: #ef7c7c;
+            z-index: 10;
+        }
+        .goodsList-img{
+            width: 60%;
+            position: relative;
+            bottom: 70px;
+            right: 70px;
+        }
+        .goodsList-img img{
+            width: 100%;
+            vertical-align: top;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+        .goodsList-card{
+            width: 40%;
+            padding: 140px 50px 40px 0;
+        }
+        h3.goodsList-title{
+            margin-bottom: 30px;
+        }
+        p.goodsList-txt{
+            line-height: 3;
+        }
+        p.goodsList-price{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        a.goodsList-btn{
+            display: block;
+            width: 200px;
+            font-size: 15px;
+            padding: 10px 54px;
+            border-radius: 10px;
+            margin-top: 50px;
+            background: #323f6b;
+            text-align: center;
+            letter-spacing: 1.9px;
+            color: #fafafa;
+        }
+        /* 商品列表 */
+
+
+
+        /* 詳細分類 */
+        .CategoryStyle{
+            margin-top: 70px;
+        }
+        .CategoryStyle-L{
+            display: flex;
+        }
+        .CategoryStyle-L li{
+            margin: 10px 15px 10px 0;
+        }
+        .CategoryStyle-L li a{
+            background-color: #fff;
+            display: block;
+            padding: 15px 30px;
+            border: 3px solid rgb(64, 66, 88);
+            transition: 0.3s;
+        }
+        .CategoryStyle-L li a:hover{
+            background-color: #37354b;
+            border: 3px solid #37354b;
+            color: #fff;
+        }
+        /* 詳細分類 */
+
+
+
+
+        /* 商品排序及顯示 */
+        .product-tools{
+            padding: 15px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #28292b;
+            border-radius: 5px;
+        }
+        .product-tools h1{
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.5;
+            color: #fff;
+            padding-left: 10px;
+        }
+        .ProductList-settings-sort{
+            margin-right: 10px;
+        }
+        .ProductList-settings{
+            display: flex;
+            font-size: 14px;
+        }
+        .ProductList-settings select{
+            display: block;
+            padding: 7px 20px 7px 10px;
+            background: #f3f3f3;
+            color: rgb(68, 68, 68);
+            border: 1px solid rgb(172, 172, 172);
+            border-radius: 3px;
+        }
+        /* 商品排序及顯示 */
+
+
+
+
+
+
+
+
+        /* feature start */
+        .feature-wrap{
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 50px 0;
+            box-sizing: border-box;
+        }
+        h2.title{
+            text-align: center;
+            padding-bottom: 40px;
+            font-size: 30px;
+        }
+        .feature-list{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin:0 0 40px;
+            grid-gap: 40px;
+        }
+        .feature-list .feature-item{
+            box-sizing: border-box;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .feature-list .feature-item img{
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+        .feature-item p{
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        .item-txt{
+            padding: 20px 10px 0;
+            /* border: 1px solid gold; */
+            height: 160px;
+        }
+        .feature-item p:nth-child(1){
+            font-size: 14px;
+            color: rgb(15, 15, 15);
+        }
+        .feature-item .add-cart{
+            text-align: center;
+            background-color: rgb(255, 153, 0);
+            padding: 10px 0;
+            margin: 0 10px;
+            border: 1px solid rgb(255, 169, 19);
+            transition: 0.3s;
+            border-radius: 10px;
+            /* visibility: hidden; */
+            display: none;
+        }
+        .feature-item .add-cart a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+        }
+        .feature-item .add-cart:hover a{
+            color: rgb(255, 255, 255);
+        }
+        .feature-item .add-cart:hover{
+            background-color: rgb(255, 105, 12);
+            border: 1px solid rgb(255, 164, 29);
+        }
+        .item-card:hover .add-cart{
+            display: block;
+        }
+        /* feature end */
+
+
+
+        .goodsList-swip{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .goodsList-swip div{
+            width: 100%;
+            height: 250px;
+            background-color: #d7d7d7;
+            margin:50px 10px;
+        }
+
+
+        
+        @media screen and (max-width:1024px) { /*對平版以下有作用*/
+            .mainCategory{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .feature-list{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        @media screen and (max-width:959px) { /*對平版以下有作用*/
+        
+        }
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+            .mainCategory{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .goodsList-inner{
+                display: block;
+            }
+            .goodsList-img{
+                width: 100%;
+                position: static;
+                bottom: 0;
+                right: 0;
+            }
+            .goodsList-card {
+                width: 100%;
+                padding: 30px;
+            }
+            .feature-list{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .goodsList-inner::before{
+                font-size: 40px;
+                right: 0;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <!-- 外部引用header區塊 -->
+        <div class="m-header"></div>
+        <!-- 外部引用header區塊 -->
+
+
+
+
+
+        
+
+        <div class="Catbanner"></div>
+
+        <div class="main-content">
+
+
+            <section class="Category">
+                <h2 class="CategoryTitle">Category</h2>
+                <ul class="mainCategory">
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatGrinder">
+                            <img src="./UX/cat01.jpeg" alt="">
+                            <h3 data-hover="磨豆機">ミル （豆を挽く）</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatKettle">
+                            <img src="./UX/cat02.jpeg" alt="">
+                            <h3 data-hover="手沖壺">コーヒーケトル＆ポット</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatDripper">
+                            <img src="./UX/cat03.jpeg" alt="">
+                            <h3 data-hover="濾杯">ハンドドリップ</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatOthers">
+                            <img src="./UX/cat04.jpeg" alt="">
+                            <h3 data-hover="虹吸壺">コーヒーサイフォン</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatGrinder">
+                            <img src="./UX/cat05-2.jpeg" alt="">
+                            <h3 data-hover="濾紙">ペーパー＆フィルター</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatKettle">
+                            <img src="./UX/cat06-3.jpeg" alt="">
+                            <h3 data-hover="咖啡壺">コーヒーサーバー</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatDripper">
+                            <img src="./UX/cat07.jpeg" alt="">
+                            <h3 data-hover="咖啡量匙">コーヒーメジャースプーン</h3>
+                        </a>
+                    </li>
+                    <li class="mainCategory-list">
+                        <a class="mainCategory-card" href="#CatOthers">
+                            <img src="./UX/cat08.jpeg" alt="">
+                            <h3 data-hover="調理器具/其他用品">調理器具＆キッチングッズ</h3>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="goodsList">
+                <!-- 磨豆機 -->
+                <div id="CatGrinder" class="goodsList-L">
+                    <div class="goodsList-inner">
+                        <!-- <h3 class="test">おすすめメニュー</h3> -->
+                        <div class="goodsList-img">
+                            <img src="./UX/more-p1-r220b.jpeg" alt="">
+                        </div>
+                        <div class="goodsList-card">
+                            <h3 class="goodsList-title">フジローヤル みるっこDX R-220 エスプレッソ刃仕様 （ブラック）</h3>
+                            <p class="goodsList-txt">ドリップ用に挽くこともできますがエスプレッソに比重を置いた刃ですので
+                                荒く挽いた際には粒度が若干疎らになる事がございます。</p>
+                            <p class="goodsList-price">価格52,962円</p>
+                            <a class="goodsList-btn" href="">詳しく見る</a>
+                        </div>
+                    </div>
+
+                    <div class="CategoryStyle">
+                        <ul class="CategoryStyle-L">
+                            <li><a href=""><span>手挽きミル</span></a></li>
+                            <li><a href=""><span>電動ミル</span></a></li>
+                            <li><a href=""><span>ミルの部品</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="product-tools">
+                        <h1>ミル （豆を挽く）</h1>
+                        <div class="ProductList-settings">
+                            <div class="ProductList-settings-sort">
+                                <select name="" id="">
+                                    <option value="">商品排序</option>
+                                    <option value="">上架時間:由新到舊</option>
+                                    <option value="">上架時間:由舊到新</option>
+                                    <option value="">價格:由高至低</option>
+                                    <option value="">價格:由低至高</option>
+                                </select>
+                            </div>
+                            <div class="ProductList-settings-limit">
+                                <select name="" id="">
+                                    <option value="">顯示數量</option>
+                                    <option value="">每頁顯示 24 個</option>
+                                    <option value="">每頁顯示48個</option>
+                                    <option value="">每頁顯示72個</option>
+                                    <option value="">顯示全部</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-product">
+                        <div class="feature-wrap">
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go01.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>コーヒーグラインダー マールクーニック EK43S ブラック</p>
+                                                <p>484,000円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go02.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>シモネリ Grinta AMM 赤 エスプレッソ用グラインダー</p>
+                                                <p>77,000円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go03.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>デロンギ デディカ コーン式コーヒーグラインダー KG521J-M</p>
+                                                <p>29,800円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go04.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>1Zpresso コーヒーグラインダー JPpro 携行バッグ付</p>
+                                                <p>43,780円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go05.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>Comandante C40 ニトロブレード - コーヒーグラインダー</p>
+                                                <p>38,610円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <!-- clo2 -->
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX//go06.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>カリタ NEXT G2 ネクストG2 電動コーヒーミル</p>
+                                                <p>63,800円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go07.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>WPM グラインダー ZD-17N エスプレッソ電動グラインダー</p>
+                                                <p>60,280円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>ボダム ビストロ 電動コーヒーグラインダー ブラック</p>
+                                                <p>13,200円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/go09.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>ASCASO i-mini グラインダー ブラック 【Dark Black】</p>
+                                                <p>52,250円</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- clo2 -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="goodsList-swip"></div>
+                </div>
+                <!-- 磨豆機 -->
+
+
+
+                <!-- 手沖壺 -->
+                <div id="CatKettle" class="goodsList-L">
+                    <div class="goodsList-inner">
+                        <div class="goodsList-img">
+                            <img src="./UX/Tsukiusagi-Enamel-Slim-Pot-_0.7L__02_1200x.webp" alt="">
+                        </div>
+                        <div class="goodsList-card">
+                            <h3 class="goodsList-title">月兎印　スリムポット1.2L（ブラック）</h3>
+                            <p class="goodsList-txt">スタイリッシュなデザインと素朴なホーロー製のポットで大人気の月兎印のスリムポット。コーヒーのハンドドリップにも最適な絵になるホーローケトルです。（日本製）</p>
+                            <p class="goodsList-price">価格3,969円</p>
+                            <a class="goodsList-btn" href="">詳しく見る</a>
+                        </div>
+                    </div>
+
+                    <div class="CategoryStyle">
+                        <ul class="CategoryStyle-L">
+                            <li><a href=""><span>コーヒーケトル</span></a></li>
+                            <li><a href=""><span>ホーロー製ケトル</span></a></li>
+                            <li><a href=""><span>電気式ケトル</span></a></li>
+                            <li><a href=""><span>その他のケトル＆ポット</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="product-tools">
+                        <h1>コーヒー豆</h1>
+                        <div class="ProductList-settings">
+                            <div class="ProductList-settings-sort">
+                                <select name="" id="">
+                                    <option value="">商品排序</option>
+                                    <option value="">上架時間:由新到舊</option>
+                                    <option value="">上架時間:由舊到新</option>
+                                    <option value="">價格:由高至低</option>
+                                    <option value="">價格:由低至高</option>
+                                </select>
+                            </div>
+                            <div class="ProductList-settings-limit">
+                                <select name="" id="">
+                                    <option value="">顯示數量</option>
+                                    <option value="">每頁顯示 24 個</option>
+                                    <option value="">每頁顯示48個</option>
+                                    <option value="">每頁顯示72個</option>
+                                    <option value="">顯示全部</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-product">
+                        <div class="feature-wrap">
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="product-page.html">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
+                                                <p>NT$280</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no01.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no02.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no03.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no04.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>タリーズ ブラジル ファゼンダバウ</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <!-- clo2 -->
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no05.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no06.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no07.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- clo2 -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="goodsList-swip"></div>
+
+                </div>
+                <!-- 手沖壺 -->
+
+
+
+                <!-- 濾杯 -->
+                <div id="CatDripper" class="goodsList-L">
+                    <div class="goodsList-inner">
+                        <div class="goodsList-img">
+                            <img src="./UX/origami.jpeg" alt="">
+                        </div>
+                        <div class="goodsList-card">
+                            <h3 class="goodsList-title">ORIGAMI ドリッパー</h3>
+                            <p class="goodsList-txt">Sサイズ 1～2杯用 磁器 日本製（美濃焼）
+                                スペシャルティコーヒーの抽出に オリガミ</p>
+                            <p class="goodsList-price">価格2,530円</p>
+                            <a class="goodsList-btn" href="">詳しく見る</a>
+                        </div>
+                    </div>
+
+
+                    <div class="CategoryStyle">
+                        <ul class="CategoryStyle-L">
+                            <li><a href=""><span>コーヒードリッパー</span></a></li>
+                            <li><a href=""><span>ネルドリップ</span></a></li>
+                            <li><a href=""><span>その他のドリップ用品</span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="product-tools">
+                        <h1>コーヒー豆</h1>
+                        <div class="ProductList-settings">
+                            <div class="ProductList-settings-sort">
+                                <select name="" id="">
+                                    <option value="">商品排序</option>
+                                    <option value="">上架時間:由新到舊</option>
+                                    <option value="">上架時間:由舊到新</option>
+                                    <option value="">價格:由高至低</option>
+                                    <option value="">價格:由低至高</option>
+                                </select>
+                            </div>
+                            <div class="ProductList-settings-limit">
+                                <select name="" id="">
+                                    <option value="">顯示數量</option>
+                                    <option value="">每頁顯示 24 個</option>
+                                    <option value="">每頁顯示48個</option>
+                                    <option value="">每頁顯示72個</option>
+                                    <option value="">顯示全部</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-product">
+                        <div class="feature-wrap">
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="product-page.html">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
+                                                <p>NT$280</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no01.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no02.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no03.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no04.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>タリーズ ブラジル ファゼンダバウ</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <!-- clo2 -->
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no05.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no06.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no07.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- clo2 -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="goodsList-swip"></div>
+
+                </div>
+                <!-- 濾杯 -->
+
+
+
+
+                <!-- 虹吸壺 -->
+                <div id="CatOthers" class="goodsList-L">
+                    <div class="goodsList-inner">
+                        <div class="goodsList-img">
+                            <img src="./UX//sca-5.jpg" alt="">
+                        </div>
+                        <div class="goodsList-card">
+                            <h3 class="goodsList-title">ハリオ コーヒーサイフォン ソムリエ ５人用 SCA-5</h3>
+                            <p class="goodsList-txt">新ステンレス製フィルターがセットされています。コーヒーの香りを愉しんでいただくサイフォンです。</p>
+                            <p class="goodsList-price">価格18,480円</p>
+                            <a class="goodsList-btn" href="">詳しく見る</a>
+                        </div>
+                    </div>
+
+
+                    <div class="CategoryStyle">
+                        <ul class="CategoryStyle-L">
+                            <li><a href=""><span>コーヒーサイフォン</span></a></li>
+                            <li><a href=""><span>コーヒーサイフォン部品</span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="product-tools">
+                        <h1>コーヒー豆</h1>
+                        <div class="ProductList-settings">
+                            <div class="ProductList-settings-sort">
+                                <select name="" id="">
+                                    <option value="">商品排序</option>
+                                    <option value="">上架時間:由新到舊</option>
+                                    <option value="">上架時間:由舊到新</option>
+                                    <option value="">價格:由高至低</option>
+                                    <option value="">價格:由低至高</option>
+                                </select>
+                            </div>
+                            <div class="ProductList-settings-limit">
+                                <select name="" id="">
+                                    <option value="">顯示數量</option>
+                                    <option value="">每頁顯示 24 個</option>
+                                    <option value="">每頁顯示48個</option>
+                                    <option value="">每頁顯示72個</option>
+                                    <option value="">顯示全部</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-product">
+                        <div class="feature-wrap">
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="product-page.html">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
+                                                <p>NT$280</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no01.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no02.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no03.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no04.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>タリーズ ブラジル ファゼンダバウ</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <!-- clo2 -->
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no05.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                                <p>NT$400</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no06.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$450</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no07.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                                <p>NT$325</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="item-card">
+                                        <a href="">
+                                            <img src="./UX/items-no08.jpeg" alt="">
+                                            <div class="item-txt">
+                                                <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                                                <p>NT$1200</p>
+                                                <div class="add-cart">
+                                                    <a href="">カートに入れる</a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- clo2 -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="goodsList-swip"></div>
+
+                </div>
+                <!-- 虹吸壺 -->
+                
+            </section>
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- 外部引用footer區塊 -->
+        <div class="m-footer"></div>
+        <!-- 外部引用footer區塊 -->
+
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jquery -->
+
+    <script>
+        $(function() {
+			$('.m-header').load('./m-header.html')
+			$('.m-footer').load('./m-footer.html')
+		})
+
+
+
+
+        
+        $(function(){
+            var $li = $('ul.mainCategory li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.goodsList-L').hide();
+        
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.goodsList-L').hide();
+                // $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+        });
+    </script>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- bootstrap JS -->
+
+    
+</body>
+</html>

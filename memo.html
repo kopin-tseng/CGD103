@@ -9,6 +9,9 @@ CSS
 pseudo-element 是以 :: 為開頭
 
 
+pointer-event : none
+
+
 
 position
 
@@ -31,8 +34,8 @@ sticky 參考父層空間，會佔位，離開父層就會被捲走
 text-align:center 對容器內的元件水平置中
 vertical-align    只對inline table 有垂直置中作用
 
-等比例
-aspect-ratio 1/1 
+固定照片長寬比
+aspect-ratio 16/9 
 
 
 RWD
@@ -86,3 +89,90 @@ JavaScript
 5.咖啡知識-咖啡豆挑選
 6.咖啡知識-咖啡沖煮入門
 7.會員登入/註冊
+
+
+
+
+
+
+Jquery
+事件 ｜
+      1.建立事件聆聽
+      2.事件分類    (滑鼠, 鍵盤, Broswer, form)
+                              ^>load unload beforeload resize scroll
+      3.事件物件e
+      4.引用事件物件
+
+
+
+
+<style>
+
+      @media screen and (max-width:1024px) { /*對平版以下有作用*/
+        
+      }
+      @media screen and (max-width:959px) { /*對平版以下有作用*/
+      
+      }
+      @media screen and (max-width:767px) { /*對手機以下有作用*/
+      
+      }
+
+
+
+
+</style>
+
+
+<!-- hover時文字可以穿透圖片 -->
+pointer-events: none; 
+
+<div id="ggg" onclick="123">123</div>
+
+<script>
+var a=document.getElementById("ggg");
+
+
+
+
+function funA(){};
+function funB(){};
+
+a.onclick=funA;
+a.onclick=funB;
+// funA會被funB覆蓋,只會執行funB
+
+a.addEventListener("click",funA,false);
+a.addEventListener("click",funB,false);
+// funA,funB會依照預設依序執行
+
+
+
+
+var cc=document.getElementsByClassName("aaff")
+cc.classList //尋找class中的指定class名稱
+
+
+// e.Target 事件物件？？
+
+</script>
+<script>
+   具名函式
+   function funName(){};
+
+   匿名函式
+
+   let funN =function(){};
+
+   new關鍵字
+
+   let funB = new Function('number', 'return number * number');
+   console.log(funB(5));
+
+
+</script>
+
+
+
+
+<p>我們使用 Cookie 來確保您在網站上能獲得良好的體驗。如果您繼續使用本網站，我們將認定您接受並理解我們的隱私政策和使用者條款。</p>
