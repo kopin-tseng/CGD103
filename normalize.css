@@ -8,6 +8,28 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+
+/* 自訂共用CSS */
+.m-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  color: #000;
+}
+li{
+  list-style-type: none;
+}
+
+
+
+
+
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */

@@ -17,16 +17,7 @@
             background-color: #fcfcfc;
         }
 
-        a{
-            text-decoration: none;
-            color: #000;
-        }
-
-        .m-header{
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        
 
         .banner-img{
             background-image: url(./UX/banner-13.webp);
@@ -35,9 +26,7 @@
             background-attachment: fixed;
             height: 50vh;
         }
-        ul{
-            padding-left: 0;
-        }
+        
 
 
 
@@ -60,7 +49,7 @@
             /* border: 1px solid gold; */
         }
         .product-search{
-            padding: 40px 30px 0;
+            padding: 0 30px;
         }
         .product-search h3{
             padding:0 10px 10px;
@@ -104,11 +93,14 @@
             position: relative;
         }
         .ProductList-categoryMenu{
-            padding: 40px 30px;
+            display: grid;
+            padding: 0 30px;
         }
-        .ProductList-categoryMenu h3{
-            padding:0 10px 10px;
-            margin-bottom: 15px;
+        .left-box h3{
+            padding: 40px 30px 0;
+            /* padding:0 10px 10px; */
+            margin: 15px 30px;
+            /* margin-bottom: 15px; */
             border-bottom: 1px solid #28292b;
             font-size: 20px;
         }
@@ -173,7 +165,7 @@
             display: flex;
             flex-direction: column;
             flex: 0 0 auto;
-            padding: 0 0.9375rem;
+            padding: 0 10px;
         }
         .Breadcrumbs{
             padding: 10px 20px;
@@ -234,7 +226,7 @@
             max-width: 1200px;
             text-align: center;
             margin: 0 auto;
-            padding: 0 20px;
+            /* padding: 0 20px; */
             box-sizing: border-box;
         }
         h2.title{
@@ -306,7 +298,50 @@
         /* feature end */
 
 
+        @media screen and (max-width:1024px) { /*對平版以下有作用*/
+        
+        }
+        @media screen and (max-width:959px) { /*對平版以下有作用*/
+            .feature-list{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width:767px) { /*對手機以下有作用*/
+            .main-wrapper{
+                display: block;
+            }
+            .product-tools{
+                display: block;
+                padding: 20px 10px 0 ;
+            }
+            .product-tools h1{
+                margin-bottom: 10px;
+            }
+            .ProductList-settings{
+                /* display: block; */
+                justify-content: space-evenly;
+            }
+            .ProductList-settings-sort{
+                margin: 0;
+            }
+            .product-sidebar{
+                width: 100%;
+            }
+            .product-content{
+                width: 100%;
+            }
+            .feature-list{
+                grid-gap: 5px;
+            }
+            .feature-item p{
+                padding: 0;
 
+            }
+            .ProductList-categoryMenu{
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 10px;
+            }
+        }
 
         
     </style>
@@ -325,15 +360,15 @@
         <div class="main-wrapper">
             <aside class="product-sidebar">
                 <div class="left-box">
+                    <h3>商品をさがす</h3>
                     <div class="product-search">
-                        <h3>商品をさがす</h3>
                         <form action="./product-category.html" class="searchbox">
                             <input class="searchbox-in" type="text" placeholder="お探しの商品は？">
                             <input class="searchbtn" type="submit" value="">
                         </form>
                     </div>
+                    <h3>カテゴリー</h3>
                     <ul class="ProductList-categoryMenu">
-                        <h3>カテゴリー</h3>
                         <li class="List-item">
                             <a href="">精選商品</a>
                             <ul class="ProductList-dropdown">

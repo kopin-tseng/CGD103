@@ -13,29 +13,21 @@
     <title>Wellcome to GARY CAFE!</title>
     <style>
         
-
-
-
-
-        
-        
         .product-page{
             width: 100%;
         }
-        .m-header{
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
 
 
-        a{
-            text-decoration: none;
-            color: #000;
-        }
-        li{
-            list-style-type: none;
-        }
+
+
+
+
+        
+
+
+
+
+
 
         .banner-img{
             background-image: url(./UX/s-2400x858_v-frms_webp_58f30432-a6a1-48e1-add4-374edfdab7b3.webp);
@@ -305,6 +297,8 @@
             /* margin: 40px 0; */
             grid-gap: 20px;
             /* gap: 15px; */
+
+            overflow: scroll;
         }
         .feature-list .feature-item{
             /* padding: 10px; */
@@ -365,7 +359,10 @@
         
         }
         @media screen and (max-width:959px) { /*對平版以下有作用*/
-        
+            .banner-img{
+                background-image: url(./UX/IMG_5536_1440x1530.jpeg);
+                height: 80vh;
+            }
         }
         @media screen and (max-width:767px) { /*對手機以下有作用*/
             .product-gallery{
@@ -373,7 +370,7 @@
             }
             .product-info{
                 width: 100%;
-                padding: 50px;
+                padding: 10px;
             }
             .product-detail{
                 display: block;

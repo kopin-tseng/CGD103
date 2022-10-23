@@ -14,29 +14,22 @@
     <style>
         *{
             font-size: 15px;
-
         }
         .main-content{
             width: 100%;
             position: relative;
         }
-        .m-header{
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        a{
-            color: #000;
-            text-decoration: none;
-        }
-
         
 
+        
+        #imgBoard{
+			width: 100px;
+			background: rebeccapurple;
+			padding: 30px;
+
+			position: absolute;
+			left: -130px;
+		}
 
 
 
@@ -53,22 +46,7 @@
             background-position: center center;
             height: 100vh; */
         }
-        .slick p{
-            position: absolute;
-            margin: 0 auto;
-            width: 100%;
-            text-align: center;
-            /* top: 40%; */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* font-size: 60px; */
-            font-size: 3em;
-            color: #fff;
-            /* font-style: italic; */
-            font-weight: 300;
-            opacity: 0.9;
-        }
+        
         .slick img{
             width: 100%;
             vertical-align: middle;
@@ -297,6 +275,10 @@
             z-index: 1;
             right: -30px;
         }
+        .moreabout-img-list img{
+            width: 1104px;
+            height: 500px;
+        }
         .moreabout-text{
             padding-top: 280px;
             z-index: 2;
@@ -321,10 +303,13 @@
                 display: block;
             }
             .moreabout-inner{
-                padding: 60px;
+                padding: 0;
             }
             .moreabout-img-list {
-                right: -70px;
+                /* right: -70px; */
+                position: static;
+                right: 0;
+                overflow: hidden;
             }
             .moreabout-text {
                 padding-top: 20px;
@@ -793,6 +778,9 @@
                 align-items: center;
                 margin: 30px;
             }
+            .slick img{
+                aspect-ratio: 16/10;
+            }
         }
         @media screen and (max-width: 767px){
             .knowledge-txt{
@@ -820,6 +808,9 @@
                 width: 72vw;
                 font-size: 4vw;
             }
+            .slick img{
+                aspect-ratio: 2/3;
+            }
         }
         
 
@@ -830,12 +821,11 @@
     </style>
 </head>
 <body>
-    <div class="main-content">
-
+    <div class="main-content" >
+        
         <!-- 外部引用header區塊 -->
         <div class="m-header"></div>
         <!-- 外部引用header區塊 -->
-        
 
 
 
@@ -890,7 +880,7 @@
             <div class="moreabout">
                 <div class="moreabout-img">
                     <div class="moreabout-img-list">
-                        <img src="/UX/pt-product01@2x.jpeg" width="1104" height="500" alt="">
+                        <img src="/UX/pt-product01@2x.jpeg" alt="">
                     </div>
                 </div>
                 <div class="moreabout-text">
@@ -1096,17 +1086,44 @@
             <div class="knowledge-btn sm"><a href="">豆知識をもっと見る</a></div>
         </section>
         
-        
-        
-        
         <!-- 外部引用footer區塊 -->
         <div class="m-footer"></div>
         <!-- 外部引用footer區塊 -->
-
-
-
-
     </div>
+
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                chuuchuchu
+            </a>
+        </li>
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+        <li>
+            <a href="#">Shortcuts</a>
+        </li>
+        <li>
+            <a href="#">Overview</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
 
 

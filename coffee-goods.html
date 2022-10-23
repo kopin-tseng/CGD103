@@ -17,26 +17,10 @@
         } 
         .main{
             width: 100%;
-
             /* background-image: url(./UX/bg-beige.png); */
             /* background-color: #f7f7f7; */
         }
-        .m-header{
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        a{
-            text-decoration: none;
-            color: #000;
-        }
-        a:hover{
-            color: #000;
-        }
-        ul, li{
-            list-style: none;
-            padding-left: 0;
-        }
+        
         
 
 
@@ -50,7 +34,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding:50px 20px;
+            padding:50px 10px;
         }
 
 
@@ -208,6 +192,7 @@
         }
         .CategoryStyle-L{
             display: flex;
+            flex-wrap: wrap;
         }
         .CategoryStyle-L li{
             margin: 10px 15px 10px 0;
@@ -252,6 +237,8 @@
         .ProductList-settings{
             display: flex;
             font-size: 14px;
+            justify-content: space-evenly;
+            align-items: center;
         }
         .ProductList-settings select{
             display: block;
@@ -368,7 +355,10 @@
             }
         }
         @media screen and (max-width:959px) { /*對平版以下有作用*/
-        
+            .Catbanner{
+                background-image: url(./UX/img-slide3@2x.jpeg);
+                height: 90vh;
+            }
         }
         @media screen and (max-width:767px) { /*對手機以下有作用*/
             .mainCategory{
@@ -385,14 +375,49 @@
             }
             .goodsList-card {
                 width: 100%;
-                padding: 30px;
+                padding: 10px;
             }
             .feature-list{
                 grid-template-columns: repeat(2,1fr);
+                grid-gap:5px
             }
             .goodsList-inner::before{
                 font-size: 40px;
                 right: 0;
+            }
+            .product-tools{
+                display: block;
+                background-color: #fff;
+                padding: 0;
+            }
+            .product-tools h1{
+                /* color: #000; */
+                background-color: #353267;
+                padding: 10px 20px;
+                border-radius: 5px 5px 0 0;
+
+            }
+            .ProductList-settings-sort{
+                margin: 15px 0;
+            }
+            .ProductList-settings{
+                /* display: block; */
+                /* margin: 10px 0 10x auto; */
+                font-size: inherit;
+            }
+            .ProductList-settings select{
+                /* padding: 0; */
+                /* margin-left: auto; */
+            }
+            .Catbanner{
+                background-size: cover ;
+                background-repeat: no-repeat;
+                background-position:center;
+                height: 90vh;
+            }
+            .mainCategory{
+                padding: 5px;
+                grid-gap: 5px;
             }
         }
         
