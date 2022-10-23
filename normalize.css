@@ -22,8 +22,10 @@ a{
 a:hover{
   color: #000;
 }
-li{
+ul,li{
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 
