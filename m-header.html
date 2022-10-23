@@ -84,7 +84,42 @@
             
         }
         
-        
+        /*搜尋按鈕模組*/
+        .product-search{
+            /* padding: 30px 20px; */
+        }
+        .product-search h3{
+            padding:0 10px 10px;
+            margin-bottom: 15px;
+            
+            border-bottom: 1px solid #28292b;
+            font-size: 20px;
+        }
+        .searchbox{
+            position: relative;
+        }
+        .searchbox-in{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .searchbtn{
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            background: url(./UX/search.svg);
+            background-size: cover;
+            padding: 15px;
+            height: 20px;
+            width: 20px;
+            border: none;
+            color: #fff;
+            /* cursor: pointer; */
+            color: transparent;
+        }
+        /*搜尋按鈕模組*/
 
 
         .main-nav{
@@ -131,7 +166,7 @@
         .nav-item>a{
             display: block;
             padding: 20px;
-            margin: 0 5px;
+            /* margin: 0 5px; */
             text-decoration: none;
             color: rgb(0, 0, 0);
             font-size: 17px;
@@ -211,6 +246,15 @@
 
 
         @media screen and (max-width:959px){
+            a.logo-link h1{
+                font-size: 20px;
+            }
+            a.logo-link img{
+                height: 60px;
+            }
+            .nav-item{
+                padding: 10px;
+            }
             .nav-item>a{
                 padding: 5px;
             }
@@ -226,6 +270,8 @@
             ul.layer1 a{
                 width: 12vw;
             }
+            
+            
         }
 
 
@@ -233,6 +279,7 @@
             .header{
                 justify-content: space-between;
                 align-items: center;
+                padding: 0 10px;
             }
             .logo{
                 order: 2;
@@ -243,9 +290,17 @@
             .header-icon{
                 order: 3;
             }
-            .icon-list .icon:nth-child(3){
+            .icon-list .icon:nth-child(1){
                 display: none;
             }
+
+            a.logo-link h1{
+                font-size: 18px;
+            }
+            a.logo-link img{
+                height: 45px;
+            }
+
             .main-nav{
                 /* display: none; */
                 position: absolute;
@@ -269,7 +324,7 @@
                 display: block;
                 padding: 20px;
                 /* margin: 10px 30px 10px 20px; */
-                margin: 10px 20px;
+                /* margin: 10px 20px; */
                 background-color: #362d52;
                 color: #fff;
             }
@@ -293,6 +348,7 @@
             }
             .nav-item.mobile{
                 display: block;
+                padding: 20px 10px 10px;
             }
             
             
@@ -395,7 +451,7 @@
             <div class="logo">
                 <a class="logo-link" href="index.html">
                     <img src="./UX//LOGO-pic.png" alt="GARY CAFE LOGO ICON">
-                    <h1>GARY COFFEE+</h1>
+                    <h1>GARY COFFEE</h1>
                 </a>
             </div>
             <label for="menu-switch" class="hb">

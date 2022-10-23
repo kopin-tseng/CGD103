@@ -201,19 +201,39 @@
 
 
 
-        @media screen and (max-width:1024px) { /*對平版以下有作用*/
         
-        }
         @media screen and (max-width:959px) { /*對平版以下有作用*/
         
         }
-        @media screen and (max-width:767px) { /*對手機以下有作用*/
+        @media screen and (max-width:767px) { /*對手機橫式有作用*/
             .shopping-row{
                 display: block;
             }
             .shopping-pay, .shopping-info{
                 width: 100%;
 
+            }
+        }
+        @media screen and (max-width:576px) { /*對手機直式以下*/
+            .table-header{
+                grid-template-columns: 1fr 5fr 1fr;
+            }
+            .table-header div:nth-child(3){
+                display: none;
+            }
+            .table-header div:nth-child(5){
+                display: none;
+            }
+            .table-row{
+                grid-template-columns: 1fr 5fr 1fr;
+            }
+            .table-row div:nth-child(3){
+                display: none;
+            }
+            .table-row .items-price{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                justify-content: end;
             }
         }
 
