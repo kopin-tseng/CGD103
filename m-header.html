@@ -146,7 +146,6 @@
         
         ul.layer1{
             display: none;
-            list-style: none;
             padding-left: 0;
             box-sizing: border-box;
             overflow: hidden;
@@ -235,14 +234,26 @@
                 justify-content: space-between;
                 align-items: center;
             }
+            .logo{
+                order: 2;
+            }
+            .menu-switch{
+                order: 1;
+            }
+            .header-icon{
+                order: 3;
+            }
+            .icon-list .icon:nth-child(3){
+                display: none;
+            }
             .main-nav{
                 /* display: none; */
                 position: absolute;
                 background-color: rgb(255, 255, 255);
                 height:  90vh;
                 overflow: scroll;
-                width: 80%;
-                right: 100%;
+                width: 60%;
+                left: -100%;
                 top: 100%;
                 opacity: 0;
                 transition: opacity 1s 0s ,left 0s 1s;
@@ -255,19 +266,27 @@
                 /* font-size: 25px; */
             }
             .nav-item>a{
+                display: block;
                 padding: 20px;
-                margin: 10px 30px 10px 20px;
+                /* margin: 10px 30px 10px 20px; */
+                margin: 10px 20px;
                 background-color: #362d52;
                 color: #fff;
             }
-            /* ul.layer1 li{
+            ul.layer1 li{
                 display: none;
-            } */
+                /* padding: 10px 20px; */
+            }
+            .navbar-nav>li:before{
+                height: 0;
+            }
             .nav-item:hover ul.layer1{
-                display: block;
+                display: none;
+                flex-direction: column;
                 position: static;
-                top: 0;
-                left: 0;
+            }
+            .mainCat{
+                padding: 20px 0;
             }
             .navbar-nav>li:hover::before{
                 width: 0;
@@ -276,14 +295,15 @@
                 display: block;
             }
             
+            
 
 
 
 
 
-            .header-icon{
+            /* .header-icon{
                 display: none;
-            }
+            } */
 
 
 
@@ -302,18 +322,18 @@
                 top: 31px;
             }
             #menu-switch:checked + .header .hb span:nth-child(1){
-                animation: no1 .5s .5s forwards;
+                animation: no1 .3s .3s forwards;
             }
             #menu-switch:checked + .header .hb span:nth-child(2){
-                animation: no2 .5s 0s forwards;
+                animation: no2 .3s 0s forwards;
             }
             #menu-switch:checked + .header .hb span:nth-child(3){
-                animation: no3 .5s .5s forwards;
+                animation: no3 .3s .3s forwards;
             }
             #menu-switch:checked + .header .main-nav{
-                right: 0;
+                left: 0;  /*點擊漢堡後選單出現後與兩側的距離*/
                 opacity: 1;
-                transition: opacity .5s 1s;
+                transition: opacity .3s 0.5s;
             }
             @keyframes no1 {
                 0%{top: 7px;transform: rotate(0deg);}
@@ -388,9 +408,14 @@
             <nav class="main-nav">
                 <ul class="navbar-nav">
                     <li class="nav-item mobile">
-                        <a href="#">登入/註冊
-                            
-                        </a>
+                        <!-- <label for=""><input type="search" name="" id=""></label>
+                        <a href="#">搜尋</a> -->
+                        <div class="product-search">
+                            <form action="./product-category.html" class="searchbox">
+                                <input class="searchbox-in" type="text" placeholder="お探しの商品は？">
+                                <input class="searchbtn" type="submit" value="">
+                            </form>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="aboutus.html">關於我們
