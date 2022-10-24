@@ -172,14 +172,18 @@
         }
         a.goodsList-btn{
             display: block;
-            width: 200px;
+            width: 270px;
             font-size: 15px;
-            padding: 10px 54px;
+            padding: 14px 54px;
             border-radius: 10px;
             margin-top: 50px;
             background: #323f6b;
             text-align: center;
             letter-spacing: 1.9px;
+            color: #fafafa;
+        }
+        a.goodsList-btn:hover{
+            background: #5451ff;
             color: #fafafa;
         }
         /* 商品列表 */
@@ -275,7 +279,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             margin:0 0 40px;
-            grid-gap: 40px;
+            grid-gap: 20px;
         }
         .feature-list .feature-item{
             box-sizing: border-box;
@@ -288,43 +292,52 @@
             object-fit: cover;
             aspect-ratio: 1/1;
         }
-        .feature-item p{
-            padding: 0 15px;
-            margin-bottom: 20px;
-        }
+        
         .item-txt{
-            padding: 20px 10px 0;
+            padding: 10px 10px 0;
             /* border: 1px solid gold; */
-            height: 160px;
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .feature-item p:nth-child(1){
+        .item-txt-title{
+            display: block;
             font-size: 14px;
-            color: rgb(15, 15, 15);
+            color: rgb(88, 88, 88);
+            /* height: 50px; */
+            margin: 0;
         }
+        .item-txt-price{
+            display: block;
+            margin: 0;
+            padding: 10px 0;
+            
+        }
+
+
+
+
+
         .feature-item .add-cart{
             text-align: center;
-            background-color: rgb(255, 153, 0);
             padding: 10px 0;
-            margin: 0 10px;
-            border: 1px solid rgb(255, 169, 19);
+            border: 1px solid rgb(58, 47, 130);
             transition: 0.3s;
-            border-radius: 10px;
-            /* visibility: hidden; */
-            display: none;
+            border-radius: 5px;
+            display: block;
         }
         .feature-item .add-cart a{
             text-decoration: none;
-            color: rgb(255, 255, 255);
+            color: rgb(73, 73, 73);
             transition: 0.3s;
         }
         .feature-item .add-cart:hover a{
             color: rgb(255, 255, 255);
         }
-        .feature-item .add-cart:hover{
-            background-color: rgb(255, 105, 12);
-            border: 1px solid rgb(255, 164, 29);
-        }
         .item-card:hover .add-cart{
+            background-color: rgb(255, 105, 12);
+            border: 1px solid rgb(255, 105, 12);
             display: block;
         }
         /* feature end */
@@ -360,7 +373,7 @@
                 height: 90vh;
             }
         }
-        @media screen and (max-width:767px) { /*對手機以下有作用*/
+        @media screen and (max-width:767px) { /*對手機直握有作用*/
             .mainCategory{
                 grid-template-columns: repeat(2,1fr);
             }
@@ -422,6 +435,12 @@
             .Catbanner{
                 background-attachment: scroll;
                 height: 70vh;
+            }
+        }
+        @media screen and (max-width:576px) {/*對手機直握有作用*/
+            .CategoryStyle-L li a{
+                padding: 10px;
+
             }
         }
         
@@ -557,8 +576,8 @@
                                         <a href="">
                                             <img src="./UX/go01.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>コーヒーグラインダー マールクーニック EK43S ブラック</p>
-                                                <p>484,000円</p>
+                                                <p class="item-txt-title">コーヒーグラインダー マールクーニック EK43S ブラック</p>
+                                                <p class="item-txt-price">484,000円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -571,8 +590,8 @@
                                         <a href="">
                                             <img src="./UX/go02.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>シモネリ Grinta AMM 赤 エスプレッソ用グラインダー</p>
-                                                <p>77,000円</p>
+                                                <p class="item-txt-title">シモネリ Grinta AMM 赤 エスプレッソ用グラインダー</p>
+                                                <p class="item-txt-price">77,000円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -585,8 +604,8 @@
                                         <a href="">
                                             <img src="./UX/go03.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>デロンギ デディカ コーン式コーヒーグラインダー KG521J-M</p>
-                                                <p>29,800円</p>
+                                                <p class="item-txt-title">デロンギ デディカ コーン式コーヒーグラインダー KG521J-M</p>
+                                                <p class="item-txt-price">29,800円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -599,8 +618,8 @@
                                         <a href="">
                                             <img src="./UX/go04.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>1Zpresso コーヒーグラインダー JPpro 携行バッグ付</p>
-                                                <p>43,780円</p>
+                                                <p class="item-txt-title">1Zpresso コーヒーグラインダー JPpro 携行バッグ付</p>
+                                                <p class="item-txt-price">43,780円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -613,8 +632,8 @@
                                         <a href="">
                                             <img src="./UX/go05.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>Comandante C40 ニトロブレード - コーヒーグラインダー</p>
-                                                <p>38,610円</p>
+                                                <p class="item-txt-title">Comandante C40 ニトロブレード - コーヒーグラインダー</p>
+                                                <p class="item-txt-price">38,610円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -629,8 +648,8 @@
                                         <a href="">
                                             <img src="./UX//go06.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>カリタ NEXT G2 ネクストG2 電動コーヒーミル</p>
-                                                <p>63,800円</p>
+                                                <p class="item-txt-title">カリタ NEXT G2 ネクストG2 電動コーヒーミル</p>
+                                                <p class="item-txt-price">63,800円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -643,8 +662,8 @@
                                         <a href="">
                                             <img src="./UX/go07.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>WPM グラインダー ZD-17N エスプレッソ電動グラインダー</p>
-                                                <p>60,280円</p>
+                                                <p class="item-txt-title">WPM グラインダー ZD-17N エスプレッソ電動グラインダー</p>
+                                                <p class="item-txt-price">60,280円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -657,8 +676,8 @@
                                         <a href="">
                                             <img src="./UX/go08.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>ボダム ビストロ 電動コーヒーグラインダー ブラック</p>
-                                                <p>13,200円</p>
+                                                <p class="item-txt-title">ボダム ビストロ 電動コーヒーグラインダー ブラック</p>
+                                                <p class="item-txt-price">13,200円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>
@@ -671,8 +690,8 @@
                                         <a href="">
                                             <img src="./UX/go09.jpeg" alt="">
                                             <div class="item-txt">
-                                                <p>ASCASO i-mini グラインダー ブラック 【Dark Black】</p>
-                                                <p>52,250円</p>
+                                                <p class="item-txt-title">ASCASO i-mini グラインダー ブラック 【Dark Black】</p>
+                                                <p class="item-txt-price">52,250円</p>
                                                 <div class="add-cart">
                                                     <a href="">カートに入れる</a>
                                                 </div>

@@ -48,16 +48,20 @@
             background-color: #f0f0f0;
             /* border: 1px solid gold; */
         }
+
+
+        /*搜尋按鈕模組*/
         .product-search{
-            padding: 0 30px;
+            /* padding: 0 30px; */
+            margin: 10px 0;
         }
-        .product-search h3{
+        /* .product-search h3{
             padding:0 10px 10px;
             margin-bottom: 15px;
             
             border-bottom: 1px solid #28292b;
             font-size: 20px;
-        }
+        } */
         .searchbox{
             position: relative;
         }
@@ -82,7 +86,13 @@
             /* cursor: pointer; */
             color: transparent;
         }
+        /*搜尋按鈕模組*/
 
+
+
+        .left-box{
+            padding: 20px;
+        }
         .left-box li.List-item{
             list-style-type: none;
             font-size: 16px;
@@ -94,12 +104,12 @@
         }
         .ProductList-categoryMenu{
             display: grid;
-            padding: 0 30px;
+            /* padding: 0 30px 20px; */
         }
         .left-box h3{
-            padding: 40px 30px 0;
+            padding: 10px;
             /* padding:0 10px 10px; */
-            margin: 15px 30px;
+            /* margin: 0 30px 15px; */
             /* margin-bottom: 15px; */
             border-bottom: 1px solid #28292b;
             font-size: 20px;
@@ -197,6 +207,7 @@
         .ProductList-settings{
             display: flex;
             font-size: 14px;
+            
         }
         .ProductList-settings select{
             display: block;
@@ -248,51 +259,57 @@
             box-sizing: border-box;
             /* width: 25% */
             text-align: left;
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
+            height: 100%;
         }
         .feature-list .feature-item img{
             width: 100%;
             vertical-align: middle;
         }
-        .feature-item p{
-            padding: 0 15px;
-            margin-bottom: 20px;
-        }
         .item-txt{
-            padding: 20px 10px 0;
+            padding: 10px 10px 0;
             /* border: 1px solid gold; */
-            height: 160px;
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-
-
-        .feature-item p:nth-child(1){
+        .item-txt-title{
+            display: block;
             font-size: 14px;
             color: rgb(88, 88, 88);
+            /* height: 50px; */
+            margin: 0;
         }
+        .item-txt-price{
+            display: block;
+            margin: 0;
+            padding: 10px 0;
+            
+        }
+
+
+
+
         .feature-item .add-cart{
             text-align: center;
-            background-color: rgb(255, 153, 0);
             padding: 10px 0;
-            margin: 0 10px;
-            border: 1px solid rgb(255, 169, 19);
+            border: 1px solid rgb(58, 47, 130);
             transition: 0.3s;
-            border-radius: 10px;
-            /* visibility: hidden; */
-            display: none;
+            border-radius: 5px;
+            display: block;
         }
         .feature-item .add-cart a{
             text-decoration: none;
-            color: rgb(255, 255, 255);
+            color: rgb(73, 73, 73);
             transition: 0.3s;
         }
         .feature-item .add-cart:hover a{
             color: rgb(255, 255, 255);
         }
-        .feature-item .add-cart:hover{
-            background-color: rgb(255, 105, 12);
-            border: 1px solid rgb(255, 164, 29);
-        }
         .item-card:hover .add-cart{
+            background-color: rgb(255, 105, 12);
+            border: 1px solid rgb(255, 105, 12);
             display: block;
         }
         /* feature end */
@@ -304,6 +321,9 @@
         @media screen and (max-width:959px) { /*對平版以下有作用*/
             .feature-list{
                 grid-template-columns: repeat(2, 1fr);
+            }
+            .left-box h3{
+                padding: 30px 0 0;
             }
         }
         @media screen and (max-width:767px) { /*對手機以下有作用*/
@@ -318,20 +338,22 @@
                 margin-bottom: 10px;
             }
             .ProductList-settings{
-                /* display: block; */
-                justify-content: space-evenly;
+                justify-content: flex-end;
+                gap: 20px;
             }
             .ProductList-settings-sort{
                 margin: 0;
             }
             .product-sidebar{
                 width: 100%;
+                /* margin: 15px 0; */
+                padding:10px;
             }
             .product-content{
                 width: 100%;
             }
             .feature-list{
-                grid-gap: 5px;
+                grid-gap: 20px;
             }
             .feature-item p{
                 padding: 0;
@@ -345,6 +367,7 @@
                 background-attachment: scroll;
                 height: 70vh;
             }
+            
         }
 
         
@@ -468,10 +491,10 @@
                             <div class="feature-item">
                                 <div class="item-card">
                                     <a href="product-page.html">
-                                        <img src="./UX/items-no08.jpeg" alt="">
+                                        <img src="./UX/items-no03.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
-                                            <p>NT$280</p>
+                                            <p class="item-txt-title">衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1衣索比亞 水洗 蓋德奧 耶加雪菲鎮 艾瑞嘉村 G1</p>
+                                            <p class="item-txt-price">NT$280</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -484,8 +507,8 @@
                                     <a href="">
                                         <img src="./UX/items-no01.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                            <p>NT$400</p>
+                                            <p class="item-txt-title">2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                            <p class="item-txt-price">NT$400</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -498,8 +521,8 @@
                                     <a href="">
                                         <img src="./UX/items-no02.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                            <p>NT$450</p>
+                                            <p class="item-txt-title">CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p class="item-txt-price">NT$450</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -510,10 +533,10 @@
                             <div class="feature-item">
                                 <div class="item-card">
                                     <a href="">
-                                        <img src="./UX/items-no03.jpeg" alt="">
+                                        <img src="./UX/items-no08.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
-                                            <p>NT$325</p>
+                                            <p class="item-txt-title">グァテマラコンテスト金賞 ウニオン コアタネカ農協</p>
+                                            <p class="item-txt-price">NT$325</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -526,8 +549,8 @@
                                     <a href="">
                                         <img src="./UX/items-no04.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>タリーズ ブラジル ファゼンダバウ</p>
-                                            <p>NT$1200</p>
+                                            <p class="item-txt-title">タリーズ ブラジル ファゼンダバウ</p>
+                                            <p class="item-txt-price">NT$1200</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -542,8 +565,8 @@
                                     <a href="">
                                         <img src="./UX/items-no05.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
-                                            <p>NT$400</p>
+                                            <p class="item-txt-title">2022新產季 衣索比亞 日曬特殊發酵 班奇馬吉 瑰夏/藝伎種 G1</p>
+                                            <p class="item-txt-price">NT$400</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -556,8 +579,8 @@
                                     <a href="">
                                         <img src="./UX/items-no06.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                            <p>NT$450</p>
+                                            <p class="item-txt-title">CR95-衣索比亞 日曬 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p class="item-txt-price">NT$450</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -570,8 +593,8 @@
                                     <a href="">
                                         <img src="./UX/items-no07.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
-                                            <p>NT$325</p>
+                                            <p class="item-txt-title">CR95-衣索比亞 水洗 古吉 夏奇索 摩摩拉莊園 74112 品種 G1</p>
+                                            <p class="item-txt-price">NT$325</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>
@@ -584,8 +607,8 @@
                                     <a href="">
                                         <img src="./UX/items-no08.jpeg" alt="">
                                         <div class="item-txt">
-                                            <p>巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
-                                            <p>NT$1200</p>
+                                            <p class="item-txt-title">巴拿馬 厭氧慢速乾燥日曬 Mama Cata莊園 Mokkita(BOP VN-01姊妹批次)</p>
+                                            <p class="item-txt-price">NT$1200</p>
                                             <div class="add-cart">
                                                 <a href="">カートに入れる</a>
                                             </div>

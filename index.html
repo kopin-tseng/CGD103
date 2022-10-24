@@ -680,6 +680,10 @@
             align-items: center;
             justify-content: center;
         }
+        .feature-btn a:hover{
+            background: #5451ff;
+            color: #fafafa;
+        }
         /* feature end */
 
 
@@ -722,6 +726,7 @@
         .knowledge-btn{
             margin: 48px auto 0;
             text-align: center;
+
         }
         .knowledge-btn a{
             display: block;
@@ -731,11 +736,12 @@
             border-radius: 10px;
             /* transition: opacity ease 0.2s; */
             background: #323f6b;
-            text-align: center;
+            /* text-align: center; */
             letter-spacing: 1.9px;
             color: #fafafa;
-            align-items: center;
-            justify-content: center;
+            /* align-items: center; */
+            /* justify-content: center; */
+            margin: 0 auto;
         }
 
         .knowledge-card{
@@ -786,7 +792,7 @@
                 padding: 0 10%;
                 width: 100%;
             }
-            p.knowledge-btn{
+            .knowledge-btn{
                 display: none;
             }
             .knowledge-btn.sm{
@@ -795,9 +801,13 @@
                 align-items: center;
                 margin: 30px;
             }
+            .knowledge-txt{
+                padding: 0 0 20px;
+            }
             .slick img{
                 aspect-ratio: 16/10;
             }
+
         }
         @media screen and (max-width: 767px){
             .knowledge-txt{
@@ -1071,7 +1081,7 @@
                         
                         コーヒーの困りごとがいっぱいだと思います。<br>
                         ここの記事が解決の一助になれば嬉しいです。</p>
-                    <p class="knowledge-btn"><a href="">豆知識をもっと見る</a></p>
+                    <div class="knowledge-btn"><a href="">豆知識をもっと見る</a></div>
                 </div>
                 <div class="knowledge-card">
                     <ul class="knowledge-card-list">
