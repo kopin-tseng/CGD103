@@ -382,7 +382,7 @@ padding-left: 0;
 }
 .menu-lst__unit {
     width: 100%;
-    margin: 40px auto 0;
+    margin: 40px auto;
     padding-left: 60px;
 }
 .menu-lst {
@@ -675,16 +675,20 @@ padding-left: 0;
     color: rgb(88, 88, 88);
 }
 .feature-btn{
-    margin: 10px auto 50px;
+    margin: 30px auto 50px;
     text-align: center;
+    border: 1px solid #323f6b;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50vw;
+    /* height: 3vw; */
+    padding: 3vw 0;
+    background: #323f6b;
 }
 .feature-btn a{
-    width: 270px;
+    display: block;
     font-size: 15px;
-    padding: 14px 54px;
-    border-radius: 10px;
     /* transition: opacity ease 0.2s; */
-    background: #323f6b;
     text-align: center;
     letter-spacing: 1.9px;
     color: #fafafa;
