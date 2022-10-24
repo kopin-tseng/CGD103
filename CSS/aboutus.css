@@ -1,0 +1,137 @@
+.main{
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+
+
+.main-section{
+    box-sizing: border-box;
+    width: 100%;
+    /* padding: 100px 0; */
+    display: flex;
+    gap: 10px;
+}
+.main-section div{
+    overflow: hidden;
+}
+.main-section img{
+    width: 100%;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+.main-section img:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+
+}
+
+
+
+.about-us{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.about-us h1{
+    padding: 50px 0 40px;
+    text-align: center;
+}
+.about-us .us-text p{
+    line-height: 2;
+    margin-bottom: 50px;
+    color: rgb(112, 112, 112);
+    background: #f9f9f9;
+    font-weight: normal;
+}
+.about-us  .us-text p:nth-child(2n){
+    line-height: 1;
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+}
+
+.us-text{
+    padding: 20px;
+}
+
+.belt-img{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+.belt-img img{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    aspect-ratio: 16/10;
+}
+
+
+
+.our-location{
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.location-map{
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 75%;
+}
+.location-map iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.our-location-info{
+    padding: 20px;
+    /* border: 1px solid gold; */
+    border-radius: 10px;
+    background-color: darkslategrey;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+.our-location p{
+    /* color: rgb(49, 49, 49); */
+    font-size: 20px;
+    font-weight: 600;
+}
+.shop-info{
+    padding: 0;
+    list-style-type: none;
+    /* color: rgb(113, 113, 113); */
+    line-height: 2;
+}
+
+@media screen and (max-width:1024px) { /*對平版以下有作用*/
+    
+}
+@media screen and (max-width:959px) { /*對平版以下有作用*/
+    .belt-img{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-location{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .location-map{
+        padding-bottom: 62.5%;
+    }
+    .our-location-info{
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
+@media screen and (max-width:767px) { /*對手機以下有作用*/
+
+}

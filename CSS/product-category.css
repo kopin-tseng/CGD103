@@ -1,0 +1,357 @@
+.main{
+    width: 100%;
+    background-color: #fcfcfc;
+}
+
+
+
+.banner-img{
+    background-image: url(../UX/banner2.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+
+
+
+
+
+
+
+.main-wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: flex;
+}
+.product-sidebar{
+    width: 25%;
+}
+.left-box{
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    /* border: 1px solid gold; */
+}
+
+
+/*搜尋按鈕模組*/
+.product-search{
+    /* padding: 0 30px; */
+    margin: 10px 0;
+}
+/* .product-search h3{
+    padding:0 10px 10px;
+    margin-bottom: 15px;
+    
+    border-bottom: 1px solid #28292b;
+    font-size: 20px;
+} */
+.searchbox{
+    position: relative;
+}
+.searchbox-in{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.searchbtn{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background: url(./UX/search.svg);
+    background-size: cover;
+    padding: 15px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    color: #fff;
+    /* cursor: pointer; */
+    color: transparent;
+}
+/*搜尋按鈕模組*/
+
+
+
+.left-box{
+    padding: 20px;
+}
+.left-box li.List-item{
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    padding: 5px 0;
+    font-weight: 400;
+    position: relative;
+}
+.ProductList-categoryMenu{
+    display: grid;
+    /* padding: 0 30px 20px; */
+}
+.left-box h3{
+    padding: 10px;
+    /* padding:0 10px 10px; */
+    /* margin: 0 30px 15px; */
+    /* margin-bottom: 15px; */
+    border-bottom: 1px solid #28292b;
+    font-size: 20px;
+}
+.ProductList-categoryMenu ul{
+    display: none;
+}
+.ProductList-dropdown{
+    /* padding: 10px 0; */
+    padding-bottom: 10px;
+}
+.ProductList-dropdown li.List-item{
+    color: rgb(94, 94, 94);
+    padding:10px 10px;
+    /* border: 1px solid gainsboro; */
+
+    background: #fff;
+    margin: 10px 20px 10px 0;
+    border-radius: 5px;
+}
+.List-item>a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: 0.5s;
+    position: relative;
+    background: #323f6b;
+}
+.List-item a:hover{
+    background-color: rgb(118, 136, 209);
+}
+
+.List-item>a::before{
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 28px;
+    width: 13px;
+    border-bottom: 2px solid #fff;
+}
+.List-item>a::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    height: 13px;
+    border-left: 2px solid #fff;
+}
+a.rmminus::after{
+    height: 0;
+}
+
+
+
+
+
+
+/* 商品排序及顯示 */
+.product-content{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding: 0 10px;
+}
+.Breadcrumbs{
+    padding: 10px 20px;
+    /* background: #995f0e; */
+    background-color: #28292b;
+    border-radius: 3px;
+}
+.Breadcrumbs span{
+    display: block;
+    color: #fff;
+}
+.product-tools{
+    margin-bottom: 20px;
+    padding: 40px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.product-tools h1{
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.5;
+}
+.ProductList-settings-sort{
+    /* width: 50%; */
+    /* margin: 0 5px; */
+    margin-right: 10px;
+}
+.ProductList-settings{
+    display: flex;
+    font-size: 14px;
+    
+}
+.ProductList-settings select{
+    display: block;
+    padding: 7px 20px 7px 10px;
+    background: #f3f3f3;
+    color: rgb(68, 68, 68);
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 3px;
+}
+/* 商品排序及顯示 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* feature start */
+.feature-wrap{
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    box-sizing: border-box;
+}
+h2.title{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+.feature-list{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2,1fr); */
+    margin:0 0 40px;
+    grid-gap: 20px;
+    /* gap: 15px; */
+}
+.feature-list .feature-item{
+    /* padding: 10px; */
+    box-sizing: border-box;
+    /* width: 25% */
+    text-align: left;
+    /* margin-bottom: 50px; */
+    height: 100%;
+}
+.feature-list .feature-item img{
+    width: 100%;
+    vertical-align: middle;
+}
+.item-txt{
+    padding: 10px 10px 0;
+    /* border: 1px solid gold; */
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item-txt-title{
+    display: block;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+    /* height: 50px; */
+    margin: 0;
+}
+.item-txt-price{
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+    
+}
+
+
+
+
+.feature-item .add-cart{
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid rgb(58, 47, 130);
+    transition: 0.3s;
+    border-radius: 5px;
+    display: block;
+}
+.feature-item .add-cart a{
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    transition: 0.3s;
+}
+.feature-item .add-cart:hover a{
+    color: rgb(255, 255, 255);
+}
+.item-card:hover .add-cart{
+    background-color: rgb(255, 105, 12);
+    border: 1px solid rgb(255, 105, 12);
+    display: block;
+}
+/* feature end */
+
+
+@media screen and (max-width:1024px) { /*對平版以下有作用*/
+
+}
+@media screen and (max-width:959px) { /*對平版以下有作用*/
+    .feature-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .left-box h3{
+        padding: 30px 0 0;
+    }
+}
+@media screen and (max-width:767px) { /*對手機以下有作用*/
+    .main-wrapper{
+        display: block;
+    }
+    .product-tools{
+        display: block;
+        padding: 20px 10px 0 ;
+    }
+    .product-tools h1{
+        margin-bottom: 10px;
+    }
+    .ProductList-settings{
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    .ProductList-settings-sort{
+        margin: 0;
+    }
+    .product-sidebar{
+        width: 100%;
+        /* margin: 15px 0; */
+        padding:10px;
+    }
+    .product-content{
+        width: 100%;
+    }
+    .feature-list{
+        grid-gap: 20px;
+    }
+    .feature-item p{
+        padding: 0;
+
+    }
+    .ProductList-categoryMenu{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+    }
+    .banner-img{
+        background-attachment: scroll;
+        height: 70vh;
+    }
+    
+}
