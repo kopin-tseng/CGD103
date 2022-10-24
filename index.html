@@ -50,6 +50,15 @@
             -webkit-align-items: center;
             align-items: center;
         }
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .2s opacity;
+            transform: translate3d(0,0,0);
+            z-index: 10
+        }
+
+
         .multiImgLoop{
             overflow: hidden;
             margin: 0 auto;
@@ -456,7 +465,7 @@
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: {
-                delay: 3000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -479,7 +488,7 @@
             spaceBetween: 10,
             centeredSlides: false,
             autoplay: {
-                delay: 2000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             pagination: {

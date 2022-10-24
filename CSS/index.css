@@ -201,48 +201,7 @@ padding-left: 0;
 
 
 /* story */
-@media screen and (max-width:1024px) { /*對平版以下有作用*/
-    .about-statement__text-inner {
-        padding: 60px 11.5% 15px 11.5%;
-    }
-    .about-statement__bgvisual {
-        /* width: 48%; */
-    }
-}
-@media screen and (max-width:959px) {
-    .quick-opt{
-        padding-top: 0;
-    }
-    .about-statement__bgvisual, .about-statement__bgvisual-inner {
-        display: none;
-    }
-    .about-statement__visual, .about-statement__visual-inner {
-        display: block;
-        width: 100%;
-        margin: 10px auto 0;
-        overflow: hidden;
-    }
-    .about-statement__text-inner {
-        padding: 50px 10% 15px 10%;
-    }
-    .about-statement:before{
-        width: 0;
-    }
-    .about-statement {
-        display: block;
-    }
-    .about-statement__text {
-        width: 100%;
-        padding-top: 0;
-    }
-    .about-statement__read {
-        margin-top: 25px;
-    }
-}
 
-@media screen and (max-width:767px) { /*對手機以下有作用*/
-    
-}
 
 
 
@@ -298,34 +257,7 @@ padding-left: 0;
 }
 /* moreabout */
 
-@media screen and (max-width:1024) { /*對平版以下有作用*/
-    .moreabout-img-list{
-        
-        right: -300px;
-    }
 
-}
-@media screen and (max-width:767px) { /*對手機以下有作用*/
-    .moreabout{
-        display: block;
-    }
-    .moreabout-inner{
-        padding: 0;
-    }
-    .moreabout-img-list {
-        /* right: -70px; */
-        position: static;
-        right: 0;
-        overflow: hidden;
-    }
-    .moreabout-text {
-        padding-top: 20px;
-        z-index: 2;
-    }
-    .moreabout-text-list{
-        padding: 40px;
-    }
-}
 
 
 
@@ -524,89 +456,8 @@ padding-left: 0;
 
 
 
-@media screen and (max-width:1200px) { /*對手機以下有作用*/
-    /* .menu-lst__visual:after{
-        height: 17%;
-    } */
-    .menu-lst__copy h3{
-        font-size: 17px;
-    }
-    .menu-lst__thumb{
-        margin-top: 20px;
-    }       
-}
-@media screen and (max-width:1024px) { /*對平版以下有作用*/
-    .menu-lst__text-inner {
-        padding: 0 35px 0 35px;
-    }
-    .menu-lst__copy {
-        margin-top: 18px;
-    }
 
-    .menu-lst__thumb {
-        margin-top: 25px;
-    }
-}
-@media screen and (max-width:959px) { /*對平版以下有作用*/
-    
-    .p-top-menu__body {
-        padding: 100px 6%;
-    }
-    .menu-lst__unit {
-        margin: 60px auto 0;
-        padding: 0;
-    }
-    .menu-lst {
-        padding: 0;
-        margin-bottom: 95px;
-    }
-    .menu-lst__inner {
-        display: block;
-    }
-    .menu-lst__visual {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .menu-lst__visual-inner {
-        width: 92%;
-        margin: 0 auto;
-        z-index: 1;
-    }
-    .menu-lst__visual:after {
-        background-color: #f6f4ef;
-        width: 100%;
-        height: 90%;
-        position: absolute;
-        content: '';
-        z-index: 0;
-        top: 0;
-        left: 0;
-    }
-    .menu-lst__text {
-        width: 100%;
-    }
-    .menu-lst__text-inner {
-        padding: 50px 60px 70px;
-    }
-    .menu-lst__name {
-        left: 7%;
-        letter-spacing: .03em;
-    }
-    .menu-lst:after {
-        background-image: url(../UX/bg-beige.png);
-        width: 0;
-        height: 20%;
-        position: absolute;
-        content: '';
-        z-index: 0;
-        bottom: 0;
-        left: 0;
-    }
-            
-}
-@media screen and (max-width:767px) { /*對手機以下有作用*/
 
-}
 
 
 
@@ -675,30 +526,31 @@ padding-left: 0;
     color: rgb(88, 88, 88);
 }
 .feature-btn{
-    margin: 30px auto 50px;
+    margin: 48px auto 0;
     text-align: center;
-    border: 1px solid #323f6b;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 50vw;
-    /* height: 3vw; */
-    padding: 3vw 0;
-    background: #323f6b;
 }
 .feature-btn a{
     display: block;
+    width: 270px;
     font-size: 15px;
+    padding: 14px 54px;
+    border-radius: 10px;
     /* transition: opacity ease 0.2s; */
-    text-align: center;
+    background: #323f6b;
+    /* text-align: center; */
     letter-spacing: 1.9px;
     color: #fafafa;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 0 auto;
 }
 .feature-btn a:hover{
     background: #5451ff;
     color: #fafafa;
 }
+
+
+
 /* feature end */
 
 
@@ -794,7 +646,28 @@ padding-left: 0;
     display: none;
 }
 /* knowledge */
-@media screen and (max-width: 1000px){
+
+
+
+
+
+
+@media screen and (max-width:1200px) { /*對手機以下有作用*/
+    /* .menu-lst__visual:after{
+        height: 17%;
+    } */
+    .menu-lst__copy h3{
+        font-size: 17px;
+    }
+    .menu-lst__thumb{
+        margin-top: 20px;
+    }       
+}
+
+
+
+
+@media screen and (max-width: 1024px){
     .knowledge{
         flex-direction: column;
     }
@@ -822,8 +695,116 @@ padding-left: 0;
     .slick img{
         aspect-ratio: 16/10;
     }
+    .moreabout-img-list{
+        
+        right: -300px;
+    }
+    .about-statement__text-inner {
+        padding: 60px 11.5% 15px 11.5%;
+    }
+    .menu-lst__text-inner {
+        padding: 0 35px 0 35px;
+    }
+    .menu-lst__copy {
+        margin-top: 18px;
+    }
+
+    .menu-lst__thumb {
+        margin-top: 25px;
+    }
 
 }
+
+
+
+
+@media screen and (max-width:959px) {
+    .quick-opt{
+        padding-top: 0;
+    }
+    .about-statement__bgvisual, .about-statement__bgvisual-inner {
+        display: none;
+    }
+    .about-statement__visual, .about-statement__visual-inner {
+        display: block;
+        width: 100%;
+        margin: 10px auto 0;
+        overflow: hidden;
+    }
+    .about-statement__text-inner {
+        padding: 50px 10% 15px 10%;
+    }
+    .about-statement:before{
+        width: 0;
+    }
+    .about-statement {
+        display: block;
+    }
+    .about-statement__text {
+        width: 100%;
+        padding-top: 0;
+    }
+    .about-statement__read {
+        margin-top: 25px;
+    }
+    .p-top-menu__body {
+        padding: 100px 6%;
+    }
+    .menu-lst__unit {
+        margin: 60px auto 0;
+        padding: 0;
+    }
+    .menu-lst {
+        padding: 0;
+        margin-bottom: 95px;
+    }
+    .menu-lst__inner {
+        display: block;
+    }
+    .menu-lst__visual {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .menu-lst__visual-inner {
+        width: 92%;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    .menu-lst__visual:after {
+        background-color: #f6f4ef;
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        content: '';
+        z-index: 0;
+        top: 0;
+        left: 0;
+    }
+    .menu-lst__text {
+        width: 100%;
+    }
+    .menu-lst__text-inner {
+        padding: 50px 60px 70px;
+    }
+    .menu-lst__name {
+        left: 7%;
+        letter-spacing: .03em;
+    }
+    .menu-lst:after {
+        background-image: url(../UX/bg-beige.png);
+        width: 0;
+        height: 20%;
+        position: absolute;
+        content: '';
+        z-index: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+
+
 @media screen and (max-width: 767px){
     .knowledge-txt{
         letter-spacing: 0.84px;
@@ -853,4 +834,35 @@ padding-left: 0;
     .slick img{
         aspect-ratio: 2/3;
     }
+    .moreabout{
+        display: block;
+    }
+    .moreabout-inner{
+        padding: 0;
+    }
+    .moreabout-img-list {
+        /* right: -70px; */
+        position: static;
+        right: 0;
+        overflow: hidden;
+    }
+    .moreabout-text {
+        padding-top: 20px;
+        z-index: 2;
+    }
+    .moreabout-text-list{
+        padding: 40px;
+    }
+    .menu-lst__text-inner {
+        padding: 30px;
+    }
+    .p-top-menu__body {
+        padding: 6%;
+    }
+    .coffee-knowledge{
+        padding: 6% 0; 
+    }
 }
+
+
+
