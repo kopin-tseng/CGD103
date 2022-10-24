@@ -62,7 +62,7 @@
     position: absolute;
     right: 10px;
     top: 5px;
-    background: url(./UX/search.svg);
+    background: url(../UX/search.svg);
     background-size: cover;
     padding: 15px;
     height: 20px;

@@ -102,8 +102,8 @@
             display: block;
             width: 100%;
             padding: 10px;
-            border-radius: 5px;
-            border: 1px solid gray;
+            /* border-radius: 5px; */
+            border: 1px solid rgb(175, 175, 175);
         }
         .searchbtn{
             position: absolute;
@@ -118,6 +118,7 @@
             color: #fff;
             /* cursor: pointer; */
             color: transparent;
+            opacity: 0.5;
         }
         /*搜尋按鈕模組*/
 
@@ -140,19 +141,19 @@
             content: "";
             width: 0%;
             height: 4px;
-            background-color: #af7200;
+            background-color: #000000;/*動畫線條色彩*/
             position: absolute;
             top: 80%;
             transform: translateX(0%);
-            left: 20%;
+            left: 10%;
             transition: width .3s;
             border-radius: 1px;
         }
         .navbar-nav>li:hover::before{
-            width: 60%;
+            width: 80%;
         }
         .navbar-nav>li:hover a{
-            color: rgb(218, 158, 19);
+            color: rgb(90, 64, 17);/*nav文字互動色彩*/
             font-weight: 700;
         }
 
@@ -168,7 +169,7 @@
             padding: 20px;
             /* margin: 0 5px; */
             text-decoration: none;
-            color: rgb(0, 0, 0);
+            color: #262626;/*nav文字色彩*/
             font-size: 17px;
             line-height: 100%;
             position: relative;
@@ -253,7 +254,7 @@
                 height: 60px;
             }
             .nav-item{
-                padding: 10px;
+                /* padding: 10px; */
             }
             .nav-item>a{
                 padding: 5px;
@@ -304,7 +305,7 @@
             .main-nav{
                 /* display: none; */
                 position: absolute;
-                background-color: rgb(255, 255, 255);
+                background-color: rgb(238, 238, 238);/*表單背景色*/
                 height:  90vh;
                 overflow: scroll;
                 width: 60%;
@@ -323,10 +324,12 @@
             .nav-item>a{
                 display: block;
                 padding: 20px;
+                text-align: left;
                 /* margin: 10px 30px 10px 20px; */
                 /* margin: 10px 20px; */
-                background-color: #362d52;
-                color: #fff;
+                /* background-color: #362d52; */
+                border-bottom: 1px solid #cfcfcf;/*表單底線*/
+                color: rgb(71, 71, 71);/*表單文字色彩*/
             }
             ul.layer1 li{
                 display: none;
@@ -348,8 +351,13 @@
             }
             .nav-item.mobile{
                 display: block;
-                padding: 20px 10px 10px;
+                padding: 20px;
+                border-bottom: 1px solid #cfcfcf;/*表單底線*/
             }
+            .navbar-nav>li:hover a{
+                color: rgb(129, 102, 28);/*表單互動色彩*/
+            }
+
             
             
 

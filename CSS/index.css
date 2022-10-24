@@ -276,7 +276,7 @@ padding-left: 0;
 .moreabout-img-list{
     position: absolute;
     z-index: 1;
-    right: -30px;
+    right: -300px;
 }
 .moreabout-img-list img{
     width: 1104px;
@@ -299,6 +299,10 @@ padding-left: 0;
 /* moreabout */
 
 @media screen and (max-width:1024) { /*對平版以下有作用*/
+    .moreabout-img-list{
+        
+        right: -300px;
+    }
 
 }
 @media screen and (max-width:767px) { /*對手機以下有作用*/
@@ -374,12 +378,12 @@ padding-left: 0;
     letter-spacing: .1em;
     line-height: 2;
     text-align: center;
-    margin-top: 40px;
+    margin: 40px 20px;
 }
 .menu-lst__unit {
     width: 100%;
     margin: 40px auto 0;
-    padding-left: 100px;
+    padding-left: 60px;
 }
 .menu-lst {
     position: relative;
@@ -425,7 +429,7 @@ padding-left: 0;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.menu-lst__visual:after {
+/* .menu-lst__visual:after {
     background-image: url(../UX/bg-beige.png);
     width: 62%;
     height: 20%;
@@ -434,6 +438,16 @@ padding-left: 0;
     z-index: 0;
     bottom: -20%;
     left: 0;
+} */
+.menu-lst:after {
+    background-image: url(../UX/bg-beige.png);
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    content: '';
+    z-index: 0;
+    bottom: 0;
+    left: 0;
 }
 .menu-lst__text {
     width: 50%;
@@ -441,6 +455,7 @@ padding-left: 0;
     position: relative;
     display: flex;
     align-items: flex-end;
+    padding: 10px 10px 0;
 }
 .menu-lst__text-inner {
     width: 100%;
@@ -576,6 +591,16 @@ padding-left: 0;
     .menu-lst__name {
         left: 7%;
         letter-spacing: .03em;
+    }
+    .menu-lst:after {
+        background-image: url(../UX/bg-beige.png);
+        width: 0;
+        height: 20%;
+        position: absolute;
+        content: '';
+        z-index: 0;
+        bottom: 0;
+        left: 0;
     }
             
 }
