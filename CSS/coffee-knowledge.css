@@ -250,4 +250,9 @@ a.btt1:hover{
     a.btt1{
         margin: 0;
     }
+    .top-photo{
+        background-image: url(../ux/New-Project-23-15.59.15.jpg);
+        background-attachment: scroll;
+        height: 70vh;
+    }
 }
